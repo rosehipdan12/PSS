@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cb506b561cd4dba90dfae5c7c874278" Name="Diagram1">
+        <EntityTypeShape EntityType="PSSModel.category" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.item" Width="1.5" PointX="4.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.order" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.pet" Width="1.5" PointX="3.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.role" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.species" Width="1.5" PointX="1.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.supplier" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.user" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSSModel.order_product" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="PSSModel.FK_category_category" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_items_category" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_items_supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_order_product_items" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_order_product_order" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_order_product_pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_pet_species" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.FK_user_role" ManuallyRouted="false" />
+        <AssociationConnector Association="PSSModel.order_user" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
