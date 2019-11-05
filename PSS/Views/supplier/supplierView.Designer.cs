@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.supplierView {
+﻿namespace test7.Views.supplierView {
     partial class supplierView {
         /// <summary> 
         /// Required designer variable.
@@ -145,7 +145,7 @@
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
 			this.supplierViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.supplierViewBindingSource.DataSource = typeof(PSS.supplier);
+			this.supplierViewBindingSource.DataSource = typeof(test7.supplier);
 			this.dataLayoutControl1.DataSource = supplierViewBindingSource;
 			//
 			//Create GridControls
@@ -193,12 +193,12 @@
             itemsitemsChildPopulateColumnParameters.Path = "items.name";
 			itemsPopulateColumnsParameters.CustomColumnParameters.Add(itemsitemsChildPopulateColumnParameters);
 			 
-		    this.itemsGridView.PopulateColumns(typeof(PSS.item),itemsPopulateColumnsParameters);
+		    this.itemsGridView.PopulateColumns(typeof(test7.item),itemsPopulateColumnsParameters);
 			//
 			//itemsBindingSource
 			//
 			System.Windows.Forms.BindingSource itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			itemsBindingSource.DataSource = typeof(PSS.item);
+			itemsBindingSource.DataSource = typeof(test7.item);
             this.itemsGridControl.DataSource = itemsBindingSource;
 			//
 			//itemsXtraUserControl
@@ -285,15 +285,15 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.supplierViewModel);
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "Save", bbiSave));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "SaveAndClose", bbiSaveAndClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "SaveAndNew", bbiSaveAndNew));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "Reset", bbiReset));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "Delete", bbiDelete));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "Close", bbiClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "SaveLayout", bbiSaveLayout));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierViewModel), "ResetLayout", bbiResetLayout));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.supplierViewModel);
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "Save", bbiSave));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "SaveAndClose", bbiSaveAndClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "SaveAndNew", bbiSaveAndNew));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "Reset", bbiReset));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "Delete", bbiDelete));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "Close", bbiClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "SaveLayout", bbiSaveLayout));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierViewModel), "ResetLayout", bbiResetLayout));
 						this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
 			//

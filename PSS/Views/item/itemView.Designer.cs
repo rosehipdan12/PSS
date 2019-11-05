@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.itemView {
+﻿namespace test7.Views.itemView {
     partial class itemView {
         /// <summary> 
         /// Required designer variable.
@@ -37,6 +37,9 @@
 			this.order_productBar = new DevExpress.XtraBars.Bar();
 			this.order_productXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
 			this.order_productPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+						this.bbiorder_productNew = new DevExpress.XtraBars.BarButtonItem();
+						this.bbiorder_productEdit = new DevExpress.XtraBars.BarButtonItem();
+						this.bbiorder_productDelete = new DevExpress.XtraBars.BarButtonItem();
 						this.bbiorder_productRefresh = new DevExpress.XtraBars.BarButtonItem();
 						((System.ComponentModel.ISupportInitialize)(this.order_productBarManager)).BeginInit();
 									this.categoryLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -146,7 +149,7 @@
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
 			this.itemViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.itemViewBindingSource.DataSource = typeof(PSS.item);
+			this.itemViewBindingSource.DataSource = typeof(test7.item);
 			this.dataLayoutControl1.DataSource = itemViewBindingSource;
 			//
 			//Create GridControls
@@ -204,12 +207,12 @@
             order_productorder_productChildPopulateColumnParameters.Path = "order_product.order_id";
 			order_productPopulateColumnsParameters.CustomColumnParameters.Add(order_productorder_productChildPopulateColumnParameters);
 			 
-		    this.order_productGridView.PopulateColumns(typeof(PSS.order_product),order_productPopulateColumnsParameters);
+		    this.order_productGridView.PopulateColumns(typeof(test7.order_product),order_productPopulateColumnsParameters);
 			//
 			//order_productBindingSource
 			//
 			System.Windows.Forms.BindingSource order_productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			order_productBindingSource.DataSource = typeof(PSS.order_product);
+			order_productBindingSource.DataSource = typeof(test7.order_product);
             this.order_productGridControl.DataSource = order_productBindingSource;
 			//
 			//order_productXtraUserControl
@@ -218,6 +221,36 @@
 			this.order_productXtraUserControl.Name = "order_productXtraUserControl";
 			this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100); 
 							//
+			//order_productNew
+			//
+			this.bbiorder_productNew.Caption = "New";
+			this.bbiorder_productNew.Name = "bbiorder_productNew";
+			this.bbiorder_productNew.ImageUri.Uri = "New";
+			this.bbiorder_productNew.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+			this.order_productBarManager.Items.Add(this.bbiorder_productNew);
+			this.order_productBar.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productNew));
+			this.order_productPopUpMenu.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productNew));
+						//
+			//order_productEdit
+			//
+			this.bbiorder_productEdit.Caption = "Edit";
+			this.bbiorder_productEdit.Name = "bbiorder_productEdit";
+			this.bbiorder_productEdit.ImageUri.Uri = "Edit";
+			this.bbiorder_productEdit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+			this.order_productBarManager.Items.Add(this.bbiorder_productEdit);
+			this.order_productBar.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productEdit));
+			this.order_productPopUpMenu.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productEdit));
+						//
+			//order_productDelete
+			//
+			this.bbiorder_productDelete.Caption = "Delete";
+			this.bbiorder_productDelete.Name = "bbiorder_productDelete";
+			this.bbiorder_productDelete.ImageUri.Uri = "Delete";
+			this.bbiorder_productDelete.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+			this.order_productBarManager.Items.Add(this.bbiorder_productDelete);
+			this.order_productBar.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productDelete));
+			this.order_productPopUpMenu.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_productDelete));
+						//
 			//order_productRefresh
 			//
 			this.bbiorder_productRefresh.Caption = "Refresh";
@@ -260,7 +293,7 @@
 									//
 			//categoryLookUpEdit
 			//
-			this.categoryBindingSource.DataSource = typeof(PSS.category);
+			this.categoryBindingSource.DataSource = typeof(test7.category);
 			this.categoryLookUpEdit.Properties.ValueMember = "id"; 
 			this.categoryLookUpEdit.Properties.DisplayMember = "name";
 			this.categoryLookUpEdit.Properties.DataSource = this.categoryBindingSource;
@@ -277,7 +310,7 @@
 						//
 			//supplierLookUpEdit
 			//
-			this.supplierBindingSource.DataSource = typeof(PSS.supplier);
+			this.supplierBindingSource.DataSource = typeof(test7.supplier);
 			this.supplierLookUpEdit.Properties.ValueMember = "id"; 
 			this.supplierLookUpEdit.Properties.DisplayMember = "name";
 			this.supplierLookUpEdit.Properties.DataSource = this.supplierBindingSource;
@@ -300,15 +333,15 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.itemViewModel);
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "Save", bbiSave));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "SaveAndClose", bbiSaveAndClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "SaveAndNew", bbiSaveAndNew));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "Reset", bbiReset));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "Delete", bbiDelete));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "Close", bbiClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "SaveLayout", bbiSaveLayout));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.itemViewModel), "ResetLayout", bbiResetLayout));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.itemViewModel);
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "Save", bbiSave));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "SaveAndClose", bbiSaveAndClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "SaveAndNew", bbiSaveAndNew));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "Reset", bbiReset));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "Delete", bbiDelete));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "Close", bbiClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "SaveLayout", bbiSaveLayout));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.itemViewModel), "ResetLayout", bbiResetLayout));
 						this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
 			//
@@ -342,6 +375,9 @@
 		private DevExpress.XtraBars.Bar order_productBar;
 		private DevExpress.XtraEditors.XtraUserControl order_productXtraUserControl;
 		private DevExpress.XtraBars.PopupMenu order_productPopUpMenu;
+				private DevExpress.XtraBars.BarButtonItem bbiorder_productNew;
+				private DevExpress.XtraBars.BarButtonItem bbiorder_productEdit;
+				private DevExpress.XtraBars.BarButtonItem bbiorder_productDelete;
 				private DevExpress.XtraBars.BarButtonItem bbiorder_productRefresh;
 								private DevExpress.XtraEditors.GridLookUpEdit categoryLookUpEdit;
 		private System.Windows.Forms.BindingSource categoryBindingSource;

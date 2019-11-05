@@ -1,4 +1,4 @@
-﻿namespace PSS
+﻿namespace test7
 {
     partial class Form1
     {
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pssEntitiesView1 = new PSS.Views.PSSEntitiesView.PSSEntitiesView();
+            this.model1View1 = new test7.Views.Model1View.Model1View();
             this.SuspendLayout();
             // 
-            // pssEntitiesView1
+            // model1View1
             // 
-            this.pssEntitiesView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pssEntitiesView1.Location = new System.Drawing.Point(0, 0);
-            this.pssEntitiesView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pssEntitiesView1.Name = "pssEntitiesView1";
-            this.pssEntitiesView1.Size = new System.Drawing.Size(737, 342);
-            this.pssEntitiesView1.TabIndex = 0;
+            this.model1View1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.model1View1.Location = new System.Drawing.Point(0, 0);
+            this.model1View1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.model1View1.Name = "model1View1";
+            this.model1View1.Size = new System.Drawing.Size(737, 342);
+            this.model1View1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 342);
-            this.Controls.Add(this.pssEntitiesView1);
+            this.Controls.Add(this.model1View1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -55,7 +55,7 @@
 
         #endregion
 
-        private Views.PSSEntitiesView.PSSEntitiesView pssEntitiesView1;
+        private Views.Model1View.Model1View model1View1;
     }
 }
 

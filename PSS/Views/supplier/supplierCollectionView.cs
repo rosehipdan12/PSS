@@ -7,7 +7,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraBars;
 
-namespace PSS.Views.supplierCollectionView{
+namespace test7.Views.supplierCollectionView{
     public partial class supplierCollectionView : XtraUserControl {
         public supplierCollectionView() {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace PSS.Views.supplierCollectionView{
         }
         void InitBindings() {
 			mvvmContext.RegisterService(WindowedDocumentManagerService.Create(this));
-            var fluentAPI = mvvmContext.OfType<PSS.ViewModels.supplierCollectionViewModel>();
+            var fluentAPI = mvvmContext.OfType<test7.ViewModels.supplierCollectionViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             // We want to show the Entities collection in grid and react on this collection external changes (Reload, server-side Filtering)
             fluentAPI.SetBinding(gridControl, gControl => gControl.DataSource, x => x.Entities);
@@ -30,7 +30,7 @@ namespace PSS.Views.supplierCollectionView{
 						// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(gridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity,
-                    args => args.Row as PSS.supplier,
+                    args => args.Row as test7.supplier,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 			//We want to show ribbon print preview when bbiPrintPreview clicked
 			bbiPrintPreview.ItemClick += (s, e) => { gridControl.ShowRibbonPrintPreview(); };

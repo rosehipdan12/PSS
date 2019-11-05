@@ -7,22 +7,22 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using PSS.PSSEntitiesDataModel;
-using PSS.Common;
-using PSS;
+using test7.Model1DataModel;
+using test7.Common;
+using test7;
 
-namespace PSS.ViewModels {
+namespace test7.ViewModels {
 
     /// <summary>
     /// Represents the single supplier object view model.
     /// </summary>
-    public partial class supplierViewModel : SingleObjectViewModel<supplier, int, IPSSEntitiesUnitOfWork> {
+    public partial class supplierViewModel : SingleObjectViewModel<supplier, int, IModel1UnitOfWork> {
 
         /// <summary>
         /// Creates a new instance of supplierViewModel as a POCO view model.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        public static supplierViewModel Create(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null) {
+        public static supplierViewModel Create(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null) {
             return ViewModelSource.Create(() => new supplierViewModel(unitOfWorkFactory));
         }
 
@@ -31,7 +31,7 @@ namespace PSS.ViewModels {
         /// This constructor is declared protected to avoid undesired instantiation of the supplierViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected supplierViewModel(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null)
+        protected supplierViewModel(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.suppliers, x => x.name) {
                 }
 
@@ -51,7 +51,7 @@ namespace PSS.ViewModels {
         /// <summary>
         /// The view model for the supplieritems detail collection.
         /// </summary>
-        public CollectionViewModelBase<item, item, int, IPSSEntitiesUnitOfWork> supplieritemsDetails {
+        public CollectionViewModelBase<item, item, int, IModel1UnitOfWork> supplieritemsDetails {
             get {
                 return GetDetailsCollectionViewModel(
                     propertyExpression: (supplierViewModel x) => x.supplieritemsDetails,

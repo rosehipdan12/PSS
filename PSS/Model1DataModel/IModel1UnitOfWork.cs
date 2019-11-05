@@ -1,15 +1,15 @@
 ﻿using DevExpress.Mvvm.DataModel;
-using PSS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using test7;
 
-namespace PSS.PSSEntitiesDataModel {
+namespace test7.Model1DataModel {
 
     /// <summary>
-    /// IPSSEntitiesUnitOfWork extends the IUnitOfWork interface with repositories representing specific entities.
+    /// IModel1UnitOfWork extends the IUnitOfWork interface with repositories representing specific entities.
     /// </summary>
-    public interface IPSSEntitiesUnitOfWork : IUnitOfWork {
+    public interface IModel1UnitOfWork : IUnitOfWork {
         
         /// <summary>
         /// The category entities repository.
@@ -22,19 +22,29 @@ namespace PSS.PSSEntitiesDataModel {
 		IRepository<item, int> items { get; }
         
         /// <summary>
+        /// The order_product entities repository.
+        /// </summary>
+		IRepository<order_product, Tuple<int, int>> order_product { get; }
+        
+        /// <summary>
         /// The order entities repository.
         /// </summary>
 		IRepository<order, int> orders { get; }
         
         /// <summary>
-        /// The pet entities repository.
+        /// The user entities repository.
         /// </summary>
-		IRepository<pet, int> pets { get; }
+		IRepository<user, int> users { get; }
         
         /// <summary>
         /// The role entities repository.
         /// </summary>
 		IRepository<role, int> roles { get; }
+        
+        /// <summary>
+        /// The pet entities repository.
+        /// </summary>
+		IRepository<pet, int> pets { get; }
         
         /// <summary>
         /// The species entities repository.
@@ -45,15 +55,5 @@ namespace PSS.PSSEntitiesDataModel {
         /// The supplier entities repository.
         /// </summary>
 		IRepository<supplier, int> suppliers { get; }
-        
-        /// <summary>
-        /// The user entities repository.
-        /// </summary>
-		IRepository<user, int> users { get; }
-        
-        /// <summary>
-        /// The order_product entities repository.
-        /// </summary>
-		IReadOnlyRepository<order_product> order_product { get; }
     }
 }

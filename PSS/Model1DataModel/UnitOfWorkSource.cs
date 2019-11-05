@@ -2,12 +2,12 @@
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.DataModel.DesignTime;
 using DevExpress.Mvvm.DataModel.EF6;
-using PSS;
 using System;
 using System.Collections;
 using System.Linq;
+using test7;
 
-namespace PSS.PSSEntitiesDataModel {
+namespace test7.Model1DataModel {
 
     /// <summary>
     /// Provides methods to obtain the relevant IUnitOfWorkFactory.
@@ -17,8 +17,8 @@ namespace PSS.PSSEntitiesDataModel {
 		/// <summary>
         /// Returns the IUnitOfWorkFactory implementation.
         /// </summary>
-        public static IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> GetUnitOfWorkFactory() {
-            return new DbUnitOfWorkFactory<IPSSEntitiesUnitOfWork>(() => new PSSEntitiesUnitOfWork(() => new PSSEntities()));
+        public static IUnitOfWorkFactory<IModel1UnitOfWork> GetUnitOfWorkFactory() {
+            return new DbUnitOfWorkFactory<IModel1UnitOfWork>(() => new Model1UnitOfWork(() => new Model1()));
         }
     }
 }

@@ -7,22 +7,22 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using PSS.PSSEntitiesDataModel;
-using PSS.Common;
-using PSS;
+using test7.Model1DataModel;
+using test7.Common;
+using test7;
 
-namespace PSS.ViewModels {
+namespace test7.ViewModels {
 
     /// <summary>
     /// Represents the single item object view model.
     /// </summary>
-    public partial class itemViewModel : SingleObjectViewModel<item, int, IPSSEntitiesUnitOfWork> {
+    public partial class itemViewModel : SingleObjectViewModel<item, int, IModel1UnitOfWork> {
 
         /// <summary>
         /// Creates a new instance of itemViewModel as a POCO view model.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        public static itemViewModel Create(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null) {
+        public static itemViewModel Create(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null) {
             return ViewModelSource.Create(() => new itemViewModel(unitOfWorkFactory));
         }
 
@@ -31,7 +31,7 @@ namespace PSS.ViewModels {
         /// This constructor is declared protected to avoid undesired instantiation of the itemViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected itemViewModel(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null)
+        protected itemViewModel(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.items, x => x.name) {
                 }
 
@@ -61,7 +61,7 @@ namespace PSS.ViewModels {
         /// </summary>
         public IEntitiesViewModel<order_product> LookUporder_product {
             get {
-                return GetLookUpEntitiesViewModel<itemViewModel, order_product, Tuple<int, int>>(
+                return GetLookUpEntitiesViewModel(
                     propertyExpression: (itemViewModel x) => x.LookUporder_product,
                     getRepositoryFunc: x => x.order_product);
             }
@@ -71,8 +71,14 @@ namespace PSS.ViewModels {
         /// <summary>
         /// The view model for the itemorder_product detail collection.
         /// </summary>
-        public ReadOnlyCollectionViewModelBase<order_product, order_product, IPSSEntitiesUnitOfWork> itemorder_productDetails {
-            get { return GetReadOnlyDetailsCollectionViewModel((itemViewModel x) => x.itemorder_productDetails, x => x.order_product, x => x.item_id); }
+        public CollectionViewModelBase<order_product, order_product, Tuple<int, int>, IModel1UnitOfWork> itemorder_productDetails {
+            get {
+                return GetDetailsCollectionViewModel(
+                    propertyExpression: (itemViewModel x) => x.itemorder_productDetails,
+                    getRepositoryFunc: x => x.order_product,
+                    foreignKeyExpression: x => x.item_id,
+                    navigationExpression: x => x.item);
+            }
         }
     }
 }

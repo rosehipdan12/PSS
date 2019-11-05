@@ -7,7 +7,7 @@ using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 
-namespace PSS.Views.categoryView{
+namespace test7.Views.categoryView{
     public partial class categoryView : XtraUserControl {
         public categoryView() {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace PSS.Views.categoryView{
 				InitBindings();
 		}
 		void InitBindings() {
-		    var fluentAPI = mvvmContext.OfType<PSS.ViewModels.categoryViewModel>();
+		    var fluentAPI = mvvmContext.OfType<test7.ViewModels.categoryViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             fluentAPI.SetObjectDataSourceBinding(
                 categoryViewBindingSource, x => x.Entity, x => x.Update());
@@ -23,7 +23,7 @@ namespace PSS.Views.categoryView{
 			// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(category1GridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.categorycategory1Details.SelectedEntity,
-                    args => args.Row as PSS.category,
+                    args => args.Row as test7.category,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 						// We want to proceed the Edit command when row double-clicked
 			fluentAPI.WithEvent<RowClickEventArgs>(category1GridView, "RowClick")
@@ -48,7 +48,7 @@ namespace PSS.Views.categoryView{
 			// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(itemsGridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.categoryitemsDetails.SelectedEntity,
-                    args => args.Row as PSS.item,
+                    args => args.Row as test7.item,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 						// We want to proceed the Edit command when row double-clicked
 			fluentAPI.WithEvent<RowClickEventArgs>(itemsGridView, "RowClick")

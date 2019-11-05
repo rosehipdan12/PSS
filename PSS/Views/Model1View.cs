@@ -6,9 +6,9 @@ using DevExpress.XtraBars;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.Utils.MVVM;
 
-namespace PSS.Views.PSSEntitiesView{
-    public partial class PSSEntitiesView : XtraUserControl {
-        public PSSEntitiesView() {
+namespace test7.Views.Model1View{
+    public partial class Model1View : XtraUserControl {
+        public Model1View() {
 			InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
                 InitializeNavigation();
@@ -35,26 +35,26 @@ namespace PSS.Views.PSSEntitiesView{
             mvvmContext.RegisterService(DocumentManagerService.Create(navigationFrame));
             DevExpress.Utils.MVVM.MVVMContext.RegisterFlyoutDialogService();
             // We want to use buttons in Ribbon to show the specific modules
-            var fluentAPI = mvvmContext.OfType<PSS.ViewModels.PSSEntitiesViewModel>();
+            var fluentAPI = mvvmContext.OfType<test7.ViewModels.Model1ViewModel>();
 			            fluentAPI.BindCommand(navigationBarItemcategoryCollectionView, (x, m) => x.Show(m), x => x.Modules[0]);
 			fluentAPI.BindCommand(barButtonItemcategoryCollectionView, (x, m) => x.Show(m), x => x.Modules[0]);
 			            fluentAPI.BindCommand(navigationBarItemitemCollectionView, (x, m) => x.Show(m), x => x.Modules[1]);
 			fluentAPI.BindCommand(barButtonItemitemCollectionView, (x, m) => x.Show(m), x => x.Modules[1]);
-			            fluentAPI.BindCommand(navigationBarItemorderCollectionView, (x, m) => x.Show(m), x => x.Modules[2]);
-			fluentAPI.BindCommand(barButtonItemorderCollectionView, (x, m) => x.Show(m), x => x.Modules[2]);
-			            fluentAPI.BindCommand(navigationBarItempetCollectionView, (x, m) => x.Show(m), x => x.Modules[3]);
-			fluentAPI.BindCommand(barButtonItempetCollectionView, (x, m) => x.Show(m), x => x.Modules[3]);
-			            fluentAPI.BindCommand(navigationBarItemroleCollectionView, (x, m) => x.Show(m), x => x.Modules[4]);
-			fluentAPI.BindCommand(barButtonItemroleCollectionView, (x, m) => x.Show(m), x => x.Modules[4]);
-			            fluentAPI.BindCommand(navigationBarItemspeciesCollectionView, (x, m) => x.Show(m), x => x.Modules[5]);
-			fluentAPI.BindCommand(barButtonItemspeciesCollectionView, (x, m) => x.Show(m), x => x.Modules[5]);
-			            fluentAPI.BindCommand(navigationBarItemsupplierCollectionView, (x, m) => x.Show(m), x => x.Modules[6]);
-			fluentAPI.BindCommand(barButtonItemsupplierCollectionView, (x, m) => x.Show(m), x => x.Modules[6]);
-			            fluentAPI.BindCommand(navigationBarItemuserCollectionView, (x, m) => x.Show(m), x => x.Modules[7]);
-			fluentAPI.BindCommand(barButtonItemuserCollectionView, (x, m) => x.Show(m), x => x.Modules[7]);
-									fluentAPI.BindCommand(navigationBarItemorder_productCollectionView, (x, m) => x.Show(m), x => x.Modules[8]);
-			fluentAPI.BindCommand(barButtonItemorder_productCollectionView, (x, m) => x.Show(m), x => x.Modules[8]);
-			            // We want show the default module when our UserControl is loaded
+			            fluentAPI.BindCommand(navigationBarItemorder_productCollectionView, (x, m) => x.Show(m), x => x.Modules[2]);
+			fluentAPI.BindCommand(barButtonItemorder_productCollectionView, (x, m) => x.Show(m), x => x.Modules[2]);
+			            fluentAPI.BindCommand(navigationBarItemorderCollectionView, (x, m) => x.Show(m), x => x.Modules[3]);
+			fluentAPI.BindCommand(barButtonItemorderCollectionView, (x, m) => x.Show(m), x => x.Modules[3]);
+			            fluentAPI.BindCommand(navigationBarItemuserCollectionView, (x, m) => x.Show(m), x => x.Modules[4]);
+			fluentAPI.BindCommand(barButtonItemuserCollectionView, (x, m) => x.Show(m), x => x.Modules[4]);
+			            fluentAPI.BindCommand(navigationBarItemroleCollectionView, (x, m) => x.Show(m), x => x.Modules[5]);
+			fluentAPI.BindCommand(barButtonItemroleCollectionView, (x, m) => x.Show(m), x => x.Modules[5]);
+			            fluentAPI.BindCommand(navigationBarItempetCollectionView, (x, m) => x.Show(m), x => x.Modules[6]);
+			fluentAPI.BindCommand(barButtonItempetCollectionView, (x, m) => x.Show(m), x => x.Modules[6]);
+			            fluentAPI.BindCommand(navigationBarItemspeciesCollectionView, (x, m) => x.Show(m), x => x.Modules[7]);
+			fluentAPI.BindCommand(barButtonItemspeciesCollectionView, (x, m) => x.Show(m), x => x.Modules[7]);
+			            fluentAPI.BindCommand(navigationBarItemsupplierCollectionView, (x, m) => x.Show(m), x => x.Modules[8]);
+			fluentAPI.BindCommand(barButtonItemsupplierCollectionView, (x, m) => x.Show(m), x => x.Modules[8]);
+						            // We want show the default module when our UserControl is loaded
             fluentAPI.WithEvent<EventArgs>(this, "Load")
                 .EventToCommand(x => x.OnLoaded(null), x => x.DefaultModule);
         }

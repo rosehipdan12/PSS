@@ -1,5 +1,5 @@
-﻿namespace PSS.Views.PSSEntitiesView {
-    partial class PSSEntitiesView {
+﻿namespace test7.Views.Model1View {
+    partial class Model1View {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -35,27 +35,25 @@
 			this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
 			this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
-						this.barSubItemTables = new DevExpress.XtraBars.BarSubItem();
-			this.barSubItemViews = new DevExpress.XtraBars.BarSubItem();
 									this.navigationBarItemcategoryCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemcategoryCollectionView = new DevExpress.XtraBars.BarButtonItem();
 						this.navigationBarItemitemCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemitemCollectionView = new DevExpress.XtraBars.BarButtonItem();
+						this.navigationBarItemorder_productCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+			this.barButtonItemorder_productCollectionView = new DevExpress.XtraBars.BarButtonItem();
 						this.navigationBarItemorderCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemorderCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItempetCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItempetCollectionView = new DevExpress.XtraBars.BarButtonItem();
+						this.navigationBarItemuserCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+			this.barButtonItemuserCollectionView = new DevExpress.XtraBars.BarButtonItem();
 						this.navigationBarItemroleCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemroleCollectionView = new DevExpress.XtraBars.BarButtonItem();
+						this.navigationBarItempetCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+			this.barButtonItempetCollectionView = new DevExpress.XtraBars.BarButtonItem();
 						this.navigationBarItemspeciesCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemspeciesCollectionView = new DevExpress.XtraBars.BarButtonItem();
 						this.navigationBarItemsupplierCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
 			this.barButtonItemsupplierCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemuserCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemuserCollectionView = new DevExpress.XtraBars.BarButtonItem();
-									this.navigationBarItemorder_productCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem(); 
-			this.barButtonItemorder_productCollectionView = new DevExpress.XtraBars.BarButtonItem();
-			            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
+						            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +63,7 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.MaxItemId = 14;
             this.ribbonControl.Name = "ribbonControl";
-			this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {this.skinRibbonGalleryBarItem, this.barSubItemNavigation ,this.barSubItemTables,this.barSubItemViews});
+			this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {this.skinRibbonGalleryBarItem, this.barSubItemNavigation });
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
@@ -94,18 +92,6 @@
             this.barSubItemNavigation.Caption = "Navigation";
             this.barSubItemNavigation.ImageUri.Uri = "NavigationBar";
             this.barSubItemNavigation.Name = "barSubItemNavigation";
-						// 
-            // barSubItemTables
-            // 
-            this.barSubItemTables.Caption = "Tables";
-            this.barSubItemTables.Name = "barSubItemTables";
-			// 
-            // barSubItemViews
-            // 
-            this.barSubItemViews.Caption = "Views";
-            this.barSubItemViews.Name = "barSubItemViews";
-			this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemTables));
-			this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemViews));
 			            // 
             // ribbonPageGroup
             // 
@@ -126,14 +112,14 @@
             this.officeNavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
             			this.navigationBarItemcategoryCollectionView,
 						this.navigationBarItemitemCollectionView,
+						this.navigationBarItemorder_productCollectionView,
 						this.navigationBarItemorderCollectionView,
-						this.navigationBarItempetCollectionView,
+						this.navigationBarItemuserCollectionView,
 						this.navigationBarItemroleCollectionView,
+						this.navigationBarItempetCollectionView,
 						this.navigationBarItemspeciesCollectionView,
 						this.navigationBarItemsupplierCollectionView,
-						this.navigationBarItemuserCollectionView,
-									this.navigationBarItemorder_productCollectionView,
-						
+									
 			});
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.Text = "officeNavigationBar";
@@ -147,8 +133,8 @@
             // 
 			this.barButtonItemcategoryCollectionView.Name = "barButtonItemcategoryCollectionView";
             this.barButtonItemcategoryCollectionView.Caption = "categories";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemcategoryCollectionView));
-									
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemcategoryCollectionView));
+					
 						// 
             // navigationBarItemitemCollectionView
             // 
@@ -159,8 +145,20 @@
             // 
 			this.barButtonItemitemCollectionView.Name = "barButtonItemitemCollectionView";
             this.barButtonItemitemCollectionView.Caption = "items";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemitemCollectionView));
-									
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemitemCollectionView));
+					
+						// 
+            // navigationBarItemorder_productCollectionView
+            // 
+			this.navigationBarItemorder_productCollectionView.Name = "navigationBarItemorder_productCollectionView";
+            this.navigationBarItemorder_productCollectionView.Text = "order product";
+			// 
+            // barButtonItemorder_productCollectionView
+            // 
+			this.barButtonItemorder_productCollectionView.Name = "barButtonItemorder_productCollectionView";
+            this.barButtonItemorder_productCollectionView.Caption = "order product";
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemorder_productCollectionView));
+					
 						// 
             // navigationBarItemorderCollectionView
             // 
@@ -171,56 +169,8 @@
             // 
 			this.barButtonItemorderCollectionView.Name = "barButtonItemorderCollectionView";
             this.barButtonItemorderCollectionView.Caption = "orders";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemorderCollectionView));
-									
-						// 
-            // navigationBarItempetCollectionView
-            // 
-			this.navigationBarItempetCollectionView.Name = "navigationBarItempetCollectionView";
-            this.navigationBarItempetCollectionView.Text = "pets";
-			// 
-            // barButtonItempetCollectionView
-            // 
-			this.barButtonItempetCollectionView.Name = "barButtonItempetCollectionView";
-            this.barButtonItempetCollectionView.Caption = "pets";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItempetCollectionView));
-									
-						// 
-            // navigationBarItemroleCollectionView
-            // 
-			this.navigationBarItemroleCollectionView.Name = "navigationBarItemroleCollectionView";
-            this.navigationBarItemroleCollectionView.Text = "roles";
-			// 
-            // barButtonItemroleCollectionView
-            // 
-			this.barButtonItemroleCollectionView.Name = "barButtonItemroleCollectionView";
-            this.barButtonItemroleCollectionView.Caption = "roles";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemroleCollectionView));
-									
-						// 
-            // navigationBarItemspeciesCollectionView
-            // 
-			this.navigationBarItemspeciesCollectionView.Name = "navigationBarItemspeciesCollectionView";
-            this.navigationBarItemspeciesCollectionView.Text = "species";
-			// 
-            // barButtonItemspeciesCollectionView
-            // 
-			this.barButtonItemspeciesCollectionView.Name = "barButtonItemspeciesCollectionView";
-            this.barButtonItemspeciesCollectionView.Caption = "species";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemspeciesCollectionView));
-									
-						// 
-            // navigationBarItemsupplierCollectionView
-            // 
-			this.navigationBarItemsupplierCollectionView.Name = "navigationBarItemsupplierCollectionView";
-            this.navigationBarItemsupplierCollectionView.Text = "suppliers";
-			// 
-            // barButtonItemsupplierCollectionView
-            // 
-			this.barButtonItemsupplierCollectionView.Name = "barButtonItemsupplierCollectionView";
-            this.barButtonItemsupplierCollectionView.Caption = "suppliers";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemsupplierCollectionView));
-									
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemorderCollectionView));
+					
 						// 
             // navigationBarItemuserCollectionView
             // 
@@ -231,25 +181,62 @@
             // 
 			this.barButtonItemuserCollectionView.Name = "barButtonItemuserCollectionView";
             this.barButtonItemuserCollectionView.Caption = "users";
-							this.barSubItemTables.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemuserCollectionView));
-									
-									// 
-            // navigationBarItemorder_productCollectionView
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemuserCollectionView));
+					
+						// 
+            // navigationBarItemroleCollectionView
             // 
-			this.navigationBarItemorder_productCollectionView.Name = "navigationBarItemorder_productCollectionView";
-            this.navigationBarItemorder_productCollectionView.Text = "order product";
+			this.navigationBarItemroleCollectionView.Name = "navigationBarItemroleCollectionView";
+            this.navigationBarItemroleCollectionView.Text = "roles";
 			// 
-            // barButtonItemorder_productCollectionView
+            // barButtonItemroleCollectionView
             // 
-			this.barButtonItemorder_productCollectionView.Name = "barButtonItemorder_productCollectionView";
-            this.barButtonItemorder_productCollectionView.Caption = "order product";
-						this.barSubItemViews.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemorder_productCollectionView));
-										
+			this.barButtonItemroleCollectionView.Name = "barButtonItemroleCollectionView";
+            this.barButtonItemroleCollectionView.Caption = "roles";
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemroleCollectionView));
+					
+						// 
+            // navigationBarItempetCollectionView
+            // 
+			this.navigationBarItempetCollectionView.Name = "navigationBarItempetCollectionView";
+            this.navigationBarItempetCollectionView.Text = "pets";
+			// 
+            // barButtonItempetCollectionView
+            // 
+			this.barButtonItempetCollectionView.Name = "barButtonItempetCollectionView";
+            this.barButtonItempetCollectionView.Caption = "pets";
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItempetCollectionView));
+					
+						// 
+            // navigationBarItemspeciesCollectionView
+            // 
+			this.navigationBarItemspeciesCollectionView.Name = "navigationBarItemspeciesCollectionView";
+            this.navigationBarItemspeciesCollectionView.Text = "species";
+			// 
+            // barButtonItemspeciesCollectionView
+            // 
+			this.barButtonItemspeciesCollectionView.Name = "barButtonItemspeciesCollectionView";
+            this.barButtonItemspeciesCollectionView.Caption = "species";
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemspeciesCollectionView));
+					
+						// 
+            // navigationBarItemsupplierCollectionView
+            // 
+			this.navigationBarItemsupplierCollectionView.Name = "navigationBarItemsupplierCollectionView";
+            this.navigationBarItemsupplierCollectionView.Text = "suppliers";
+			// 
+            // barButtonItemsupplierCollectionView
+            // 
+			this.barButtonItemsupplierCollectionView.Name = "barButtonItemsupplierCollectionView";
+            this.barButtonItemsupplierCollectionView.Caption = "suppliers";
+											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemsupplierCollectionView));
+					
+							
 			// 
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.PSSEntitiesViewModel);
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.Model1ViewModel);
 			 // 
             // navigationFrame
             // 
@@ -258,7 +245,7 @@
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.Text = "navigationFrame";
 			// 
-            // PSSEntitiesView
+            // Model1View
             // 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,7 +254,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
 			this.Size = new System.Drawing.Size(1024, 768);
-            this.Name = "PSSEntitiesView";
+            this.Name = "Model1View";
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
@@ -289,25 +276,23 @@
 		private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
 		private DevExpress.XtraBars.Navigation.OfficeNavigationBar officeNavigationBar;
         private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame; 
-				private DevExpress.XtraBars.BarSubItem barSubItemTables;
-		private DevExpress.XtraBars.BarSubItem barSubItemViews;
 						private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemcategoryCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemcategoryCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemitemCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemitemCollectionView;
+				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemorder_productCollectionView;
+		private DevExpress.XtraBars.BarButtonItem  barButtonItemorder_productCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemorderCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemorderCollectionView;
-				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItempetCollectionView;
-		private DevExpress.XtraBars.BarButtonItem  barButtonItempetCollectionView;
+				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemuserCollectionView;
+		private DevExpress.XtraBars.BarButtonItem  barButtonItemuserCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemroleCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemroleCollectionView;
+				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItempetCollectionView;
+		private DevExpress.XtraBars.BarButtonItem  barButtonItempetCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemspeciesCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemspeciesCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemsupplierCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemsupplierCollectionView;
-				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemuserCollectionView;
-		private DevExpress.XtraBars.BarButtonItem  barButtonItemuserCollectionView;
-						private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemorder_productCollectionView;
-		private DevExpress.XtraBars.BarButtonItem  barButtonItemorder_productCollectionView;
-			}
+					}
 }

@@ -7,22 +7,22 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using PSS.PSSEntitiesDataModel;
-using PSS.Common;
-using PSS;
+using test7.Model1DataModel;
+using test7.Common;
+using test7;
 
-namespace PSS.ViewModels {
+namespace test7.ViewModels {
 
     /// <summary>
     /// Represents the single species object view model.
     /// </summary>
-    public partial class speciesViewModel : SingleObjectViewModel<species, int, IPSSEntitiesUnitOfWork> {
+    public partial class speciesViewModel : SingleObjectViewModel<species, int, IModel1UnitOfWork> {
 
         /// <summary>
         /// Creates a new instance of speciesViewModel as a POCO view model.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        public static speciesViewModel Create(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null) {
+        public static speciesViewModel Create(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null) {
             return ViewModelSource.Create(() => new speciesViewModel(unitOfWorkFactory));
         }
 
@@ -31,7 +31,7 @@ namespace PSS.ViewModels {
         /// This constructor is declared protected to avoid undesired instantiation of the speciesViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected speciesViewModel(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null)
+        protected speciesViewModel(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.species, x => x.name) {
                 }
 
@@ -51,7 +51,7 @@ namespace PSS.ViewModels {
         /// <summary>
         /// The view model for the speciespets detail collection.
         /// </summary>
-        public CollectionViewModelBase<pet, pet, int, IPSSEntitiesUnitOfWork> speciespetsDetails {
+        public CollectionViewModelBase<pet, pet, int, IModel1UnitOfWork> speciespetsDetails {
             get {
                 return GetDetailsCollectionViewModel(
                     propertyExpression: (speciesViewModel x) => x.speciespetsDetails,

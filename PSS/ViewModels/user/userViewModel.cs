@@ -7,22 +7,22 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using PSS.PSSEntitiesDataModel;
-using PSS.Common;
-using PSS;
+using test7.Model1DataModel;
+using test7.Common;
+using test7;
 
-namespace PSS.ViewModels {
+namespace test7.ViewModels {
 
     /// <summary>
     /// Represents the single user object view model.
     /// </summary>
-    public partial class userViewModel : SingleObjectViewModel<user, int, IPSSEntitiesUnitOfWork> {
+    public partial class userViewModel : SingleObjectViewModel<user, int, IModel1UnitOfWork> {
 
         /// <summary>
         /// Creates a new instance of userViewModel as a POCO view model.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        public static userViewModel Create(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null) {
+        public static userViewModel Create(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null) {
             return ViewModelSource.Create(() => new userViewModel(unitOfWorkFactory));
         }
 
@@ -31,7 +31,7 @@ namespace PSS.ViewModels {
         /// This constructor is declared protected to avoid undesired instantiation of the userViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected userViewModel(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null)
+        protected userViewModel(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.users, x => x.first_name) {
                 }
 
@@ -51,6 +51,6 @@ namespace PSS.ViewModels {
             }
         }
 
-    public virtual AddRemoveDetailEntitiesViewModel<user, Int32, order, Int32, IPSSEntitiesUnitOfWork> ordersDetailEntities { get; protected set; }
+    public virtual AddRemoveDetailEntitiesViewModel<user, Int32, order, Int32, IModel1UnitOfWork> ordersDetailEntities { get; protected set; }
     }
 }

@@ -7,22 +7,22 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using PSS.PSSEntitiesDataModel;
-using PSS.Common;
-using PSS;
+using test7.Model1DataModel;
+using test7.Common;
+using test7;
 
-namespace PSS.ViewModels {
+namespace test7.ViewModels {
 
     /// <summary>
     /// Represents the single category object view model.
     /// </summary>
-    public partial class categoryViewModel : SingleObjectViewModel<category, int, IPSSEntitiesUnitOfWork> {
+    public partial class categoryViewModel : SingleObjectViewModel<category, int, IModel1UnitOfWork> {
 
         /// <summary>
         /// Creates a new instance of categoryViewModel as a POCO view model.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        public static categoryViewModel Create(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null) {
+        public static categoryViewModel Create(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null) {
             return ViewModelSource.Create(() => new categoryViewModel(unitOfWorkFactory));
         }
 
@@ -31,7 +31,7 @@ namespace PSS.ViewModels {
         /// This constructor is declared protected to avoid undesired instantiation of the categoryViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected categoryViewModel(IUnitOfWorkFactory<IPSSEntitiesUnitOfWork> unitOfWorkFactory = null)
+        protected categoryViewModel(IUnitOfWorkFactory<IModel1UnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.categories, x => x.name) {
                 }
 
@@ -61,7 +61,7 @@ namespace PSS.ViewModels {
         /// <summary>
         /// The view model for the categorycategory1 detail collection.
         /// </summary>
-        public CollectionViewModelBase<category, category, int, IPSSEntitiesUnitOfWork> categorycategory1Details {
+        public CollectionViewModelBase<category, category, int, IModel1UnitOfWork> categorycategory1Details {
             get {
                 return GetDetailsCollectionViewModel(
                     propertyExpression: (categoryViewModel x) => x.categorycategory1Details,
@@ -74,7 +74,7 @@ namespace PSS.ViewModels {
         /// <summary>
         /// The view model for the categoryitems detail collection.
         /// </summary>
-        public CollectionViewModelBase<item, item, int, IPSSEntitiesUnitOfWork> categoryitemsDetails {
+        public CollectionViewModelBase<item, item, int, IModel1UnitOfWork> categoryitemsDetails {
             get {
                 return GetDetailsCollectionViewModel(
                     propertyExpression: (categoryViewModel x) => x.categoryitemsDetails,

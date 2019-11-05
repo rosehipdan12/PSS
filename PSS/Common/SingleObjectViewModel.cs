@@ -11,7 +11,7 @@ using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.ViewModel;
 using DevExpress.Mvvm.DataModel;
 
-namespace PSS.Common {
+namespace test7.Common {
     /// <summary>
     /// The base class for POCO view models exposing a single entity of a given type and CRUD operations against this entity.
     /// This is a partial class that provides the extension point to add custom properties, commands and override methods without modifying the auto-generated code.

@@ -1,5 +1,5 @@
-﻿namespace test7.Views.userView {
-    partial class userView {
+﻿namespace test7.Views.order_productView {
+    partial class order_productView {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -31,8 +31,12 @@
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
-									this.roleLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-			this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+									this.itemLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+						this.orderLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+						this.petLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			 
 			this.SuspendLayout();
 			// 
@@ -106,7 +110,7 @@
 						this.mainRibbonPageGroup.ItemLinks.Add(bbiClose);
 			            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
             this.mainRibbonPageGroup.ShowCaptionButton = false;
-            this.mainRibbonPageGroup.Text = "user Tasks";
+            this.mainRibbonPageGroup.Text = "order_product Tasks";
 			// 
             // ribbonPageGroupLayout
             //
@@ -135,31 +139,65 @@
             this.dataLayoutControl1.AllowCustomization = false;
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
-			this.userViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.userViewBindingSource.DataSource = typeof(test7.user);
-			this.dataLayoutControl1.DataSource = userViewBindingSource;
+			this.order_productViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.order_productViewBindingSource.DataSource = typeof(test7.order_product);
+			this.dataLayoutControl1.DataSource = order_productViewBindingSource;
 			//
 			//Create GridControls
 			//
 			DevExpress.XtraDataLayout.RetrieveFieldsParameters parameters = new DevExpress.XtraDataLayout.RetrieveFieldsParameters();
 			parameters.DataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged;
            							//
-			//roleLookUpEdit
+			//itemLookUpEdit
 			//
-			this.roleBindingSource.DataSource = typeof(test7.role);
-			this.roleLookUpEdit.Properties.ValueMember = "id"; 
-			this.roleLookUpEdit.Properties.DisplayMember = "name";
-			this.roleLookUpEdit.Properties.DataSource = this.roleBindingSource;
-			this.roleLookUpEdit.Name = "roleLookUpEdit";
-			this.roleLookUpEdit.DataBindings.Add("EditValue", userViewBindingSource, "role_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged);
-			DevExpress.XtraDataLayout.RetrieveFieldParameters roleLookUpEditRetrieveFieldParameters = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
-            roleLookUpEditRetrieveFieldParameters.FieldName = "role_id";
-            roleLookUpEditRetrieveFieldParameters.ControlForField = this.roleLookUpEdit;
-			parameters.CustomListParameters.Add(roleLookUpEditRetrieveFieldParameters);
-			DevExpress.XtraDataLayout.RetrieveFieldParameters roleLookUpEditRetrieveFieldParameters_NotGenerate = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
-		    roleLookUpEditRetrieveFieldParameters_NotGenerate.FieldName = "role";
-		    roleLookUpEditRetrieveFieldParameters_NotGenerate.GenerateField = false;
-			parameters.CustomListParameters.Add(roleLookUpEditRetrieveFieldParameters_NotGenerate);
+			this.itemBindingSource.DataSource = typeof(test7.item);
+			this.itemLookUpEdit.Properties.ValueMember = "id"; 
+			this.itemLookUpEdit.Properties.DisplayMember = "name";
+			this.itemLookUpEdit.Properties.DataSource = this.itemBindingSource;
+			this.itemLookUpEdit.Name = "itemLookUpEdit";
+			this.itemLookUpEdit.DataBindings.Add("EditValue", order_productViewBindingSource, "item_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters itemLookUpEditRetrieveFieldParameters = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+            itemLookUpEditRetrieveFieldParameters.FieldName = "item_id";
+            itemLookUpEditRetrieveFieldParameters.ControlForField = this.itemLookUpEdit;
+			parameters.CustomListParameters.Add(itemLookUpEditRetrieveFieldParameters);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters itemLookUpEditRetrieveFieldParameters_NotGenerate = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+		    itemLookUpEditRetrieveFieldParameters_NotGenerate.FieldName = "item";
+		    itemLookUpEditRetrieveFieldParameters_NotGenerate.GenerateField = false;
+			parameters.CustomListParameters.Add(itemLookUpEditRetrieveFieldParameters_NotGenerate);
+						//
+			//orderLookUpEdit
+			//
+			this.orderBindingSource.DataSource = typeof(test7.order);
+			this.orderLookUpEdit.Properties.ValueMember = "id"; 
+			this.orderLookUpEdit.Properties.DisplayMember = "id";
+			this.orderLookUpEdit.Properties.DataSource = this.orderBindingSource;
+			this.orderLookUpEdit.Name = "orderLookUpEdit";
+			this.orderLookUpEdit.DataBindings.Add("EditValue", order_productViewBindingSource, "order_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters orderLookUpEditRetrieveFieldParameters = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+            orderLookUpEditRetrieveFieldParameters.FieldName = "order_id";
+            orderLookUpEditRetrieveFieldParameters.ControlForField = this.orderLookUpEdit;
+			parameters.CustomListParameters.Add(orderLookUpEditRetrieveFieldParameters);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters orderLookUpEditRetrieveFieldParameters_NotGenerate = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+		    orderLookUpEditRetrieveFieldParameters_NotGenerate.FieldName = "order";
+		    orderLookUpEditRetrieveFieldParameters_NotGenerate.GenerateField = false;
+			parameters.CustomListParameters.Add(orderLookUpEditRetrieveFieldParameters_NotGenerate);
+						//
+			//petLookUpEdit
+			//
+			this.petBindingSource.DataSource = typeof(test7.pet);
+			this.petLookUpEdit.Properties.ValueMember = "id"; 
+			this.petLookUpEdit.Properties.DisplayMember = "name";
+			this.petLookUpEdit.Properties.DataSource = this.petBindingSource;
+			this.petLookUpEdit.Name = "petLookUpEdit";
+			this.petLookUpEdit.DataBindings.Add("EditValue", order_productViewBindingSource, "pet_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters petLookUpEditRetrieveFieldParameters = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+            petLookUpEditRetrieveFieldParameters.FieldName = "pet_id";
+            petLookUpEditRetrieveFieldParameters.ControlForField = this.petLookUpEdit;
+			parameters.CustomListParameters.Add(petLookUpEditRetrieveFieldParameters);
+			DevExpress.XtraDataLayout.RetrieveFieldParameters petLookUpEditRetrieveFieldParameters_NotGenerate = new DevExpress.XtraDataLayout.RetrieveFieldParameters();
+		    petLookUpEditRetrieveFieldParameters_NotGenerate.FieldName = "pet";
+		    petLookUpEditRetrieveFieldParameters_NotGenerate.GenerateField = false;
+			parameters.CustomListParameters.Add(petLookUpEditRetrieveFieldParameters_NotGenerate);
 			 
 			//
 			//call RetrieveFields
@@ -169,19 +207,19 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.userViewModel);
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "Save", bbiSave));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "SaveAndClose", bbiSaveAndClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "SaveAndNew", bbiSaveAndNew));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "Reset", bbiReset));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "Delete", bbiDelete));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "Close", bbiClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "SaveLayout", bbiSaveLayout));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.userViewModel), "ResetLayout", bbiResetLayout));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.order_productViewModel);
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "Save", bbiSave));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "SaveAndClose", bbiSaveAndClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "SaveAndNew", bbiSaveAndNew));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "Reset", bbiReset));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "Delete", bbiDelete));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "Close", bbiClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "SaveLayout", bbiSaveLayout));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productViewModel), "ResetLayout", bbiResetLayout));
 						this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
 			//
-			//userView
+			//order_productView
 			//
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,7 +227,7 @@
             this.Controls.Add(this.dataLayoutControl1);
 			this.Controls.Add(this.mainRibbonControl);
 			this.Size = new System.Drawing.Size(1024, 768);
-            this.Name = "userView";
+            this.Name = "order_productView";
 						this.ResumeLayout(false);
 		}
 		
@@ -203,9 +241,13 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup mainRibbonPageGroup;
 		private DevExpress.XtraBars.BarButtonItem bbiCustomize;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupLayout;
-		private System.Windows.Forms.BindingSource userViewBindingSource;
-						private DevExpress.XtraEditors.GridLookUpEdit roleLookUpEdit;
-		private System.Windows.Forms.BindingSource roleBindingSource;
+		private System.Windows.Forms.BindingSource order_productViewBindingSource;
+						private DevExpress.XtraEditors.GridLookUpEdit itemLookUpEdit;
+		private System.Windows.Forms.BindingSource itemBindingSource;
+				private DevExpress.XtraEditors.GridLookUpEdit orderLookUpEdit;
+		private System.Windows.Forms.BindingSource orderBindingSource;
+				private DevExpress.XtraEditors.GridLookUpEdit petLookUpEdit;
+		private System.Windows.Forms.BindingSource petBindingSource;
 		 
 	}
 }

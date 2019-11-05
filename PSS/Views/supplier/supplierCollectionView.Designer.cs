@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.supplierCollectionView {
+﻿namespace test7.Views.supplierCollectionView {
     partial class supplierCollectionView {
         /// <summary> 
         /// Required designer variable.
@@ -141,7 +141,7 @@
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
 			this.supplierCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.supplierCollectionViewBindingSource.DataSource = typeof(PSS.supplier);
+			this.supplierCollectionViewBindingSource.DataSource = typeof(test7.supplier);
 			this.gridControl.DataSource = supplierCollectionViewBindingSource;
 
 			DevExpress.XtraGrid.Extensions.PopulateColumnsParameters parameters = new DevExpress.XtraGrid.Extensions.PopulateColumnsParameters();
@@ -151,7 +151,7 @@
 		    itemsPopulateColumnParameters_NotVisible.ColumnVisible = false;
 			parameters.CustomColumnParameters.Add(itemsPopulateColumnParameters_NotVisible);
 			 
-			this.gridView.PopulateColumns(typeof(PSS.supplier),parameters);
+			this.gridView.PopulateColumns(typeof(test7.supplier),parameters);
 			// 
             // popupMenu1
             // 
@@ -166,11 +166,11 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.supplierCollectionViewModel);
-								this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierCollectionViewModel), "New", bbiNew));
-			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(PSS.ViewModels.supplierCollectionViewModel), "Edit", "SelectedEntity", bbiEdit));
-			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(PSS.ViewModels.supplierCollectionViewModel), "Delete", "SelectedEntity", bbiDelete));
-					this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.supplierCollectionViewModel), "Refresh", bbiRefresh));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.supplierCollectionViewModel);
+								this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierCollectionViewModel), "New", bbiNew));
+			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(test7.ViewModels.supplierCollectionViewModel), "Edit", "SelectedEntity", bbiEdit));
+			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(test7.ViewModels.supplierCollectionViewModel), "Delete", "SelectedEntity", bbiDelete));
+					this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.supplierCollectionViewModel), "Refresh", bbiRefresh));
 	
 			this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.Default, this.gridControl),

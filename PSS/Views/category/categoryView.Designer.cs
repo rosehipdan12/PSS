@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.categoryView {
+﻿namespace test7.Views.categoryView {
     partial class categoryView {
         /// <summary> 
         /// Required designer variable.
@@ -158,7 +158,7 @@
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
 			this.categoryViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.categoryViewBindingSource.DataSource = typeof(PSS.category);
+			this.categoryViewBindingSource.DataSource = typeof(test7.category);
 			this.dataLayoutControl1.DataSource = categoryViewBindingSource;
 			//
 			//Create GridControls
@@ -216,12 +216,12 @@
             itemscategory1ChildPopulateColumnParameters.Path = "items.name";
 			category1PopulateColumnsParameters.CustomColumnParameters.Add(itemscategory1ChildPopulateColumnParameters);
 			 
-		    this.category1GridView.PopulateColumns(typeof(PSS.category),category1PopulateColumnsParameters);
+		    this.category1GridView.PopulateColumns(typeof(test7.category),category1PopulateColumnsParameters);
 			//
 			//category1BindingSource
 			//
 			System.Windows.Forms.BindingSource category1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-			category1BindingSource.DataSource = typeof(PSS.category);
+			category1BindingSource.DataSource = typeof(test7.category);
             this.category1GridControl.DataSource = category1BindingSource;
 			//
 			//category1XtraUserControl
@@ -350,12 +350,12 @@
             itemsitemsChildPopulateColumnParameters.Path = "items.name";
 			itemsPopulateColumnsParameters.CustomColumnParameters.Add(itemsitemsChildPopulateColumnParameters);
 			 
-		    this.itemsGridView.PopulateColumns(typeof(PSS.item),itemsPopulateColumnsParameters);
+		    this.itemsGridView.PopulateColumns(typeof(test7.item),itemsPopulateColumnsParameters);
 			//
 			//itemsBindingSource
 			//
 			System.Windows.Forms.BindingSource itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			itemsBindingSource.DataSource = typeof(PSS.item);
+			itemsBindingSource.DataSource = typeof(test7.item);
             this.itemsGridControl.DataSource = itemsBindingSource;
 			//
 			//itemsXtraUserControl
@@ -436,7 +436,7 @@
 									//
 			//category2LookUpEdit
 			//
-			this.category2BindingSource.DataSource = typeof(PSS.category);
+			this.category2BindingSource.DataSource = typeof(test7.category);
 			this.category2LookUpEdit.Properties.ValueMember = "id"; 
 			this.category2LookUpEdit.Properties.DisplayMember = "name";
 			this.category2LookUpEdit.Properties.DataSource = this.category2BindingSource;
@@ -459,15 +459,15 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.categoryViewModel);
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "Save", bbiSave));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "SaveAndClose", bbiSaveAndClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "SaveAndNew", bbiSaveAndNew));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "Reset", bbiReset));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "Delete", bbiDelete));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "Close", bbiClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "SaveLayout", bbiSaveLayout));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.categoryViewModel), "ResetLayout", bbiResetLayout));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.categoryViewModel);
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "Save", bbiSave));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "SaveAndClose", bbiSaveAndClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "SaveAndNew", bbiSaveAndNew));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "Reset", bbiReset));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "Delete", bbiDelete));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "Close", bbiClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "SaveLayout", bbiSaveLayout));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.categoryViewModel), "ResetLayout", bbiResetLayout));
 						this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
 			//

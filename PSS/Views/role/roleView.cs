@@ -7,7 +7,7 @@ using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 
-namespace PSS.Views.roleView{
+namespace test7.Views.roleView{
     public partial class roleView : XtraUserControl {
         public roleView() {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace PSS.Views.roleView{
 				InitBindings();
 		}
 		void InitBindings() {
-		    var fluentAPI = mvvmContext.OfType<PSS.ViewModels.roleViewModel>();
+		    var fluentAPI = mvvmContext.OfType<test7.ViewModels.roleViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             fluentAPI.SetObjectDataSourceBinding(
                 roleViewBindingSource, x => x.Entity, x => x.Update());
@@ -23,7 +23,7 @@ namespace PSS.Views.roleView{
 			// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(usersGridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.roleusersDetails.SelectedEntity,
-                    args => args.Row as PSS.user,
+                    args => args.Row as test7.user,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 						// We want to proceed the Edit command when row double-clicked
 			fluentAPI.WithEvent<RowClickEventArgs>(usersGridView, "RowClick")

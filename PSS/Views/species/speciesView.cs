@@ -7,7 +7,7 @@ using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 
-namespace PSS.Views.speciesView{
+namespace test7.Views.speciesView{
     public partial class speciesView : XtraUserControl {
         public speciesView() {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace PSS.Views.speciesView{
 				InitBindings();
 		}
 		void InitBindings() {
-		    var fluentAPI = mvvmContext.OfType<PSS.ViewModels.speciesViewModel>();
+		    var fluentAPI = mvvmContext.OfType<test7.ViewModels.speciesViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             fluentAPI.SetObjectDataSourceBinding(
                 speciesViewBindingSource, x => x.Entity, x => x.Update());
@@ -23,7 +23,7 @@ namespace PSS.Views.speciesView{
 			// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(petsGridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.speciespetsDetails.SelectedEntity,
-                    args => args.Row as PSS.pet,
+                    args => args.Row as test7.pet,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 						// We want to proceed the Edit command when row double-clicked
 			fluentAPI.WithEvent<RowClickEventArgs>(petsGridView, "RowClick")

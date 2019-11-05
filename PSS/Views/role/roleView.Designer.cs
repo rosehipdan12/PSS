@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.roleView {
+﻿namespace test7.Views.roleView {
     partial class roleView {
         /// <summary> 
         /// Required designer variable.
@@ -145,7 +145,7 @@
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
 			this.roleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.roleViewBindingSource.DataSource = typeof(PSS.role);
+			this.roleViewBindingSource.DataSource = typeof(test7.role);
 			this.dataLayoutControl1.DataSource = roleViewBindingSource;
 			//
 			//Create GridControls
@@ -188,12 +188,12 @@
             usersusersChildPopulateColumnParameters.Path = "users.first_name";
 			usersPopulateColumnsParameters.CustomColumnParameters.Add(usersusersChildPopulateColumnParameters);
 			 
-		    this.usersGridView.PopulateColumns(typeof(PSS.user),usersPopulateColumnsParameters);
+		    this.usersGridView.PopulateColumns(typeof(test7.user),usersPopulateColumnsParameters);
 			//
 			//usersBindingSource
 			//
 			System.Windows.Forms.BindingSource usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			usersBindingSource.DataSource = typeof(PSS.user);
+			usersBindingSource.DataSource = typeof(test7.user);
             this.usersGridControl.DataSource = usersBindingSource;
 			//
 			//usersXtraUserControl
@@ -280,15 +280,15 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.roleViewModel);
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "Save", bbiSave));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "SaveAndClose", bbiSaveAndClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "SaveAndNew", bbiSaveAndNew));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "Reset", bbiReset));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "Delete", bbiDelete));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "Close", bbiClose));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "SaveLayout", bbiSaveLayout));
-						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.roleViewModel), "ResetLayout", bbiResetLayout));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.roleViewModel);
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "Save", bbiSave));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "SaveAndClose", bbiSaveAndClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "SaveAndNew", bbiSaveAndNew));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "Reset", bbiReset));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "Delete", bbiDelete));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "Close", bbiClose));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "SaveLayout", bbiSaveLayout));
+						this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.roleViewModel), "ResetLayout", bbiResetLayout));
 						this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
 			//

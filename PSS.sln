@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.47
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSS", "PSS\PSS.csproj", "{AC87CFD0-9B43-4F73-A764-932340A47247}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSS", "test7\PSS.csproj", "{CC7395FF-FBC2-40A4-B060-CD4F354165D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC87CFD0-9B43-4F73-A764-932340A47247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC87CFD0-9B43-4F73-A764-932340A47247}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC87CFD0-9B43-4F73-A764-932340A47247}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC87CFD0-9B43-4F73-A764-932340A47247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7395FF-FBC2-40A4-B060-CD4F354165D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7395FF-FBC2-40A4-B060-CD4F354165D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7395FF-FBC2-40A4-B060-CD4F354165D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7395FF-FBC2-40A4-B060-CD4F354165D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B99A31EC-8488-43B0-9A08-BC31164BA6D7}
+		SolutionGuid = {572475DF-E4AE-4801-927A-A53DE413709C}
 	EndGlobalSection
 EndGlobal

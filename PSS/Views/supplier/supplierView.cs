@@ -7,7 +7,7 @@ using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 
-namespace PSS.Views.supplierView{
+namespace test7.Views.supplierView{
     public partial class supplierView : XtraUserControl {
         public supplierView() {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace PSS.Views.supplierView{
 				InitBindings();
 		}
 		void InitBindings() {
-		    var fluentAPI = mvvmContext.OfType<PSS.ViewModels.supplierViewModel>();
+		    var fluentAPI = mvvmContext.OfType<test7.ViewModels.supplierViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             fluentAPI.SetObjectDataSourceBinding(
                 supplierViewBindingSource, x => x.Entity, x => x.Update());
@@ -23,7 +23,7 @@ namespace PSS.Views.supplierView{
 			// We want to synchronize the ViewModel.SelectedEntity and the GridView.FocusedRowRandle in two-way manner
             fluentAPI.WithEvent<GridView, FocusedRowObjectChangedEventArgs>(itemsGridView, "FocusedRowObjectChanged")
                 .SetBinding(x => x.supplieritemsDetails.SelectedEntity,
-                    args => args.Row as PSS.item,
+                    args => args.Row as test7.item,
                     (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
 						// We want to proceed the Edit command when row double-clicked
 			fluentAPI.WithEvent<RowClickEventArgs>(itemsGridView, "RowClick")

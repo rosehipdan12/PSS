@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace PSS
+namespace test7
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {

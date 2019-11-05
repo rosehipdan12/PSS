@@ -7,7 +7,7 @@ using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 
-namespace PSS.Views.userView{
+namespace test7.Views.userView{
     public partial class userView : XtraUserControl {
         public userView() {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace PSS.Views.userView{
 				InitBindings();
 		}
 		void InitBindings() {
-		    var fluentAPI = mvvmContext.OfType<PSS.ViewModels.userViewModel>();
+		    var fluentAPI = mvvmContext.OfType<test7.ViewModels.userViewModel>();
 			fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             fluentAPI.SetObjectDataSourceBinding(
                 userViewBindingSource, x => x.Entity, x => x.Update());

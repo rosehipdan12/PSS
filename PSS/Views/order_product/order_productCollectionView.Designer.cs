@@ -1,4 +1,4 @@
-﻿namespace PSS.Views.order_productCollectionView {
+﻿namespace test7.Views.order_productCollectionView {
     partial class order_productCollectionView {
         /// <summary> 
         /// Required designer variable.
@@ -52,7 +52,22 @@
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
 			this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {this.bbiPrintPreview, this.bsiRecordsCount});
-																DevExpress.XtraBars.BarButtonItem bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+																DevExpress.XtraBars.BarButtonItem bbiNew = new DevExpress.XtraBars.BarButtonItem();
+			bbiNew.Caption = "New";
+			bbiNew.Name = "bbiNew";
+			bbiNew.ImageUri.Uri = "New";
+						this.ribbonControl.Items.Add(bbiNew);
+								DevExpress.XtraBars.BarButtonItem bbiEdit = new DevExpress.XtraBars.BarButtonItem();
+			bbiEdit.Caption = "Edit";
+			bbiEdit.Name = "bbiEdit";
+			bbiEdit.ImageUri.Uri = "Edit";
+						this.ribbonControl.Items.Add(bbiEdit);
+								DevExpress.XtraBars.BarButtonItem bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+			bbiDelete.Caption = "Delete";
+			bbiDelete.Name = "bbiDelete";
+			bbiDelete.ImageUri.Uri = "Delete";
+						this.ribbonControl.Items.Add(bbiDelete);
+										DevExpress.XtraBars.BarButtonItem bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
 			bbiRefresh.Caption = "Refresh";
 			bbiRefresh.Name = "bbiRefresh";
 			bbiRefresh.ImageUri.Uri = "Refresh";
@@ -74,7 +89,10 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "order_product Tasks";
-								this.ribbonPageGroup1.ItemLinks.Add(bbiRefresh);
+								this.ribbonPageGroup1.ItemLinks.Add(bbiNew);
+			this.ribbonPageGroup1.ItemLinks.Add(bbiEdit);
+			this.ribbonPageGroup1.ItemLinks.Add(bbiDelete);
+					this.ribbonPageGroup1.ItemLinks.Add(bbiRefresh);
 	
 			// 
             // ribbonPageGroup2
@@ -123,7 +141,7 @@
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
 			this.order_productCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.order_productCollectionViewBindingSource.DataSource = typeof(PSS.order_product);
+			this.order_productCollectionViewBindingSource.DataSource = typeof(test7.order_product);
 			this.gridControl.DataSource = order_productCollectionViewBindingSource;
 
 			DevExpress.XtraGrid.Extensions.PopulateColumnsParameters parameters = new DevExpress.XtraGrid.Extensions.PopulateColumnsParameters();
@@ -176,11 +194,14 @@
 		    petPopulateColumnParameters_NotVisible.ColumnVisible = false;
 			parameters.CustomColumnParameters.Add(petPopulateColumnParameters_NotVisible);
 			 
-			this.gridView.PopulateColumns(typeof(PSS.order_product),parameters);
+			this.gridView.PopulateColumns(typeof(test7.order_product),parameters);
 			// 
             // popupMenu1
             // 
-								this.popupMenu.ItemLinks.Add(bbiRefresh);
+								this.popupMenu.ItemLinks.Add(bbiNew);
+			this.popupMenu.ItemLinks.Add(bbiEdit);
+			this.popupMenu.ItemLinks.Add(bbiDelete);
+					this.popupMenu.ItemLinks.Add(bbiRefresh);
 	
             this.popupMenu.Name = "popupMenu";
             this.popupMenu.Ribbon = this.ribbonControl;
@@ -188,8 +209,11 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(PSS.ViewModels.order_productCollectionViewModel);
-								this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS.ViewModels.order_productCollectionViewModel), "Refresh", bbiRefresh));
+            this.mvvmContext.ViewModelType = typeof(test7.ViewModels.order_productCollectionViewModel);
+								this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productCollectionViewModel), "New", bbiNew));
+			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(test7.ViewModels.order_productCollectionViewModel), "Edit", "SelectedEntity", bbiEdit));
+			this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(test7.ViewModels.order_productCollectionViewModel), "Delete", "SelectedEntity", bbiDelete));
+					this.mvvmContext.BindingExpressions.Add(DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(test7.ViewModels.order_productCollectionViewModel), "Refresh", bbiRefresh));
 	
 			this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.Default, this.gridControl),

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PSS.Properties
+namespace test7.Properties
 {
 
 
