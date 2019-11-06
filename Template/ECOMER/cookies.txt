@@ -1,0 +1,13 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+petica-demo-01.myshopify.com	TRUE	/12963414075/checkouts/59cc6faa1dd40803f739c5c1864c8f05	FALSE	1999999999	checkout	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVZqTmpRMVpqVmlNbUpqTUdNNFpqaG1NR1UwTmpCaVpqZzBNVGM0TmpkbFpnWTZCa1ZVIiwiZXhwIjoiMjAxOS0xMS0yNlQwOToyMjoyMy43MTFaIiwicHVyIjoiY29va2llLmNoZWNrb3V0In19--672427617c9a6ecaa9ffb08ae6b919906098bde3
+petica-demo-01.myshopify.com	TRUE	/12963414075	FALSE	1999999999	checkout_token	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVUxT1dOak5tWmhZVEZrWkRRd09EQXpaamN6T1dNMVl6RTROalJqT0dZd05RWTZCa1ZVIiwiZXhwIjoiMjAyMC0xMS0wNVQwOToyMjoyMy43MTJaIiwicHVyIjoiY29va2llLmNoZWNrb3V0X3Rva2VuIn19--b7fdfd2636461ff68353834e8b85ab834e042668
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_country	Vietnam
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	_landing_page	%2F
+.myshopify.com	TRUE	/	FALSE	1999999999	__cfduid	def41f3789dc28aedacf2d5a1646917741572945714
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	cart_ts	1572945742
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	cart	3530ba791aa446e8a84e42d0af0577ae
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_s	0d0aa4ea-d3c9-4e72-bad1-612d2911d440
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_y	3518d704-9e81-463c-a85d-10674d4cc758
+petica-demo-01.myshopify.com	TRUE	/	FALSE	1999999999	cart_currency	USD
+

@@ -265,6 +265,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\supplier\supplierCollectionView.resx">
+      <DependentUpon>supplierCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\supplier\supplierView.resx">
+      <DependentUpon>supplierView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

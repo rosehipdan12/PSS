@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://petica-demo-01.myshopify.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://petica-demo-01.myshopify.com/collections/curabitur-lurpisolus.atom"/>
+  <title>petica-demo-01</title>
+  <updated>2018-11-12T07:45:28-05:00</updated>
+  <author>
+    <name>petica-demo-01</name>
+  </author>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/mauros-sit-amet-horttitor-antes-nisdos-loremous-de-dametos-7"/>
+    <title>Mauros sit amet horttitor antes nisdos loremous de dametos</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Nectellus</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/04_c5a0bf70-05db-4866-9604-00ab10c494f5.jpg?v=1570003632" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Nectellus<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            80.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>[countdown]2019/04/20 10:20:00[/countdown]</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, venenatis et tempus quis, cursus rutrum orci. Morbi elit lorem, finibus a eros non, blandit maximus elit. Morbi in tincidunt nunc. Aliquam erat volutpat. Maecenas tristique convallis ipsum quis pellentesque. Etiam ac tellus vehicula, sollicitudin dui vitae, euismod sem. Sed ut rutrum urna, nec sodales leo.</p>
+<p>Nam a ex ligula. Morbi in diam vitae erat bibendum ullamcorper sed eu mi. Nullam vel quam nulla. Ut mollis consequat est, ut dignissim lectus malesuada sed. Suspendisse et rutrum mauris. Donec ultrices semper porttitor. Praesent id erat quis est ornare fermentum non nec lectus. Cras vel quam tincidunt, pulvinar felis sit amet, ultricies lorem. Sed aliquet diam leo, at euismod dui hendrerit eu. Proin sed justo eu nisl elementum maximus sed vel purus. Vestibulum ultrices porta nibh, at feugiat massa interdum in. Praesent sagittis luctus cursus.</p>
+<p> </p>
+<p> </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>L / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XXL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XXL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XXL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XXL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2037164539963</id>
+      <title>XXL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/mauros-sit-amet-horttitor-antes-nisdos-loremous-de-dametos-6"/>
+    <title>Mauros sit amet horttitor antes nisdos loremous de dametos</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Nectellus</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/12_188b306c-7c69-492d-9e2b-577a5a5495f7.jpg?v=1570003337" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Nectellus<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            80.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>[countdown]2019/04/20 10:20:00[/countdown]</p>
+<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos sollicitudin felis. Pellentesque diam dolor, elementum et lobortis at, mollis damos risus. Sedcus des faucibus sullamcorper mattis fusce molestie elit a lorem tempus scelerisque blandit est cursus. Quisque volutpat orci ut metus malesuada in interdumos demus lectus scelerisque lorem. Praesent deu odio des nisios dullamcorper sultricies.</p>
+<h4><img src="//cdn.shopify.com/s/files/1/0129/6341/4075/files/description-img.jpg?v=1570003452" alt=""></h4>
+<h4>SAMPLE UNORDERED LIST</h4>
+<ul>
+<li>Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.</li>
+<li>Indoremos tempor ullamcorper iaculis pellentesque vitae neque mollis urna mattis laoreet divamus sit amet purus justo.</li>
+<li>Donec vel lectus non nibh adipiscing malesuada quis nec diam.</li>
+</ul>
+<h4>SAMPLE ORDERED LIST</h4>
+<ol>
+<li>Namcos tempus turpis at metus scelerisque placerat nulla eu sollicitudin felis.</li>
+<li>Pellentesque diam dolor elementum et lobortis at mollis ut risus. Sed faucibus ullamcorper mattis.</li>
+<li>Fusce molestie elit a loremos tempus scelerisque blandit tortor cursus.</li>
+<li>Duisque dolutpat orci ut metus malesuada in interdum lectus scelerisque</li>
+</ol>
+<h4>SAMPLE BLOCK QUOTE</h4>
+<blockquote>Morbi at facilisis ipsum. Curabitur sem justo, interdum pulvinar tincidunt eu, varius ut tellus. Sed sodales mollis nullam dan interdum rutrum. Ut facilisis lacus a est vestibdulum suscipit. Duis lacinia, sem consectetur viverra pulvinar, ipsum dui feugiat dolor, a pulvinar ipsum nisilos an in lectus. Curabitur interdum velit eu nulla elementum, a cursus leo facilisis. Nulla at sapien leo. Morbi congue erat porttitor nulla tempos.</blockquote>
+<h4>SAMPLE PARAGRAPH TEXT</h4>
+<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos sollicitudin felis. Pellentesque diam dolor, elementum et lobortis at, mollis damos risus. Sedcus des faucibus sullamcorper mattis fusce molestie elit a lorem tempus scelerisque blandit est cursus. Quisque volutpat orci ut metus malesuada in interdumos demus lectus scelerisque lorem. Praesent deu odio des nisios dullamcorper sultricies.</p>
+<p>[Custom Product Tab]</p>
+<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos sollicitudin felis. Pellentesque diam dolor, elementum et lobortis at, mollis damos risus. Sedcus des faucibus sullamcorper mattis fusce molestie elit a lorem tempus scelerisque blandit est cursus. Quisque volutpat orci ut metus malesuada in interdumos demus lectus scelerisque lorem. Praesent deu odio des nisios dullamcorper sultricies.</p>
+<h4>SAMPLE TABLE</h4>
+<table>
+<tbody>
+<tr>
+<td class="column-1">Praesento</td>
+<td class="column-2">Praesent gravida neque delitos cursus eget tempor turpis gravida nam a scelerisque dolors.</td>
+</tr>
+<tr>
+<td class="column-1">Consectetur Daugue</td>
+<td class="column-2">Lorem ipsum dolor sit amet consectetur adipiscing elit in vitae augue ut nunc porta ornare.</td>
+</tr>
+<tr>
+<td class="column-1">Quisque Dehicula</td>
+<td class="column-2">Quisque velit felis, dictum volutpat des adipiscing vel dehicula sed arcu.</td>
+</tr>
+<tr>
+<td class="column-1">Morbi Sornare</td>
+<td class="column-2">Morbi ornare gravida orci sit amet lacinia felis lacinia vitae aliquam erat volutpat.</td>
+</tr>
+</tbody>
+</table>
+<h4>SAMPLE PARAGRAPH TEXT</h4>
+<p>Mauris nec turpis nec leo tempus mollis. Curabitur ullamcorper mi eget orci euismod ullamcorper. Cras tempor aliquet metus, at posuere ligula sollicitudin nec. Integer pretium feugiat eros ac cursus. Quisque ac libero in augue lobortis convallis. Fusce eleifend arcu nec velit porttitor posuere. Pellentesque vulputate nisl ultricies dui sagittis congue. Mauris erat metus, sagittis in elit eget, maximus vehicula eros. Suspendisse eleifend luctus leo a accumsan.</p>
+<div class="btn">sample button</div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>L / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XXL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XXL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XXL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XXL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032383164475</id>
+      <title>XXL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/mauros-sit-amet-horttitor-antes-nisdos-loremous-de-dametos-4"/>
+    <title>Mauros sit amet horttitor antes nisdos loremous de dametos</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Nectellus</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/01b.jpg?v=1570003223" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Nectellus<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            80.00 - 150.00
+            <a href="https://petica-demo-01.myshopify.com/products/mauros-sit-amet-horttitor-antes-nisdos-loremous-de-dametos-4">(30 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>[countdown]2019/04/20 10:20:00[/countdown]</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, venenatis et tempus quis, cursus rutrum orci. Morbi elit lorem, finibus a eros non, blandit maximus elit. Morbi in tincidunt nunc. Aliquam erat volutpat. Maecenas tristique convallis ipsum quis pellentesque. Etiam ac tellus vehicula, sollicitudin dui vitae, euismod sem. Sed ut rutrum urna, nec sodales leo.</p>
+<p>Nam a ex ligula. Morbi in diam vitae erat bibendum ullamcorper sed eu mi. Nullam vel quam nulla. Ut mollis consequat est, ut dignissim lectus malesuada sed. Suspendisse et rutrum mauris. Donec ultrices semper porttitor. Praesent id erat quis est ornare fermentum non nec lectus. Cras vel quam tincidunt, pulvinar felis sit amet, ultricies lorem. Sed aliquet diam leo, at euismod dui hendrerit eu. Proin sed justo eu nisl elementum maximus sed vel purus. Vestibulum ultrices porta nibh, at feugiat massa interdum in. Praesent sagittis luctus cursus.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>L / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XXL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XXL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XXL / Orange</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XXL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032377724987</id>
+      <title>XXL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/nulla-interdum-diverra-modes-an-dacos-maliduet-lectus-sarius-2"/>
+    <title>Nulla interdum diverra modes an dacos maliduet lectus sarius</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Dincidunteros</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/11_1bf7c70e-baf9-41b4-82a0-3af6f8c4bda6.jpg?v=1570003754" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Dincidunteros<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            30.00 - 100.00
+            <a href="https://petica-demo-01.myshopify.com/products/nulla-interdum-diverra-modes-an-dacos-maliduet-lectus-sarius-2">(30 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, venenatis et tempus quis, cursus rutrum orci. Morbi elit lorem, finibus a eros non, blandit maximus elit. Morbi in tincidunt nunc. Aliquam erat volutpat. Maecenas tristique convallis ipsum quis pellentesque. Etiam ac tellus vehicula, sollicitudin dui vitae, euismod sem. Sed ut rutrum urna, nec sodales leo.</p>
+<p>Nam a ex ligula. Morbi in diam vitae erat bibendum ullamcorper sed eu mi. Nullam vel quam nulla. Ut mollis consequat est, ut dignissim lectus malesuada sed. Suspendisse et rutrum mauris. Donec ultrices semper porttitor. Praesent id erat quis est ornare fermentum non nec lectus. Cras vel quam tincidunt, pulvinar felis sit amet, ultricies lorem. Sed aliquet diam leo, at euismod dui hendrerit eu. Proin sed justo eu nisl elementum maximus sed vel purus. Vestibulum ultrices porta nibh, at feugiat massa interdum in. Praesent sagittis luctus cursus.</p>
+<p>[Video]</p>
+<iframe width="1196" height="673" src="https://www.youtube.com/embed/eTCtDW7O1aM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>[/Video]</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>L / White</title>
+      <s:price currency="USD">30.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">100.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>2X / Red</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>2X / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>2X / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>2X / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/2032359145531</id>
+      <title>2X / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/nulla-interdum-diverra-modes-an-dacos-maliduet-lectus-sarius-1"/>
+    <title>Nulla interdum diverra modes an dacos maliduet lectus sarius</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Dincidunteros</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/15.jpg?v=1570003719" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Dincidunteros<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            50.00 - 80.00
+            <a href="https://petica-demo-01.myshopify.com/products/nulla-interdum-diverra-modes-an-dacos-maliduet-lectus-sarius-1">(30 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, venenatis et tempus quis, cursus rutrum orci. Morbi elit lorem, finibus a eros non, blandit maximus elit. Morbi in tincidunt nunc. Aliquam erat volutpat. Maecenas tristique convallis ipsum quis pellentesque. Etiam ac tellus vehicula, sollicitudin dui vitae, euismod sem. Sed ut rutrum urna, nec sodales leo.</p>
+<p>Nam a ex ligula. Morbi in diam vitae erat bibendum ullamcorper sed eu mi. Nullam vel quam nulla. Ut mollis consequat est, ut dignissim lectus malesuada sed. Suspendisse et rutrum mauris. Donec ultrices semper porttitor. Praesent id erat quis est ornare fermentum non nec lectus. Cras vel quam tincidunt, pulvinar felis sit amet, ultricies lorem. Sed aliquet diam leo, at euismod dui hendrerit eu. Proin sed justo eu nisl elementum maximus sed vel purus. Vestibulum ultrices porta nibh, at feugiat massa interdum in. Praesent sagittis luctus cursus.</p>
+<p>[Video]</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eTCtDW7O1aM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>[/Video]</p>
+<p> </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>video</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>L / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>2X / Red</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>2X / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>2X / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>2X / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1895016726587</id>
+      <title>2X / Gray</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+    <published>2018-11-12T07:45:28-05:00</published>
+    <updated>2018-11-12T07:45:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://petica-demo-01.myshopify.com/products/mauros-sit-amet-horttitor-antes-nisdos-loremous-de-dametos-2"/>
+    <title>Mauros sit amet horttitor antes nisdos loremous de dametos</title>
+    <s:type>Nectellus</s:type>
+    <s:vendor>Nectellus</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0129/6341/4075/products/04_7a0e99db-762b-4a37-862f-3b369844bbd2.jpg?v=1570003172" /></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Nectellus<br />
+        <strong>Type: </strong>Nectellus<br />
+        <strong>Price: </strong>
+            80.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>[countdown]2019/04/20 10:20:00[/countdown]</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, venenatis et tempus quis, cursus rutrum orci. Morbi elit lorem, finibus a eros non, blandit maximus elit. Morbi in tincidunt nunc. Aliquam erat volutpat. Maecenas tristique convallis ipsum quis pellentesque. Etiam ac tellus vehicula, sollicitudin dui vitae, euismod sem. Sed ut rutrum urna, nec sodales leo.</p>
+<p>Nam a ex ligula. Morbi in diam vitae erat bibendum ullamcorper sed eu mi. Nullam vel quam nulla. Ut mollis consequat est, ut dignissim lectus malesuada sed. Suspendisse et rutrum mauris. Donec ultrices semper porttitor. Praesent id erat quis est ornare fermentum non nec lectus. Cras vel quam tincidunt, pulvinar felis sit amet, ultricies lorem. Sed aliquet diam leo, at euismod dui hendrerit eu. Proin sed justo eu nisl elementum maximus sed vel purus. Vestibulum ultrices porta nibh, at feugiat massa interdum in. Praesent sagittis luctus cursus.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$100 - $300</s:tag>
+    <s:tag>$300 - $600</s:tag>
+    <s:tag>Above $600</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Dinciduntero</s:tag>
+    <s:tag>Dincidunteros</s:tag>
+    <s:tag>Gray</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>Less than $100</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Nectellus</s:tag>
+    <s:tag>new</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Solutmades</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>XS</s:tag>
+    <s:tag>XXL</s:tag>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XS / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XS / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XS / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XS / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XS / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>S / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>S / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>S / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>L / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>L / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>L / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>M / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>M / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>M / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XXL / Red</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XXL / Blue</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XXL / Orange</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XXL / White</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://petica-demo-01.myshopify.com/products/1892535205947</id>
+      <title>XXL / Gray</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>
