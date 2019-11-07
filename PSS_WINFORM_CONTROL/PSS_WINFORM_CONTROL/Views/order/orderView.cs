@@ -38,8 +38,8 @@ namespace PSS_WINFORM_CONTROL.Views.orderView{
             };
 			// We want to show the orderorder_productDetails collection in grid and react on this collection external changes (Reload, server-side Filtering)
 			fluentAPI.SetBinding(order_productGridControl, g => g.DataSource, x => x.orderorder_productDetails.Entities);
-				
-														fluentAPI.BindCommand(bbiorder_productNew, x => x.orderorder_productDetails.New());
+
+            fluentAPI.BindCommand(bbiorder_productNew, x => x.orderorder_productDetails.New());
 																													fluentAPI.BindCommand(bbiorder_productEdit,x => x.orderorder_productDetails.Edit(null), x=>x.orderorder_productDetails.SelectedEntity);
 																								fluentAPI.BindCommand(bbiorder_productDelete,x => x.orderorder_productDetails.Delete(null), x=>x.orderorder_productDetails.SelectedEntity);
 																			fluentAPI.BindCommand(bbiorder_productRefresh, x => x.orderorder_productDetails.Refresh());

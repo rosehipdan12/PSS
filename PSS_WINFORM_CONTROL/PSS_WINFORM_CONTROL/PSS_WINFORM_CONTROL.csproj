@@ -295,6 +295,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\order\orderView.resx">
+      <DependentUpon>orderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\order_product\order_productCollectionView.resx">
+      <DependentUpon>order_productCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\order_user\order_userCollectionView.resx">
+      <DependentUpon>order_userCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\pet\petCollectionView.resx">
+      <DependentUpon>petCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\species\speciesCollectionView.resx">
+      <DependentUpon>speciesCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

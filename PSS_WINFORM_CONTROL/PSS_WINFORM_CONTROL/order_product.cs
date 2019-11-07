@@ -16,6 +16,8 @@ namespace PSS_WINFORM_CONTROL
 
         public int? quantity { get; set; }
 
+        public int? price { get; set; }
+
         public int id { get; set; }
 
         public virtual item item { get; set; }
