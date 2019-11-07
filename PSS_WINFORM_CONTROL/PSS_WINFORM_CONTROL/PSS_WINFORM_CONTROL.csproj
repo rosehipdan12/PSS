@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7BDECA7-8B5B-4A6F-BB7D-CC42417D29F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSS_WINFORM_CONTROL</RootNamespace>
+    <AssemblyName>PSS_WINFORM_CONTROL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.DataModel, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.DataModel.EF6, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.ViewModel, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="category.cs" />
+    <Compile Include="Common\CollectionViewModel.cs" />
+    <Compile Include="Common\EntitiesViewModel.cs" />
+    <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="item.cs" />
+    <Compile Include="Model1.cs" />
+    <Compile Include="Model1DataModel\IModel1UnitOfWork.cs" />
+    <Compile Include="Model1DataModel\Model1UnitOfWork.cs" />
+    <Compile Include="Model1DataModel\UnitOfWorkSource.cs" />
+    <Compile Include="order.cs" />
+    <Compile Include="order_product.cs" />
+    <Compile Include="order_user.cs" />
+    <Compile Include="pet.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="role.cs" />
+    <Compile Include="species.cs" />
+    <Compile Include="supplier.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="ViewModels\category\categoryCollectionViewModel.cs" />
+    <Compile Include="ViewModels\category\categoryViewModel.cs" />
+    <Compile Include="ViewModels\item\itemCollectionViewModel.cs" />
+    <Compile Include="ViewModels\item\itemViewModel.cs" />
+    <Compile Include="ViewModels\Model1ViewModel.cs" />
+    <Compile Include="ViewModels\order\orderCollectionViewModel.cs" />
+    <Compile Include="ViewModels\order\orderViewModel.cs" />
+    <Compile Include="ViewModels\order_product\order_productCollectionViewModel.cs" />
+    <Compile Include="ViewModels\order_product\order_productViewModel.cs" />
+    <Compile Include="ViewModels\order_user\order_userCollectionViewModel.cs" />
+    <Compile Include="ViewModels\order_user\order_userViewModel.cs" />
+    <Compile Include="ViewModels\pet\petCollectionViewModel.cs" />
+    <Compile Include="ViewModels\pet\petViewModel.cs" />
+    <Compile Include="ViewModels\role\roleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\role\roleViewModel.cs" />
+    <Compile Include="ViewModels\species\speciesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\species\speciesViewModel.cs" />
+    <Compile Include="ViewModels\supplier\supplierCollectionViewModel.cs" />
+    <Compile Include="ViewModels\supplier\supplierViewModel.cs" />
+    <Compile Include="ViewModels\sysdiagram\sysdiagramCollectionViewModel.cs" />
+    <Compile Include="ViewModels\sysdiagram\sysdiagramViewModel.cs" />
+    <Compile Include="ViewModels\user\userCollectionViewModel.cs" />
+    <Compile Include="ViewModels\user\userViewModel.cs" />
+    <Compile Include="Views\category\categoryCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\category\categoryCollectionView.designer.cs">
+      <DependentUpon>categoryCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\category\categoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\category\categoryView.designer.cs">
+      <DependentUpon>categoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\item\itemCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\item\itemCollectionView.designer.cs">
+      <DependentUpon>itemCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\item\itemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\item\itemView.designer.cs">
+      <DependentUpon>itemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Model1View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Model1View.designer.cs">
+      <DependentUpon>Model1View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order\orderCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order\orderCollectionView.designer.cs">
+      <DependentUpon>orderCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order\orderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order\orderView.designer.cs">
+      <DependentUpon>orderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order_product\order_productCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order_product\order_productCollectionView.designer.cs">
+      <DependentUpon>order_productCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order_product\order_productView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order_product\order_productView.designer.cs">
+      <DependentUpon>order_productView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order_user\order_userCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order_user\order_userCollectionView.designer.cs">
+      <DependentUpon>order_userCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\order_user\order_userView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\order_user\order_userView.designer.cs">
+      <DependentUpon>order_userView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\pet\petCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\pet\petCollectionView.designer.cs">
+      <DependentUpon>petCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\pet\petView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\pet\petView.designer.cs">
+      <DependentUpon>petView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\role\roleCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\role\roleCollectionView.designer.cs">
+      <DependentUpon>roleCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\role\roleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\role\roleView.designer.cs">
+      <DependentUpon>roleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\species\speciesCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\species\speciesCollectionView.designer.cs">
+      <DependentUpon>speciesCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\species\speciesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\species\speciesView.designer.cs">
+      <DependentUpon>speciesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\supplier\supplierCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\supplier\supplierCollectionView.designer.cs">
+      <DependentUpon>supplierCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\supplier\supplierView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\supplier\supplierView.designer.cs">
+      <DependentUpon>supplierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\sysdiagram\sysdiagramCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\sysdiagram\sysdiagramCollectionView.designer.cs">
+      <DependentUpon>sysdiagramCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\sysdiagram\sysdiagramView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\sysdiagram\sysdiagramView.designer.cs">
+      <DependentUpon>sysdiagramView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user\userCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\user\userCollectionView.designer.cs">
+      <DependentUpon>userCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user\userView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\user\userView.designer.cs">
+      <DependentUpon>userView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
