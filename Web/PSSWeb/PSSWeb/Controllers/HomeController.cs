@@ -9,9 +9,20 @@ namespace PSSWeb.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ActionResult Index(String name)
         {
-            return "Helewo world asp.net coming in";
+            var input = Server.HtmlEncode(name);
+
+            return Content(name);
         }
+    }
+    public class FriendController : Controller
+    {
+        public ActionResult Search(String name)
+        {
+            var input = Server.HtmlEncode(name);
+            return Content(input);
+        }
+            
     }
 }
