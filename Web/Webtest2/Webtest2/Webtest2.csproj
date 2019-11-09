@@ -166,6 +166,7 @@
     <Compile Include="pet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+Web/Webtest2/Webtest2/Webtest2.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -397,8 +398,8 @@
     <Content Include="itemImage\WhiskerCity_Tower_Three_Redwood.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -454,10 +455,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

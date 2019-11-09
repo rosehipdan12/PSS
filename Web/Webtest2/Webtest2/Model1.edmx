@@ -26,10 +26,10 @@
           <Property Name="status" Type="bit" />
           <Property Name="pricePerUnit" Type="float" />
           <Property Name="tags" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
           <Property Name="detail" Type="text" />
           <Property Name="quantity" Type="int" />
           <Property Name="supplier_id" Type="int" Nullable="false" />
-          <Property Name="image" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="order">
           <Key>
@@ -79,7 +79,6 @@ warning 6002: The table/view 'PSS.dbo.order_user' does not have a primary key de
           <Property Name="vaccine" Type="bit" />
           <Property Name="status" Type="bit" />
           <Property Name="species_id" Type="int" Nullable="false" />
-          <Property Name="image" Type="image" />
         </EntityType>
         <EntityType Name="role">
           <Key>
@@ -349,10 +348,10 @@ warning 6002: The table/view 'PSS.dbo.order_user' does not have a primary key de
           <Property Name="status" Type="Boolean" />
           <Property Name="pricePerUnit" Type="Double" />
           <Property Name="tags" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="quantity" Type="Int32" />
           <Property Name="supplier_id" Type="Int32" Nullable="false" />
-          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="category" Relationship="Self.FK_items_category" FromRole="items" ToRole="category" />
           <NavigationProperty Name="supplier" Relationship="Self.FK_items_supplier" FromRole="items" ToRole="supplier" />
           <NavigationProperty Name="order_product" Relationship="Self.FK_order_product_items" FromRole="items" ToRole="order_product" />
@@ -382,7 +381,6 @@ warning 6002: The table/view 'PSS.dbo.order_user' does not have a primary key de
           <Property Name="vaccine" Type="Boolean" />
           <Property Name="status" Type="Boolean" />
           <Property Name="species_id" Type="Int32" Nullable="false" />
-          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="order_product" Relationship="Self.FK_order_product_pet" FromRole="pet" ToRole="order_product" />
           <NavigationProperty Name="species" Relationship="Self.FK_pet_species" FromRole="pet" ToRole="species" />
         </EntityType>
@@ -668,10 +666,10 @@ warning 6002: The table/view 'PSS.dbo.order_user' does not have a primary key de
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="pricePerUnit" ColumnName="pricePerUnit" />
                 <ScalarProperty Name="tags" ColumnName="tags" />
+                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="detail" ColumnName="detail" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
                 <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
-                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -698,7 +696,6 @@ warning 6002: The table/view 'PSS.dbo.order_user' does not have a primary key de
                 <ScalarProperty Name="vaccine" ColumnName="vaccine" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="species_id" ColumnName="species_id" />
-                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
