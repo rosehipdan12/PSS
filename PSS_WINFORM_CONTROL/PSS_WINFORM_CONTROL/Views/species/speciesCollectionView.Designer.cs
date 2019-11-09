@@ -24,29 +24,29 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.speciesCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
-            this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
+            this.speciesCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesCollectionViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesCollectionViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             this.SuspendLayout();
@@ -65,10 +65,6 @@
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
-            // 
-            // speciesCollectionViewBindingSource
-            // 
-            this.speciesCollectionViewBindingSource.DataSource = typeof(PSS_WINFORM_CONTROL.species);
             // 
             // gridView
             // 
@@ -126,13 +122,13 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
             this.bbiPrintPreview,
             this.bsiRecordsCount,
             this.bbiNew,
             this.bbiEdit,
             this.bbiDelete,
-            this.bbiRefresh});
+            this.bbiRefresh,
+            this.ribbonControl.SearchEditItem});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 20;
@@ -145,18 +141,25 @@
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // bbiPrintPreview
+            // ribbonPage1
             // 
-            this.bbiPrintPreview.Caption = "Print Preview";
-            this.bbiPrintPreview.Id = 14;
-            this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
-            this.bbiPrintPreview.Name = "bbiPrintPreview";
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
+            this.ribbonPage1.MergeOrder = 0;
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Home";
             // 
-            // bsiRecordsCount
+            // ribbonPageGroup1
             // 
-            this.bsiRecordsCount.Caption = "RECORDS : 2";
-            this.bsiRecordsCount.Id = 15;
-            this.bsiRecordsCount.Name = "bsiRecordsCount";
+            this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
+            this.ribbonPageGroup1.Text = "species Tasks";
             // 
             // bbiNew
             // 
@@ -186,26 +189,6 @@
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
-            this.ribbonPage1.MergeOrder = 0;
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Home";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.AllowTextClipping = false;
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
-            this.ribbonPageGroup1.Text = "Species Tasks";
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
@@ -214,14 +197,22 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Print and Export";
             // 
-            // ribbonStatusBar
+            // bbiPrintPreview
             // 
-            this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 911);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1195, 34);
+            this.bbiPrintPreview.Caption = "Print Preview";
+            this.bbiPrintPreview.Id = 14;
+            this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
+            this.bbiPrintPreview.Name = "bbiPrintPreview";
+            // 
+            // bsiRecordsCount
+            // 
+            this.bsiRecordsCount.Caption = "RECORDS : 2";
+            this.bsiRecordsCount.Id = 15;
+            this.bsiRecordsCount.Name = "bsiRecordsCount";
+            // 
+            // speciesCollectionViewBindingSource
+            // 
+            this.speciesCollectionViewBindingSource.DataSource = typeof(PSS_WINFORM_CONTROL.species);
             // 
             // mvvmContext
             // 
@@ -235,6 +226,15 @@
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.Default, this.gridControl),
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, this, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext.ViewModelType = typeof(PSS_WINFORM_CONTROL.ViewModels.speciesCollectionViewModel);
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 911);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbonControl;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1195, 34);
             // 
             // popupMenu
             // 
@@ -256,9 +256,9 @@
             this.Name = "speciesCollectionView";
             this.Size = new System.Drawing.Size(1195, 945);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
             this.ResumeLayout(false);

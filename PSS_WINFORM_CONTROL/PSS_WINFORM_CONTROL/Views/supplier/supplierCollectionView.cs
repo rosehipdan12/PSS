@@ -44,10 +44,5 @@ namespace PSS_WINFORM_CONTROL.Views.supplierCollectionView{
                 }
             };
         }
-
-        private void gridControl_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
