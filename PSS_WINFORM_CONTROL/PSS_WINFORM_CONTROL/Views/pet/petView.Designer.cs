@@ -383,7 +383,7 @@
             // vaccineCheckEdit
             // 
             this.vaccineCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "vaccine", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.vaccineCheckEdit.Location = new System.Drawing.Point(12, 292);
+            this.vaccineCheckEdit.Location = new System.Drawing.Point(12, 218);
             this.vaccineCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vaccineCheckEdit.MenuManager = this.mainRibbonControl;
             this.vaccineCheckEdit.Name = "vaccineCheckEdit";
@@ -396,7 +396,7 @@
             // statusCheckEdit
             // 
             this.statusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.statusCheckEdit.Location = new System.Drawing.Point(12, 316);
+            this.statusCheckEdit.Location = new System.Drawing.Point(12, 242);
             this.statusCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.statusCheckEdit.MenuManager = this.mainRibbonControl;
             this.statusCheckEdit.Name = "statusCheckEdit";
@@ -409,7 +409,7 @@
             // speciesLookUpEdit
             // 
             this.speciesLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "species_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.speciesLookUpEdit.Location = new System.Drawing.Point(77, 340);
+            this.speciesLookUpEdit.Location = new System.Drawing.Point(77, 266);
             this.speciesLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.speciesLookUpEdit.MenuManager = this.mainRibbonControl;
             this.speciesLookUpEdit.Name = "speciesLookUpEdit";
@@ -441,11 +441,11 @@
             this.order_productXtraUserControl.Controls.Add(this.barDockControlRight);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.order_productXtraUserControl.Location = new System.Drawing.Point(24, 405);
+            this.order_productXtraUserControl.Location = new System.Drawing.Point(24, 331);
             this.order_productXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
             this.order_productXtraUserControl.Name = "order_productXtraUserControl";
-            this.order_productXtraUserControl.Size = new System.Drawing.Size(1146, 370);
+            this.order_productXtraUserControl.Size = new System.Drawing.Size(1146, 444);
             this.order_productXtraUserControl.TabIndex = 15;
             // 
             // order_productGridControl
@@ -458,7 +458,7 @@
             this.order_productGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.order_productGridControl.MenuManager = this.mainRibbonControl;
             this.order_productGridControl.Name = "order_productGridControl";
-            this.order_productGridControl.Size = new System.Drawing.Size(1146, 340);
+            this.order_productGridControl.Size = new System.Drawing.Size(1146, 414);
             this.order_productGridControl.TabIndex = 0;
             this.order_productGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.order_productGridView});
@@ -566,7 +566,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.order_productBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 340);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 414);
             // 
             // order_productBarManager
             // 
@@ -645,7 +645,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 370);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 444);
             this.barDockControlBottom.Manager = this.order_productBarManager;
             this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
             // 
@@ -655,7 +655,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
             this.barDockControlRight.Manager = this.order_productBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 340);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
             // 
             // imageComboBoxEdit1
             // 
@@ -663,9 +663,8 @@
             this.imageComboBoxEdit1.Location = new System.Drawing.Point(77, 194);
             this.imageComboBoxEdit1.MenuManager = this.mainRibbonControl;
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
-            this.imageComboBoxEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.imageComboBoxEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1106, 94);
+            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1106, 20);
             this.imageComboBoxEdit1.StyleController = this.dataLayoutControl1;
             this.imageComboBoxEdit1.TabIndex = 16;
             this.imageComboBoxEdit1.TabStop = true;
@@ -758,7 +757,7 @@
             // ItemForvaccine
             // 
             this.ItemForvaccine.Control = this.vaccineCheckEdit;
-            this.ItemForvaccine.Location = new System.Drawing.Point(0, 280);
+            this.ItemForvaccine.Location = new System.Drawing.Point(0, 206);
             this.ItemForvaccine.Name = "ItemForvaccine";
             this.ItemForvaccine.Size = new System.Drawing.Size(1175, 24);
             this.ItemForvaccine.Text = "vaccine";
@@ -768,7 +767,7 @@
             // ItemForstatus
             // 
             this.ItemForstatus.Control = this.statusCheckEdit;
-            this.ItemForstatus.Location = new System.Drawing.Point(0, 304);
+            this.ItemForstatus.Location = new System.Drawing.Point(0, 230);
             this.ItemForstatus.Name = "ItemForstatus";
             this.ItemForstatus.Size = new System.Drawing.Size(1175, 24);
             this.ItemForstatus.Text = "status";
@@ -778,7 +777,7 @@
             // ItemForspecies_id
             // 
             this.ItemForspecies_id.Control = this.speciesLookUpEdit;
-            this.ItemForspecies_id.Location = new System.Drawing.Point(0, 328);
+            this.ItemForspecies_id.Location = new System.Drawing.Point(0, 254);
             this.ItemForspecies_id.Name = "ItemForspecies_id";
             this.ItemForspecies_id.Size = new System.Drawing.Size(1175, 26);
             this.ItemForspecies_id.Text = "species_id";
@@ -786,10 +785,10 @@
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 354);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 280);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 426);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 500);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -800,7 +799,7 @@
             this.ItemFororder_product});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupFororder_product";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 374);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 448);
             this.layoutControlGroup3.Text = "order_product";
             // 
             // ItemFororder_product
@@ -808,7 +807,7 @@
             this.ItemFororder_product.Control = this.order_productXtraUserControl;
             this.ItemFororder_product.Location = new System.Drawing.Point(0, 0);
             this.ItemFororder_product.Name = "ItemFororder_product";
-            this.ItemFororder_product.Size = new System.Drawing.Size(1150, 374);
+            this.ItemFororder_product.Size = new System.Drawing.Size(1150, 448);
             this.ItemFororder_product.StartNewLine = true;
             this.ItemFororder_product.Text = "order_product";
             this.ItemFororder_product.TextSize = new System.Drawing.Size(0, 0);
@@ -828,7 +827,7 @@
             this.layoutControlItem1.Control = this.imageComboBoxEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 182);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1175, 98);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1175, 24);
             this.layoutControlItem1.Text = "Image";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 16);
             // 
