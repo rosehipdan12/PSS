@@ -28,8 +28,7 @@ namespace PSS_WINFORM_CONTROL
         [StringLength(50)]
         public string tags { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] image { get; set; }
+
 
         [Column(TypeName = "text")]
         public string detail { get; set; }
@@ -37,6 +36,8 @@ namespace PSS_WINFORM_CONTROL
         public int? quantity { get; set; }
 
         public int supplier_id { get; set; }
+
+        public byte[] image { get; set; }
 
         public virtual category category { get; set; }
 
