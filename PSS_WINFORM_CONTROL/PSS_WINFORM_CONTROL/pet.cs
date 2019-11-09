@@ -38,8 +38,9 @@ namespace PSS_WINFORM_CONTROL
         public bool? status { get; set; }
 
         public int species_id { get; set; }
-
-        public string image { get; set; }
+      
+        [Column(TypeName = "image")]
+        public byte[] image { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_product> order_product { get; set; }

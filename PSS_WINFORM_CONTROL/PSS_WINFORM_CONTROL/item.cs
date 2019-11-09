@@ -28,8 +28,8 @@ namespace PSS_WINFORM_CONTROL
         [StringLength(50)]
         public string tags { get; set; }
 
-        [StringLength(50)]
-        public string image { get; set; }
+        [Column(TypeName = "image")]
+        public byte[] image { get; set; }
 
         [Column(TypeName = "text")]
         public string detail { get; set; }
