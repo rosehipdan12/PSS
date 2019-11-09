@@ -26,10 +26,10 @@ namespace Webtest2
         public Nullable<bool> status { get; set; }
         public Nullable<double> pricePerUnit { get; set; }
         public string tags { get; set; }
+        public string image { get; set; }
         public string detail { get; set; }
         public Nullable<int> quantity { get; set; }
         public int supplier_id { get; set; }
-        public byte[] image { get; set; }
     
         public virtual category category { get; set; }
         public virtual supplier supplier { get; set; }
