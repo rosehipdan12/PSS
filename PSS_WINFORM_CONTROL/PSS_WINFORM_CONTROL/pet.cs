@@ -39,6 +39,8 @@ namespace PSS_WINFORM_CONTROL
 
         public int species_id { get; set; }
 
+        public string image { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_product> order_product { get; set; }
 
