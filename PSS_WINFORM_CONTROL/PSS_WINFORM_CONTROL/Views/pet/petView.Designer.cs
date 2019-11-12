@@ -165,7 +165,7 @@
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(77, 12);
+            this.idTextEdit.Location = new System.Drawing.Point(78, 12);
             this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
@@ -174,7 +174,7 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.idTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 4;
             // 
@@ -305,33 +305,33 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(77, 38);
+            this.nameTextEdit.Location = new System.Drawing.Point(78, 38);
             this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
             // 
             // descriptionTextEdit
             // 
             this.descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextEdit.Location = new System.Drawing.Point(77, 64);
+            this.descriptionTextEdit.Location = new System.Drawing.Point(78, 64);
             this.descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.descriptionTextEdit.Name = "descriptionTextEdit";
-            this.descriptionTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.descriptionTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.descriptionTextEdit.TabIndex = 6;
             // 
             // genderTextEdit
             // 
             this.genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.genderTextEdit.Location = new System.Drawing.Point(77, 90);
+            this.genderTextEdit.Location = new System.Drawing.Point(78, 90);
             this.genderTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.genderTextEdit.MenuManager = this.mainRibbonControl;
             this.genderTextEdit.Name = "genderTextEdit";
-            this.genderTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.genderTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.genderTextEdit.StyleController = this.dataLayoutControl1;
             this.genderTextEdit.TabIndex = 7;
             // 
@@ -339,7 +339,7 @@
             // 
             this.birthDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "birth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.birthDateEdit.EditValue = null;
-            this.birthDateEdit.Location = new System.Drawing.Point(77, 116);
+            this.birthDateEdit.Location = new System.Drawing.Point(78, 116);
             this.birthDateEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthDateEdit.MenuManager = this.mainRibbonControl;
             this.birthDateEdit.Name = "birthDateEdit";
@@ -348,14 +348,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.birthDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthDateEdit.Size = new System.Drawing.Size(1106, 22);
+            this.birthDateEdit.Size = new System.Drawing.Size(1105, 22);
             this.birthDateEdit.StyleController = this.dataLayoutControl1;
             this.birthDateEdit.TabIndex = 8;
             // 
             // priceTextEdit
             // 
             this.priceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "price", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.priceTextEdit.Location = new System.Drawing.Point(77, 142);
+            this.priceTextEdit.Location = new System.Drawing.Point(78, 142);
             this.priceTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.priceTextEdit.MenuManager = this.mainRibbonControl;
             this.priceTextEdit.Name = "priceTextEdit";
@@ -365,18 +365,18 @@
             this.priceTextEdit.Properties.Mask.EditMask = "F";
             this.priceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.priceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.priceTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.priceTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.priceTextEdit.StyleController = this.dataLayoutControl1;
             this.priceTextEdit.TabIndex = 9;
             // 
             // colorTextEdit
             // 
             this.colorTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "color", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.colorTextEdit.Location = new System.Drawing.Point(77, 168);
+            this.colorTextEdit.Location = new System.Drawing.Point(78, 168);
             this.colorTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.colorTextEdit.MenuManager = this.mainRibbonControl;
             this.colorTextEdit.Name = "colorTextEdit";
-            this.colorTextEdit.Size = new System.Drawing.Size(1106, 22);
+            this.colorTextEdit.Size = new System.Drawing.Size(1105, 22);
             this.colorTextEdit.StyleController = this.dataLayoutControl1;
             this.colorTextEdit.TabIndex = 10;
             // 
@@ -387,7 +387,7 @@
             this.vaccineCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vaccineCheckEdit.MenuManager = this.mainRibbonControl;
             this.vaccineCheckEdit.Name = "vaccineCheckEdit";
-            this.vaccineCheckEdit.Properties.Caption = "vaccine";
+            this.vaccineCheckEdit.Properties.Caption = "Vaccine";
             this.vaccineCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.vaccineCheckEdit.Size = new System.Drawing.Size(1171, 20);
             this.vaccineCheckEdit.StyleController = this.dataLayoutControl1;
@@ -400,7 +400,7 @@
             this.statusCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.statusCheckEdit.MenuManager = this.mainRibbonControl;
             this.statusCheckEdit.Name = "statusCheckEdit";
-            this.statusCheckEdit.Properties.Caption = "status";
+            this.statusCheckEdit.Properties.Caption = "Status";
             this.statusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.statusCheckEdit.Size = new System.Drawing.Size(1171, 20);
             this.statusCheckEdit.StyleController = this.dataLayoutControl1;
@@ -409,7 +409,7 @@
             // speciesLookUpEdit
             // 
             this.speciesLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "species_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.speciesLookUpEdit.Location = new System.Drawing.Point(77, 266);
+            this.speciesLookUpEdit.Location = new System.Drawing.Point(78, 266);
             this.speciesLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.speciesLookUpEdit.MenuManager = this.mainRibbonControl;
             this.speciesLookUpEdit.Name = "speciesLookUpEdit";
@@ -419,7 +419,7 @@
             this.speciesLookUpEdit.Properties.DisplayMember = "name";
             this.speciesLookUpEdit.Properties.PopupView = this.speciesLookUpEditView;
             this.speciesLookUpEdit.Properties.ValueMember = "id";
-            this.speciesLookUpEdit.Size = new System.Drawing.Size(1106, 22);
+            this.speciesLookUpEdit.Size = new System.Drawing.Size(1105, 22);
             this.speciesLookUpEdit.StyleController = this.dataLayoutControl1;
             this.speciesLookUpEdit.TabIndex = 13;
             // 
@@ -487,6 +487,7 @@
             // 
             // colorder_id
             // 
+            this.colorder_id.Caption = "Order ID";
             this.colorder_id.FieldName = "order_id";
             this.colorder_id.MinWidth = 23;
             this.colorder_id.Name = "colorder_id";
@@ -496,6 +497,7 @@
             // 
             // colpet_id
             // 
+            this.colpet_id.Caption = "Pet ID";
             this.colpet_id.FieldName = "pet_id";
             this.colpet_id.MinWidth = 23;
             this.colpet_id.Name = "colpet_id";
@@ -505,6 +507,7 @@
             // 
             // colitem_id
             // 
+            this.colitem_id.Caption = "Item ID";
             this.colitem_id.FieldName = "item_id";
             this.colitem_id.MinWidth = 23;
             this.colitem_id.Name = "colitem_id";
@@ -514,6 +517,7 @@
             // 
             // colquantity
             // 
+            this.colquantity.Caption = "Quantity";
             this.colquantity.FieldName = "quantity";
             this.colquantity.MinWidth = 23;
             this.colquantity.Name = "colquantity";
@@ -523,6 +527,7 @@
             // 
             // colprice
             // 
+            this.colprice.Caption = "Price";
             this.colprice.FieldName = "price";
             this.colprice.MinWidth = 23;
             this.colprice.Name = "colprice";
@@ -532,6 +537,7 @@
             // 
             // colid
             // 
+            this.colid.Caption = "ID";
             this.colid.FieldName = "id";
             this.colid.MinWidth = 23;
             this.colid.Name = "colid";
@@ -660,11 +666,11 @@
             // imageComboBoxEdit1
             // 
             this.imageComboBoxEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "image", true));
-            this.imageComboBoxEdit1.Location = new System.Drawing.Point(77, 194);
+            this.imageComboBoxEdit1.Location = new System.Drawing.Point(78, 194);
             this.imageComboBoxEdit1.MenuManager = this.mainRibbonControl;
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
             this.imageComboBoxEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1106, 20);
+            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1105, 20);
             this.imageComboBoxEdit1.StyleController = this.dataLayoutControl1;
             this.imageComboBoxEdit1.TabIndex = 16;
             this.imageComboBoxEdit1.TabStop = true;
@@ -706,8 +712,8 @@
             this.ItemForid.Location = new System.Drawing.Point(0, 0);
             this.ItemForid.Name = "ItemForid";
             this.ItemForid.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForid.Text = "id";
-            this.ItemForid.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForid.Text = "ID";
+            this.ItemForid.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemForname
             // 
@@ -715,8 +721,8 @@
             this.ItemForname.Location = new System.Drawing.Point(0, 26);
             this.ItemForname.Name = "ItemForname";
             this.ItemForname.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForname.Text = "name";
-            this.ItemForname.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForname.Text = "Name";
+            this.ItemForname.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemFordescription
             // 
@@ -724,8 +730,8 @@
             this.ItemFordescription.Location = new System.Drawing.Point(0, 52);
             this.ItemFordescription.Name = "ItemFordescription";
             this.ItemFordescription.Size = new System.Drawing.Size(1175, 26);
-            this.ItemFordescription.Text = "description";
-            this.ItemFordescription.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemFordescription.Text = "Description";
+            this.ItemFordescription.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemForgender
             // 
@@ -733,8 +739,8 @@
             this.ItemForgender.Location = new System.Drawing.Point(0, 78);
             this.ItemForgender.Name = "ItemForgender";
             this.ItemForgender.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForgender.Text = "gender";
-            this.ItemForgender.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForgender.Text = "Gender";
+            this.ItemForgender.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemForbirth
             // 
@@ -742,8 +748,8 @@
             this.ItemForbirth.Location = new System.Drawing.Point(0, 104);
             this.ItemForbirth.Name = "ItemForbirth";
             this.ItemForbirth.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForbirth.Text = "birth";
-            this.ItemForbirth.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForbirth.Text = "Birth";
+            this.ItemForbirth.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemForprice
             // 
@@ -751,8 +757,8 @@
             this.ItemForprice.Location = new System.Drawing.Point(0, 130);
             this.ItemForprice.Name = "ItemForprice";
             this.ItemForprice.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForprice.Text = "price";
-            this.ItemForprice.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForprice.Text = "Price";
+            this.ItemForprice.TextSize = new System.Drawing.Size(63, 16);
             // 
             // ItemForvaccine
             // 
@@ -780,8 +786,8 @@
             this.ItemForspecies_id.Location = new System.Drawing.Point(0, 254);
             this.ItemForspecies_id.Name = "ItemForspecies_id";
             this.ItemForspecies_id.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForspecies_id.Text = "species_id";
-            this.ItemForspecies_id.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForspecies_id.Text = "Species ID";
+            this.ItemForspecies_id.TextSize = new System.Drawing.Size(63, 16);
             // 
             // tabbedControlGroup1
             // 
@@ -800,7 +806,7 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupFororder_product";
             this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 448);
-            this.layoutControlGroup3.Text = "order_product";
+            this.layoutControlGroup3.Text = "Order Product";
             // 
             // ItemFororder_product
             // 
@@ -819,8 +825,8 @@
             this.ItemForcolor.Location = new System.Drawing.Point(0, 156);
             this.ItemForcolor.Name = "ItemForcolor";
             this.ItemForcolor.Size = new System.Drawing.Size(1175, 26);
-            this.ItemForcolor.Text = "color";
-            this.ItemForcolor.TextSize = new System.Drawing.Size(62, 16);
+            this.ItemForcolor.Text = "Color";
+            this.ItemForcolor.TextSize = new System.Drawing.Size(63, 16);
             // 
             // layoutControlItem1
             // 
@@ -829,7 +835,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(1175, 24);
             this.layoutControlItem1.Text = "Image";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 16);
             // 
             // mvvmContext
             // 
