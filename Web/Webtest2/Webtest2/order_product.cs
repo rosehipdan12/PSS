@@ -1,11 +1,5 @@
 namespace Webtest2
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
     public partial class order_product
     {
         public int? order_id { get; set; }
