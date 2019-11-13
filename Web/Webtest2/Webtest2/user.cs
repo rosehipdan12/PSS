@@ -20,8 +20,9 @@ namespace Webtest2
 
         [StringLength(50)]
         public string last_name { get; set; }
-
-        public int? phone_number { get; set; }
+        
+        [StringLength(50)]
+        public string phone_number { get; set; }
 
         [StringLength(50)]
         public string email { get; set; }

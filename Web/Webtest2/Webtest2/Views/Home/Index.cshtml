@@ -1,12 +1,10 @@
 ﻿@{
-
     IEnumerable<category> category = ViewData["Category"] as IEnumerable<category>;
     IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
     IEnumerable<pet> pets = ViewData["Pet"] as IEnumerable<pet>;
     ViewBag.Title = "Home";
     var value = 8012.34m;
     var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
-    Console.WriteLine(String.Format(info, "{0:c}", value));
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using System.Collections;
@@ -52,7 +50,7 @@
 </div>
 <div class="clearfix"></div>
     </div>
-<!-- top-brands -->
+<!-- Best Food-brands -->
 <div class="top-brands">
     <div class="container">
         <h3>Best Food</h3>
@@ -62,7 +60,6 @@
                 <div class="col-md-3 top_brand_left">
                     <div class="hover14 column">
                         <div class="agile_top_brand_left_grid">
-
                             <div class="agile_top_brand_left_grid1">
                                 <figure>
                                     <div class="snipcart-item block">
@@ -76,7 +73,6 @@
                                             <p>@items.ElementAt(i).name</p>
                                             <h4>
                                                 @String.Format(info, "{0:c}", items.ElementAt(i).pricePerUnit)
-                                                
                                             </h4>
                                         </div>
                                         <div class="snipcart-details top_brand_home_details">
@@ -103,7 +99,7 @@
         </div>
     </div>
 </div>
-<!-- //top-brands -->
+<!-- //Best Food -->
 <!--Pet-->
 <div class="container">
     <h3>Best Food</h3>
@@ -127,7 +123,7 @@
                                         <p>@pets.ElementAt(i).name</p>
                                         <h4>
                                             @String.Format(info, "{0:c}", pets.ElementAt(i).price)
-                                           
+
                                         </h4>
                                     </div>
                                     <div class="snipcart-details top_brand_home_details">
@@ -141,7 +137,6 @@
                                                 <input type="submit" name="submit" value="Add to cart" class="button" />
                                             </fieldset>
                                         }
-
                                     </div>
                                 </div>
                             </figure>
@@ -201,7 +196,6 @@
                     </div>
                 </div>
                 <div class="clearfix"> </div>
-
             </div>
             <div class="clearfix"> </div>
         </div>

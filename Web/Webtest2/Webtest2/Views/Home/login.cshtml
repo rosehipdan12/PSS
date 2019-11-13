@@ -1,0 +1,124 @@
+﻿@{
+
+    IEnumerable<category> category = ViewData["Category"] as IEnumerable<category>;
+    IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
+    ViewBag.Title = "Home";
+    int count = 1;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Collections;
+
+<div class="w3l_banner_nav_right">
+    <!-- login -->
+    <div class="w3_login">
+        <h3>Sign In & Sign Up</h3>
+        <div class="w3_login_module">
+            <div class="module form-module">
+                <div class="toggle">
+                    <i class="fa fa-times fa-pencil"></i>
+                    <div class="tooltip">Click Me</div>
+                </div>
+                <div class="form">
+                    <h2>Login to your account</h2>
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        <input type="text" id="userLog" onfocosout="userLog()" name="Username" placeholder="Username" required=" ">
+                        <input type="password" id="passLog" onfocusout="passLog()" name="Password" placeholder="Password" required=" ">
+                        if (ViewData["ErrorMessage"] != null)
+                        {
+                           <span>@ViewData["ErrorMessage"].ToString()</span>
+                        }
+                        <input type="submit" value="Login">
+                    }
+                </div>
+                <div class="form">
+                    <h2>Create an account</h2>
+                    @using (Html.BeginForm("CreateAccount", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <input type="text" onfocusout="userReg()" maxlength="12" min="8" id="usernameReg" name="Username" placeholder="Username" required="tr">
+                        if (ViewData["RegMess"] != null)
+                        {
+                            <span>@ViewData["RegMess"].ToString()</span>
+                        }
+                        <input type="password" id="passReg" onfocusout="passReg()" name="Password" placeholder="Password" required=" ">
+                        <input type="email" id="emailReg" name="Email" placeholder="Email Address" required=" ">
+                        <input type="text" onfocusout="phoneReg()" name="Phone" id="phoneReg" placeholder="Phone Number" required=" ">
+                        <input type="submit" value="Register">
+                    }
+                </div>
+                <div class="cta"><a href="#">Forgot your password?</a></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+        </script>
+        <script>
+            var username = document.getElementById("usernameReg");
+            var password = document.getElementById("passReg");
+            var email = document.getElementById("emailReg");
+            var phone = document.getElementById("phoneReg");
+
+
+
+            function userReg() {
+
+                var lowerCaseLetters = /[a-z]/g;
+
+                if (username.value.length > 12 || username.value.length < 8) {
+                    swal("Username Invalid!", ",Must from 8 to 12", "error");
+                    return false;
+                }
+
+                if (!username.value.match(lowerCaseLetters)) {
+                    swal("Username Invalid!", ",Must contain letter", "error");
+                    return false;
+                }
+                return true;
+            };
+
+            function passReg() {
+
+                // Validate capital letters
+                var upperCaseLetters = /[A-Z]/g;
+                if (!password.value.match(upperCaseLetters)) {
+                    swal("Password Invalid!", ",Must contain Upperletter", "error");
+                    return false;
+                }
+
+                // Validate length
+                if (password.value.length > 12 || password.value.length < 8) {
+                    swal("Password Invalid!", ",Must from 8 to 12", "error");
+                    return false;
+                }
+                return true;
+            };
+
+            function phoneReg() {
+                var lowerCaseLetters = /[a-z]/g;
+                if (phone.value.match(lowerCaseLetters)) {
+                    swal("Phone Invalid!", ",Dont input letter words", "error");
+                    return false;
+                }
+                return true;
+            }
+
+
+            $('.toggle').click(function () {
+                // Switches the Icon
+                $(this).children('i').toggleClass('fa-pencil');
+                // Switches the forms
+                $('.form').animate({
+                    height: "toggle",
+                    'padding-top': 'toggle',
+                    'padding-bottom': 'toggle',
+                    opacity: "toggle"
+                }, "slow");
+            });
+        </script>
+    </div>
+    <!-- //login -->
+</div>
+<div class="clearfix"></div>
+
