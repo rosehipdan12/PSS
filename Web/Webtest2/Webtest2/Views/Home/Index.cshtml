@@ -4,8 +4,11 @@
     ViewBag.Title = "Home";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     var value = 8012.34m;
     var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+=======
+>>>>>>> parent of 2a7c02a... WEB update
 =======
 >>>>>>> parent of 2a7c02a... WEB update
 =======
@@ -15,6 +18,7 @@
 @using System.Collections;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <div class="w3l_banner_nav_right">
@@ -100,6 +104,8 @@
 =======
 =======
 >>>>>>> parent of 2a7c02a... WEB update
+=======
+>>>>>>> parent of 2a7c02a... WEB update
         <div class="w3l_banner_nav_right">
             <section class="slider">
                 <div class="flexslider">
@@ -111,6 +117,9 @@
                                     <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
                                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2a7c02a... WEB update
+=======
 >>>>>>> parent of 2a7c02a... WEB update
 =======
 >>>>>>> parent of 2a7c02a... WEB update
@@ -144,6 +153,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 </div>
@@ -251,6 +261,39 @@
                                                     </fieldset>
 
 >>>>>>> parent of 2a7c02a... WEB update
+=======
+    <a href="~/Views/Home/single.cshtml">~/Views/Home/single.cshtml</a>
+    <!-- top-brands -->
+    <div class="top-brands">
+        <div class="container">
+            <h3>Best Food</h3>
+            <div class="agile_top_brands_grids">
+                @for (int i = 0; i < 4; i++)
+                {
+                    <div class="col-md-3 top_brand_left">
+                        <div class="hover14 column">
+                            <div class="agile_top_brand_left_grid">
+                                <div class="tag"><img src="~/images/1.png" alt=" " class="img-responsive" /></div>
+                                <div class="agile_top_brand_left_grid1">
+                                    <figure>
+                                        <div class="snipcart-item block">
+                                            <div class="snipcart-thumb">
+                                                <a href="@Url.Action("Single", "Home", new {id = items.ElementAt(i).id})"><img title=" " alt=" " src="~/images/1.png" /></a>
+                                                <p>@items.ElementAt(i).name</p>
+                                                <h4> @items.ElementAt(i).pricePerUnit VND</h4>
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details">
+                                                @using (Html.BeginForm("Buy","Cart",FormMethod.Post))
+                                                {
+                                                    <fieldset>
+                                                        <input type="hidden" name="id" value="@items.ElementAt(i).id" />
+                                                        <input type="hidden" name="product" value="item" />
+                                                        <input type="hidden" name="Controller" value="Home" />
+                                                        <input type="hidden" name="Action" value="Index" />
+                                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                    </fieldset>
+
+>>>>>>> parent of 2a7c02a... WEB update
                                                 }
                                                
 
@@ -259,6 +302,9 @@
                                         </div>
                                     </figure>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2a7c02a... WEB update
+=======
 >>>>>>> parent of 2a7c02a... WEB update
 =======
 >>>>>>> parent of 2a7c02a... WEB update
