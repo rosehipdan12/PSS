@@ -1,18 +1,7 @@
 ﻿using System;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-=======
 using System.Collections.Generic;
->>>>>>> parent of 2a7c02a... WEB update
-=======
-using System.Collections.Generic;
->>>>>>> parent of 2a7c02a... WEB update
-=======
-using System.Collections.Generic;
->>>>>>> parent of 2a7c02a... WEB update
 using System.Linq;
 using System.Web.Mvc;
 
@@ -45,9 +34,7 @@ namespace Webtest2.Controllers
             ViewData["Catalogy_name"] = ps.categories.First(c => c.id == cata_id);
             return View();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         public ActionResult Checkout()
         {
             if (Session["user"] == null)
@@ -177,14 +164,5 @@ namespace Webtest2.Controllers
             return RedirectToAction("Index");
         }
 
-=======
-      
->>>>>>> parent of 2a7c02a... WEB update
-=======
-      
->>>>>>> parent of 2a7c02a... WEB update
-=======
-      
->>>>>>> parent of 2a7c02a... WEB update
     }
 }
