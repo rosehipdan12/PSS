@@ -450,11 +450,12 @@
     <Content Include="Views\Home\CreateAccount.cshtml" />
     <Content Include="Views\Home\user.cshtml" />
     <Content Include="Views\Home\singlepet.cshtml" />
+    <Content Include="Views\Cart\OrderProductDetail.cshtml" />
+    <Content Include="Views\Home\payment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Cart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

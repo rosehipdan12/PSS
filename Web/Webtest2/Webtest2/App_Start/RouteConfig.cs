@@ -14,7 +14,13 @@ namespace Webtest2
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-          
+            routes.MapRoute(
+                   name: "Cart",
+                   url: "{controller}/{action}/{id}",
+                   defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional }
+               );
+
+
         }
     }
 }

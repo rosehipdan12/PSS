@@ -8,7 +8,7 @@ namespace Webtest2.Controllers
 {
     public class HomeController : Controller
     {
-            Model1 ps = new Model1();
+        Model1 ps = new Model1();
         public ActionResult Index()
         {
             ViewData["Items"] = (from e in ps.items select e).ToList();
@@ -34,7 +34,7 @@ namespace Webtest2.Controllers
         public ActionResult Catalog(String id)
         {
             int cata_id = Int32.Parse(id);
-            var itemLoad = from e in ps.items where e.category_id == cata_id  select e;
+            var itemLoad = from e in ps.items where e.category_id == cata_id select e;
             ViewData["ItemLoad"] = itemLoad.ToList();
             ViewData["Catalogy_name"] = ps.categories.First(c => c.id == cata_id);
             return View();
@@ -50,6 +50,7 @@ namespace Webtest2.Controllers
                 int id = Int32.Parse(Session["user"].ToString());
                 user us = ps.users.Where(c => c.id == id).FirstOrDefault();
                 ViewData["User"] = us;
+
             }
             return View();
         }
@@ -119,7 +120,7 @@ namespace Webtest2.Controllers
                 return RedirectToAction("Login");
             }
             int id = Int32.Parse(Session["user"].ToString());
-            user us =  ps.users.Where(c => c.id == id).FirstOrDefault();
+            user us = ps.users.Where(c => c.id == id).FirstOrDefault();
             ViewData["User"] = us;
             return View();
         }
@@ -127,33 +128,23 @@ namespace Webtest2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult user(user user)
         {
-            bool saveFailed;
-            //write code to update student
-            System.Diagnostics.Debug.WriteLine(ModelState.IsValid);
-                try
-                {
-                    // Your code...
-                    // Could also be before try if you know the exception occurs in SaveChanges
-                    ps.Entry(user).State = EntityState.Modified;
-                    ps.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException e)
-                {
-                    saveFailed = true;
-                    // Update the values of the entity that failed to save from the store
-                    foreach (var eve in e.EntityValidationErrors)
-                    {
-                        System.Diagnostics.Debug.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                            eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                        foreach (var ve in eve.ValidationErrors)
-                        {
-                            System.Diagnostics.Debug.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                                ve.PropertyName, ve.ErrorMessage);
-                        }
-                    }
-                    throw;
-                }
-            return RedirectToAction("Index");
+            int id = Int32.Parse(Session["user"].ToString());
+            user us = ps.users.Where(c => c.id == id).FirstOrDefault();
+            us.first_name = user.first_name;
+            us.last_name = user.last_name;
+            us.phone_number = user.phone_number;
+            us.email = user.email;
+            us.gender = user.gender;
+            ps.SaveChanges();
+
+            return Redirect(Request.UrlReferrer.PathAndQuery);
         }
+
+
+        public ActionResult Payment()
+        {
+            return View();
+        }
+       
     }
 }

@@ -1,238 +1,287 @@
-﻿
+﻿@model Webtest2.user
+
+@{
     IEnumerable<category> category = ViewData["Category"] as IEnumerable<category>;
     IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
     ViewBag.Title = "Home";
     int count = 1;
     Layout = "~/Views/Shared/_Layout.cshtml";
     var user = (user)ViewData["user"];
+    List<cart> carts = new List<cart>();
+    Function fs = new Function();
 
+    if (Session["Cart"] != null)
+    {
+        carts = (List<cart>)Session["cart"];
+    };
+    var value = 8012.34m;
+    var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
 
 }
 @using System.Collections;
 
-<!-- products-breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a><span>|</span></li>
-				<li>Checkout</li>
-			</ul>
-		</div>
-	</div>
-<!-- //products-breadcrumb -->
-<!-- banner -->
-	<div class="banner">
-		<div class="w3l_banner_nav_left">
-			<nav class="navbar nav_bottom">
-			 <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header nav_2">
-				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-			   </div>
-			   <!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav nav_1">
-						<li><a href="products.html">Branded Foods</a></li>
-						<li><a href="household.html">Households</a></li>
-						<li class="dropdown mega-dropdown active">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="vegetables.html">Vegetables</a></li>
-										<li><a href="vegetables.html">Fruits</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li><a href="kitchen.html">Kitchen</a></li>
-						<li><a href="short-codes.html">Short Codes</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="drinks.html">Soft Drinks</a></li>
-										<li><a href="drinks.html">Juices</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li><a href="pet.html">Pet Food</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frozen Foods<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="frozen.html">Frozen Snacks</a></li>
-										<li><a href="frozen.html">Frozen Nonveg</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li><a href="bread.html">Bread & Bakery</a></li>
-					</ul>
-				 </div><!-- /.navbar-collapse -->
-			</nav>
-		</div>
-		<div class="w3l_banner_nav_right">
-<!-- about -->
-		<div class="privacy about">
-			<h3>Chec<span>kout</span></h3>
+<div class="w3l_banner_nav_right">
+    <!-- about -->
+    <div class="privacy about">
+        <h3>Chec<span>kout</span></h3>
 
-	      <div class="checkout-right">
-					<h4>Your shopping cart contains: <span>3 Products</span></h4>
-				<table class="timetable_sub">
-					<thead>
-						<tr>
-							<th>SL No.</th>
-							<th>Product</th>
-							<th>Quality</th>
-							<th>Product Name</th>
+        <div class="checkout-right">
+            <h4>Your shopping cart contains: <span>3 Products</span></h4>
+            <table class="timetable_sub">
+                <thead>
+                    <tr>
+                        <th>SL No.</th>
+                        <th>Product</th>
+                        <th>Quality</th>
+                        <th>Product Name</th>
 
-							<th>Price</th>
-							<th>Remove</th>
-						</tr>
-					</thead>
-					<tbody><tr class="rem1">
-						<td class="invert">1</td>
-						<td class="invert-image"><a href="single.html"><img src="images/1.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Fortune Sunflower Oil</td>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in carts)
+                    {
+                        if (item.item != null)
+                        {
+                    <tr class="rem+@count">
+                        <td class="invert">@count</td>
+                        @if (item.item.image != null)
+                        {
+                            <input type="hidden" id="itemID" />
+                            var base64 = Convert.ToBase64String(item.item.image);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                            <td class="invert-image">
+                                <a href="@Url.Action("Singleitem", "Home", new { id = item.item.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
+                            </td>
+                        }
 
-						<td class="invert">$290.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close1"> </div>
-							</div>
+                        <td class="invert">
+                            <div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value-minus">&nbsp;</div>
+                                    <input type="hidden" id="dataID" data-id="@item.item.id" class="idContent" value="@item.item.id" />
+                                    <div class="entry value" data-id="@item.item.id"><span >@item.quantity</span></div>
+                                    <div class="entry value-plus active">&nbsp;</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="invert">@item.item.name</td>
 
-						</td>
-					</tr>
-					<tr class="rem2">
-						<td class="invert">2</td>
-						<td class="invert-image"><a href="single.html"><img src="images/3.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Basmati Rise (5 Kg)</td>
+                        <td class="invert">
+                            @String.Format(info, "{0:c}", item.item.pricePerUnit)
+                        </td>
+                        <td class="invert">
+                            <div class="rem">
+                                <div class="close1"> </div>
+                            </div>
 
-						<td class="invert">$250.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close2"> </div>
-							</div>
+                        </td>
+                    </tr>  
+                        }
+                        else
+                        {
+                            <tr class="rem+@count">
+                                <td class="invert">@count</td>
+                                @if (item.pet.image != null)
+                                {
+                                    var base64 = Convert.ToBase64String(item.pet.image);
+                                    var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                    <td class="invert-image">
+                                        <a href="@Url.Action("Singleitem", "Home", new { id = item.pet.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
+                                    </td>
+                                }
 
-						</td>
-					</tr>
-					<tr class="rem3">
-						<td class="invert">3</td>
-						<td class="invert-image"><a href="single.html"><img src="images/2.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Pepsi Soft Drink (2 Ltr)</td>
+                                <td class="invert">
+                                    <div class="quantity">
+                                        <div class="quantity-select">
+                                            <div class="entry value-minus" id="minus" >&nbsp;</div>
+                                            <input type="hidden" id="dataID" value="@item.pet.id" />
+                                            <div class="entry value"><span data-id="@item.pet.id">@item.quantity</span></div>
+                                            <div class="entry value-plus active" id="plus">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="invert">item.pet.name</td>
 
-						<td class="invert">$15.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close3"> </div>
-							</div>
+                                <td class="invert">
+                                    @String.Format(info, "{0:c}", item.pet.price)
+                                </td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close1"> </div>
+                                    </div>
 
-						</td>
-					</tr>
+                                </td>
+                            </tr>
+                        }
+                        count++;
+                    }
 
-				</tbody></table>
-			</div>
-			<div class="checkout-left">
-				<div class="col-md-4 checkout-left-basket">
-					<h4>Continue to basket</h4>
-					<ul>
-						<li>Product1 <i>-</i> <span>$15.00 </span></li>
-						<li>Product2 <i>-</i> <span>$25.00 </span></li>
-						<li>Product3 <i>-</i> <span>$29.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$84.00</span></li>
-					</ul>
-				</div>
-				<div class="col-md-8 address_form_agile">
-					  <h4>Add a new Details</h4>
-				<form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
-									<section class="creditly-wrapper wthree, w3_agileits_wrapper">
-										<div class="information-wrapper">
-											<div class="first-row form-group">
-												<div class="controls">
-													<label class="control-label">Full name: </label>
-													<input class="billing-address-name form-control" type="text" name="name" placeholder="Full name">
-												</div>
-												<div class="w3_agileits_card_number_grids">
-													<div class="w3_agileits_card_number_grid_left">
-														<div class="controls">
-															<label class="control-label">Mobile number:</label>
-														    <input class="form-control" type="text" placeholder="Mobile number">
-														</div>
-													</div>
-													<div class="w3_agileits_card_number_grid_right">
-														<div class="controls">
-															<label class="control-label">Landmark: </label>
-														 <input class="form-control" type="text" placeholder="Landmark">
-														</div>
-													</div>
-													<div class="clear"> </div>
-												</div>
-												<div class="controls">
-													<label class="control-label">Town/City: </label>
-												 <input class="form-control" type="text" placeholder="Town/City">
-												</div>
-													<div class="controls">
-															<label class="control-label">Address type: </label>
-												     <select class="form-control option-w3ls">
-																							<option>Office</option>
-																							<option>Home</option>
-																							<option>Commercial</option>
+                </tbody>
+            </table>
+        </div>
+        <div class="checkout-left">
+            <div class="col-md-4 checkout-left-basket">
+                <h4>Continue to basket</h4>
+                <ul>
+                    @foreach (var item in carts)
+                    {
+                        if (!item.itemorpet())
+                        {
+                            <li>@item.item.name <i>-</i> <span>@item.price() </span></li>
+                        }
+                    }
+                    <li>Total <i>-</i> <span>  @String.Format(info, "{0:c}", fs.totalPrice(carts))</span></li>
+                </ul>
+            </div>
+            <div class="col-md-8 address_form_agile">
+                <h4>Delivery Detail</h4>
+                @using (Html.BeginForm("Payment", "Home", FormMethod.Post, new { @class = "creditly-card-form agileinfo_form" }))
+                {
+                    <div class="form-group">
 
-																					</select>
-													</div>
-											</div>
-											<button class="submit check_out">Delivery to this Address</button>
-										</div>
-									</section>
-								</form>
-									<div class="checkout-right-basket">
-				        	<a href="payment.html">Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-			      	</div>
-					</div>
+                        <label class="control-label" for="full_name">First Name </label>
 
-				<div class="clearfix"> </div>
+                        <div class="input-wrap">
+                            @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control", @Value = @user.first_name } })
+                            @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
+                            <span class="help-block"></span>
+                        </div>
 
-			</div>
+                        <label class="control-label" for="full_name">First Name </label>
 
-		</div>
-<!-- //about -->
-		</div>
-		<div class="clearfix"></div>
-	</div>
+                        <div class="input-wrap">
+                            @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control", @Value = @user.last_name } })
+                            @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="control-label" for="phone_number">Phone Number</label>
+                        <div class="input-wrap update-phone">
+                            @Html.EditorFor(model => model.phone_number, new { htmlAttributes = new { @class = "form-control", @Value = @user.phone_number } })
+                            @Html.ValidationMessageFor(model => model.phone_number, "", new { @class = "text-danger" })
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="address">Address</label>
+                        <div class="input-wrap">
+                            @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control", @Value = @user.address } })
+                            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="city">City</label>
+                        <div class="input-wrap">
+                            @Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control", @Value = @user.city } })
+                            @Html.ValidationMessageFor(model => model.city, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrap margin">
+                            <button type="submit" class="btn btn-info btn-block btn-update">Deliver to this address</button>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="clearfix"> </div>
+
+        </div>
+
+    </div>
+    <!-- //about -->
+</div>
+<div class="clearfix"></div>
+</div>
 <!-- //banner -->
+<!-- js -->
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<!--quantity-->
+<script>
+    $('.value-plus').on('click',  function () {
+        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
+        var idModel = divUpd.data('id');
+        alert(idModel);       
+        $.ajax({
+            url: "/Cart/PlusQuantity",
+            data: '{"id":"' + idModel +'"}',
+            contentType: 'application/json; charset=utf-8',
+            type: 'post',
+            success: function (result) {
+                if (result != "Failed") {
+
+                    divUpd.text(result);
+                }
+                else if (result == "Failed") {
+                    alert('Failed')
+                }
+            },
+            error: function (result) {
+                  alert('Fail')
+            }
+        });
+    });
+
+    $('.value-minus').on('click', function () {
+        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
+        var idModel = divUpd.data('id');
+        alert(idModel);       
+        $.ajax({
+            url: "/Cart/MinusQuantity",
+            data: '{"id":"' + idModel +'"}',
+            contentType: 'application/json; charset=utf-8',
+            type: 'post',
+            success: function (result) {
+                if (result != "Failed") {
+
+                    divUpd.text(result);
+                }
+                else if (result == "Failed") {
+                    alert('Failed')
+                }
+            },
+            error: function (result) {
+                  alert('Fail')
+            }
+        });
+    });
+    
+    
+
+</script>
+<!--quantity-->
+<script>
+    $(document).ready(function (c) {
+        $('.close1').on('click', function (c) {
+            $('.rem1').fadeOut('slow', function (c) {
+                $('.rem1').remove();
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function (c) {
+        $('.close2').on('click', function (c) {
+            $('.rem2').fadeOut('slow', function (c) {
+                $('.rem2').remove();
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function (c) {
+        $('.close3').on('click', function (c) {
+            $('.rem3').fadeOut('slow', function (c) {
+                $('.rem3').remove();
+            });
+        });
+    });
+</script>
+

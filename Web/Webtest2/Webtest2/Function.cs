@@ -25,5 +25,15 @@ namespace Webtest2
                 return sb.ToString();
             }
         }
+        public double? totalPrice(List<cart> cars)
+        {
+            double? total = 0;
+            foreach(var item in cars)
+            {
+
+                total+=item.price();
+            }
+            return total;
+        }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace Webtest2.Controllers
 {
@@ -11,7 +13,7 @@ namespace Webtest2.Controllers
         Model1 ps = new Model1();
 
         // GET: Cart
-        public ActionResult Index(String controller,String action)
+        public ActionResult Checkout()
         {
             return View();
         }
@@ -21,7 +23,7 @@ namespace Webtest2.Controllers
 
         //Action buy
         [HttpPost]
-        public ActionResult Buy(string id, string product,string controller,string action)
+        public ActionResult Buy(string id, string product, string controller, string action)
         {
             int item_id = Int32.Parse(id);
             //Create cart
@@ -99,5 +101,50 @@ namespace Webtest2.Controllers
             }
             return -1;
         }
+        [HttpPost]
+
+        public JsonResult MinusQuantity(string id)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
+            int item_id = Int32.Parse(id);
+            List<cart> cart = (List<cart>)Session["cart"];
+            int index = isExist(item_id);
+            if (index != -1)
+            {
+                if (cart[index].quantity > 1)
+                {
+                    cart[index].quantity--;
+                    return Json(cart[index].quantity, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json("Failed", JsonRequestBehavior.AllowGet);
+                }
+
+            }
+            return Json("Failed", JsonRequestBehavior.AllowGet);
+
+        }
+        [HttpPost]
+
+        public JsonResult PlusQuantity(string id)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
+            int item_id = Int32.Parse(id);
+            List<cart> cart = (List<cart>)Session["cart"];
+            int index = isExist(item_id);
+            if (index != -1)
+            {
+                
+                    cart[index].quantity++;
+                    return Json(cart[index].quantity, JsonRequestBehavior.AllowGet);
+                
+                
+
+            }
+            return Json("Failed", JsonRequestBehavior.AllowGet);
+
+        }
+
     }
 }
