@@ -4,7 +4,6 @@ using System.Data.Entity.Infrastructure;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-
 namespace Webtest2.Controllers
 {
     public class HomeController : Controller
@@ -12,18 +11,24 @@ namespace Webtest2.Controllers
             Model1 ps = new Model1();
         public ActionResult Index()
         {
-            dataModel dm = new dataModel();
             ViewData["Items"] = (from e in ps.items select e).ToList();
             ViewData["Brands"] = (from e in ps.suppliers select e).ToList();
-
+            ViewData["Pets"] = (from e in ps.pets select e).ToList();
             return View();
         }
-        public ActionResult Single(String id) {
+        public ActionResult Singlepet(String id) {
+            System.Diagnostics.Debug.WriteLine(id);
+            int Pet_id = Int32.Parse(id);
+            ViewData["PetsLoad"] = (from e in ps.pets select e).ToList();
+            ViewData["Pets"] = ps.pets.Where(c => c.id == Pet_id).FirstOrDefault();
+            return View();
+        }
+        public ActionResult Singleitem(String id)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
             int Item_id = Int32.Parse(id);
-            var itemLoad = from e in ps.items where e.id == Item_id select e;
-            ViewData["ItemLoad"] = itemLoad.ToList();
-            ViewData["Items"] = (from e in ps.items select e).ToList();
-
+            ViewData["ItemLoad"] = (from e in ps.items select e).ToList();
+            ViewData["Items"] = ps.items.Where(c => c.id == Item_id).FirstOrDefault();
             return View();
         }
         public ActionResult Catalog(String id)
@@ -34,7 +39,6 @@ namespace Webtest2.Controllers
             ViewData["Catalogy_name"] = ps.categories.First(c => c.id == cata_id);
             return View();
         }
-
         public ActionResult Checkout()
         {
             if (Session["user"] == null)
@@ -43,7 +47,9 @@ namespace Webtest2.Controllers
             }
             else
             {
-                ViewData["User"] = ps.users.Where(c => c.id == Int32.Parse(Session["user"].ToString())).FirstOrDefault();
+                int id = Int32.Parse(Session["user"].ToString());
+                user us = ps.users.Where(c => c.id == id).FirstOrDefault();
+                ViewData["User"] = us;
             }
             return View();
         }
@@ -87,9 +93,7 @@ namespace Webtest2.Controllers
             System.Diagnostics.Debug.WriteLine(password);
             System.Diagnostics.Debug.WriteLine(email);
             System.Diagnostics.Debug.WriteLine(phone);
-
             var s = ps.users.Where(c => c.username.Equals(username)).FirstOrDefault();
-
             if (s == null)
             {
                 user us = new user();
@@ -105,7 +109,6 @@ namespace Webtest2.Controllers
             else
             {
                 ViewData["RegMess"] = "Username is exist. Try again";
-
             }
             return View("login");
         }
@@ -118,7 +121,6 @@ namespace Webtest2.Controllers
             int id = Int32.Parse(Session["user"].ToString());
             user us =  ps.users.Where(c => c.id == id).FirstOrDefault();
             ViewData["User"] = us;
-
             return View();
         }
         [HttpPost]
@@ -126,7 +128,6 @@ namespace Webtest2.Controllers
         public ActionResult user(user user)
         {
             bool saveFailed;
-
             //write code to update student
             System.Diagnostics.Debug.WriteLine(ModelState.IsValid);
                 try
@@ -134,17 +135,12 @@ namespace Webtest2.Controllers
                     // Your code...
                     // Could also be before try if you know the exception occurs in SaveChanges
                     ps.Entry(user).State = EntityState.Modified;
-
                     ps.SaveChanges();
                 }
-
                 catch (System.Data.Entity.Validation.DbEntityValidationException e)
                 {
                     saveFailed = true;
-
                     // Update the values of the entity that failed to save from the store
-
-
                     foreach (var eve in e.EntityValidationErrors)
                     {
                         System.Diagnostics.Debug.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
@@ -157,12 +153,7 @@ namespace Webtest2.Controllers
                     }
                     throw;
                 }
-
-
-
-
             return RedirectToAction("Index");
         }
-
     }
 }

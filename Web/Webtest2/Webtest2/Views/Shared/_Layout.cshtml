@@ -63,15 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <input type="submit" value=" ">
             </form>
         </div>
-        <div class="product_list_header">
-            <form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
-                    <input type="submit" name="submit" value="View your cart" class="button" />
-                </fieldset>
-            </form>
-        </div>
+
         <div class="w3l_header_right">
 
             <ul>
@@ -105,26 +97,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (item.item != null)
                                         {
                                             <li class="list-group-item"><a href="">@item.item.name (@item.quantity) @item.price() VND</a></li>
-
                                         }
                                         else
                                         {
                                             <li><a href="">@item.pet.name (@item.quantity)</a></li>
-
-
-
                                         }
                                     }
                                 }
-
                                 <li>
                                     <a class="btn btn-danger" style="color:white;font-weight:bold" href="@Url.Action("Checkout","Home")">View Your Cart<i class="fa fa-shopp"></i></a>
 
                                 </li>
                             </ul>
-
-
-
                         </div>
                     </div>
                 </li>
@@ -196,10 +180,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--Category-->
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav nav_1">
-
-
-                        <!-- <li><a href="products.cshtml">@*@item.name*@</a></li>-->
-
                         @foreach (var item in category)
                         {
                             if (item.level == 0)

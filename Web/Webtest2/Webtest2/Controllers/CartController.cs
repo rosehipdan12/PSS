@@ -43,7 +43,7 @@ namespace Webtest2.Controllers
             else
             {
                 // if have card, increase quantity
-                List<cart> cart = new List<cart>();
+                List<cart> cart = (List<cart>)Session["cart"];
                 int index = isExist(item_id);
                 if (index != -1)
                 {
@@ -63,7 +63,7 @@ namespace Webtest2.Controllers
                 }
                 Session["cart"] = cart;
             }
-            return RedirectToAction(action, controller);
+            return Redirect(Request.UrlReferrer.PathAndQuery);
         }
         //Remove product im cart
         public ActionResult Remove(string id)

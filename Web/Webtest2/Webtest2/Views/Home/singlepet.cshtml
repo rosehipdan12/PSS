@@ -1,9 +1,9 @@
 ﻿
 @{
-    IEnumerable<item> itemLoad = ViewData["ItemLoad"] as IEnumerable<item>;
-    IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
+    IEnumerable<pet> petLoad = ViewData["PetLoad"] as IEnumerable<item>;
+    var pet = (pet)ViewData["Pets"];
     int count = 0;
-        ViewBag.Title = itemLoad.ElementAt(0).name;
+    ViewBag.Title = pet.name;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,21 +12,26 @@
                 <h3>Best Deals For New Products<span class="blink_me"></span></h3>
             </div>
             <div class="agileinfo_single">
-                <h5>@itemLoad.ElementAt(0).name</h5>
+                <h5>@pet.name</h5>
                 <div class="col-md-4 agileinfo_single_left">
-                    <img id="example" src="~/~/images/76.png" alt=" " class="img-responsive" />
+                    @if (pet.image != null)
+                    {
+                        var base64 = Convert.ToBase64String(pet.image);
+                        var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                     <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
+                    }
                 </div>
                 <div class="col-md-8 agileinfo_single_right">
 
                     <div class="w3agile_description">
                         <h4>Description :</h4>
                         <p>
-                            @itemLoad.ElementAt(0).detail
+                            @pet.description
                         </p>
                     </div>
                     <div class="snipcart-item block">
                         <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                            <h4>@itemLoad.ElementAt(0).pricePerUnit VND</h4>
+                            <h4>@pet.price VND</h4>
                         </div>
                         <div class="snipcart-details agileinfo_single_right_details">
                             <form action="#" method="post">
@@ -34,8 +39,8 @@
                                     <input type="hidden" name="cmd" value="_cart" />
                                     <input type="hidden" name="add" value="1" />
                                     <input type="hidden" name="business" value=" " />
-                                    <input type="hidden" name="item_name" value="@itemLoad.ElementAt(0).name" />
-                                    <input type="hidden" name="amount" value="@itemLoad.ElementAt(0).quantity" />
+                                    <input type="hidden" name="item_name" value="@pet.name" />
+                                    <input type="hidden" name="amount" value="@pet." />
                                     <input type="hidden" name="discount_amount" value="1.00" />
                                     <input type="hidden" name="currency_code" value="VND" />
                                     <input type="hidden" name="return" value=" " />
@@ -55,16 +60,7 @@
 </div>
 <div class="clearfix"></div>
 <!-- //banner -->
-<!-- brands -->
-<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_popular">
-    <div class="container">
-        <h3>Popular Brands</h3>
-        <div class="w3ls_w3l_banner_nav_right_grid1">
-            <h6>food</h6>
-            @for (int i = 0; i < 4; i += 0)
-            {
-                if (items.ElementAt(i).category_id == 14 || items.ElementAt(i).category_id == 15)
-    <!-- //banner -->
+
     <!-- brands -->
     <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_popular">
         <div class="container">
@@ -82,7 +78,7 @@
                             break;
                         }
 
-                <div class="col-md-3
+                <div class="col-md-3">
                         <div class="col-md-3 w3ls_w3l_banner_left">
                             <div class="hover14 column">
                                 <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
@@ -118,6 +114,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     }
                 }
