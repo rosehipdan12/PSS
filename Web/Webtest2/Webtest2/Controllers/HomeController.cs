@@ -116,20 +116,19 @@ namespace Webtest2.Controllers
                 return RedirectToAction("Login");
             }
             int id = Int32.Parse(Session["user"].ToString());
-            ViewData["User"] = ps.users.Where(c => c.id == id).FirstOrDefault();
+            user us =  ps.users.Where(c => c.id == id).FirstOrDefault();
+            ViewData["User"] = us;
+
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult user([Bind(Include = "id,first_name,last_name,phone_number,email,gender")]user user)
+        public ActionResult user(user user)
         {
             bool saveFailed;
 
             //write code to update student 
-            System.Diagnostics.Debug.WriteLine(ModelState.IsValid);
-            do
-            {
-                saveFailed = false;
+            System.Diagnostics.Debug.WriteLine(ModelState.IsValid);           
                 try
                 {
                     // Your code...
@@ -138,14 +137,7 @@ namespace Webtest2.Controllers
 
                     ps.SaveChanges();
                 }
-                catch (DbUpdateConcurrencyException ex)
-                {
-                    saveFailed = true;
-
-                    // Update the values of the entity that failed to save from the store
-                    var entry = ex.Entries.Single();
-                    entry.OriginalValues.SetValues(entry.GetDatabaseValues());
-                }
+             
                 catch (System.Data.Entity.Validation.DbEntityValidationException e)
                 {
                     saveFailed = true;
@@ -167,7 +159,7 @@ namespace Webtest2.Controllers
                 }
                
 
-            } while (saveFailed);
+         
 
             return RedirectToAction("Index");
         }

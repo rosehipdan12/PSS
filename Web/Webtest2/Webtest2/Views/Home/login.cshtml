@@ -20,7 +20,7 @@
                 </div>
                 <div class="form">
                     <h2>Login to your account</h2>
-                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @id = "register" }))
                     {
                         <input type="text" id="userLog" onfocosout="userLog()" name="Username" placeholder="Username" required=" ">
                         <input type="password" id="passLog" onfocusout="passLog()" name="Password" placeholder="Password" required=" ">
@@ -77,33 +77,17 @@
                 }
                 return true;
             };
-
-            function passReg() {
-
-                // Validate capital letters
-                var upperCaseLetters = /[A-Z]/g;
-                if (!password.value.match(upperCaseLetters)) {
-                    swal("Password Invalid!", ",Must contain Upperletter", "error");
-                    return false;
-                }
-
-                // Validate length
-                if (password.value.length > 12 || password.value.length < 8) {
-                    swal("Password Invalid!", ",Must from 8 to 12", "error");
-                    return false;
-                }
-                return true;
-            };
-
-            function phoneReg() {
-                var lowerCaseLetters = /[a-z]/g;
-                if (phone.value.match(lowerCaseLetters)) {
-                    swal("Phone Invalid!", ",Dont input letter words", "error");
-                    return false;
-                }
-                return true;
+            function register() {
+                var data = $("#register").serialize();
+                $.ajax({
+                    type="post"
+                    data: data,
+                    URL: "/Home/CreateAccount"
+                    success: function (result) {
+                        swal("Register Successfull", result, "success");
+                    }
+                })
             }
-
 
             $('.toggle').click(function () {
                 // Switches the Icon

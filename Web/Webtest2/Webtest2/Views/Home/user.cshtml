@@ -33,34 +33,39 @@
                     </div>
                     <div class="col-sm-7">
                         <div class="content-right">
-                            <h1 class="have-margin">Account Ìnformation</h1>
+                            <h1 class="have-margin">Account Information</h1>
                             <div class="account-profile register-form">
                                 @using (Html.BeginForm())
                                 {
                                     @Html.AntiForgeryToken()
-                                    <div class="form-group">
+                                <div class="form-group">
 
-                                        <label class="control-label" for="full_name">First Name </label>
-
-                                        <div class="input-wrap">
-                                            @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control" ,@placeholder="First Name"} })
-                                            @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
-                                            <span class="help-block"></span>
-                                        </div>
-
-                                        <label class="control-label" for="full_name">First Name </label>
-
-                                        <div class="input-wrap">
-                                            @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name" } })
-                                            @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
-                                            <span class="help-block"></span>
-                                        </div>
+                                    <label class="control-label" for="full_name">First Name </label>
+                                    @Html.HiddenFor(model => model.id)
+                                    @Html.HiddenFor(model => model.role)
+                                    @Html.HiddenFor(model => model.id)
+                                    @Html.HiddenFor(model => model.id)
+                                    @Html.HiddenFor(model => model.id)
+                                    
+                                    <div class="input-wrap">
+                                        @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control", @placeholder = @user.first_name } })
+                                        @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
+                                        <span class="help-block"></span>
                                     </div>
+
+                                    <label class="control-label" for="full_name">First Name </label>
+
+                                    <div class="input-wrap">
+                                        @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control", @placeholder = @user.last_name } })
+                                        @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
 
                                     <div class="form-group ">
                                         <label class="control-label" for="phone_number">Phone Number</label>
                                         <div class="input-wrap update-phone">
-                                            @Html.EditorFor(model => model.phone_number, new { htmlAttributes = new { @class = "form-control", @placeholder = "Phone number" } })
+                                            @Html.EditorFor(model => model.phone_number, new { htmlAttributes = new { @class = "form-control", @placeholder = @user.phone_number } })
                                             @Html.ValidationMessageFor(model => model.phone_number, "", new { @class = "text-danger" })           
                                             <span class="help-block"></span>
                                         </div>
