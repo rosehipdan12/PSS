@@ -20,7 +20,7 @@ namespace Webtest2.Controllers
         }
         public ActionResult Single(String id) {
             int Item_id = Int32.Parse(id);
-            var itemLoad = from e in ps.items where e.id == Item_id select e;          
+            var itemLoad = from e in ps.items where e.id == Item_id select e;
             ViewData["ItemLoad"] = itemLoad.ToList();
             ViewData["Items"] = (from e in ps.items select e).ToList();
 
@@ -127,8 +127,8 @@ namespace Webtest2.Controllers
         {
             bool saveFailed;
 
-            //write code to update student 
-            System.Diagnostics.Debug.WriteLine(ModelState.IsValid);           
+            //write code to update student
+            System.Diagnostics.Debug.WriteLine(ModelState.IsValid);
                 try
                 {
                     // Your code...
@@ -137,13 +137,13 @@ namespace Webtest2.Controllers
 
                     ps.SaveChanges();
                 }
-             
+
                 catch (System.Data.Entity.Validation.DbEntityValidationException e)
                 {
                     saveFailed = true;
 
                     // Update the values of the entity that failed to save from the store
-                   
+
 
                     foreach (var eve in e.EntityValidationErrors)
                     {
@@ -157,9 +157,9 @@ namespace Webtest2.Controllers
                     }
                     throw;
                 }
-               
 
-         
+
+
 
             return RedirectToAction("Index");
         }
