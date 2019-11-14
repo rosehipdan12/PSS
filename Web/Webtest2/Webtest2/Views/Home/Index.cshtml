@@ -1,15 +1,18 @@
 ﻿@{
     IEnumerable<category> category = ViewData["Category"] as IEnumerable<category>;
     IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
-    IEnumerable<pet> pets = ViewData["Pet"] as IEnumerable<pet>;
     ViewBag.Title = "Home";
+<<<<<<< HEAD
     var value = 8012.34m;
     var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+=======
+>>>>>>> parent of 2a7c02a... WEB update
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using System.Collections;
 
 
+<<<<<<< HEAD
 <div class="w3l_banner_nav_right">
     <section class="slider">
         <div class="flexslider">
@@ -90,14 +93,49 @@
                                         </div>
                                     </div>
                                 </figure>
+=======
+        <div class="w3l_banner_nav_right">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="w3l_banner_nav_right_banner">
+                                <h3>Happy <span>food</span> for Pet.</h3>
+                                <div class="more">
+                                    <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                </div>
+>>>>>>> parent of 2a7c02a... WEB update
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <div class="w3l_banner_nav_right_banner1">
+                                <h3>Having<span>fun</span> with Pet.</h3>
+                                <div class="more">
+                                    <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            }
-            <div class="clearfix"> </div>
+            </section>
+            <!-- flexSlider -->
+            <link rel="stylesheet" href="~/Content/flexslider.css" type="text/css" media="screen" property="" />
+            <script defer src="~/Scripts/jquery.flexslider.js"></script>
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        start: function (slider) {
+                            $('body').removeClass('loading');
+                        }
+                    });
+                });
+            </script>
+            <!-- //flexSlider -->
         </div>
+        <div class="clearfix"></div>
     </div>
+<<<<<<< HEAD
 </div>
 <!-- //Best Food -->
 <!--Pet-->
@@ -138,83 +176,130 @@
                                             </fieldset>
                                         }
                                     </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<!--//Pet-->
-<!-- fresh-vegetables -->
-<div class="fresh-vegetables">
-    <div class="container">
-        <h3>Top Products</h3>
-        <div class="w3l_fresh_vegetables_grids">
-            <div class="col-md-3 w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
-                <div class="w3l_fresh_vegetables_grid2">
-                    <ul>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href=@Html.ActionLink("Index", "Home") ;">Home</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href=@Html.ActionLink("Catalog","Home") ;>Product</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href=@Html.ActionLink("Catalog","Home") ;>Pet</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-9 w3l_fresh_vegetables_grid_right">
-                <div class="col-md-4 w3l_fresh_vegetables_grid">
-                    <div class="w3l_fresh_vegetables_grid1">
-                        <img src="~/images/8.jpg" alt=" " class="img-responsive" />
-                    </div>
-                </div>
-                <div class="col-md-4 w3l_fresh_vegetables_grid">
-                    <div class="w3l_fresh_vegetables_grid1">
-                        <div class="w3l_fresh_vegetables_grid1_rel">
-                            <img src="~/images/7.jpg" alt=" " class="img-responsive" />
-                            <div class="w3l_fresh_vegetables_grid1_rel_pos">
-                                <div class="more m1">
-                                    <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+=======
+    <a href="~/Views/Home/single.cshtml">~/Views/Home/single.cshtml</a>
+    <!-- top-brands -->
+    <div class="top-brands">
+        <div class="container">
+            <h3>Best Food</h3>
+            <div class="agile_top_brands_grids">
+                @for (int i = 0; i < 4; i++)
+                {
+                    <div class="col-md-3 top_brand_left">
+                        <div class="hover14 column">
+                            <div class="agile_top_brand_left_grid">
+                                <div class="tag"><img src="~/images/1.png" alt=" " class="img-responsive" /></div>
+                                <div class="agile_top_brand_left_grid1">
+                                    <figure>
+                                        <div class="snipcart-item block">
+                                            <div class="snipcart-thumb">
+                                                <a href="@Url.Action("Single", "Home", new {id = items.ElementAt(i).id})"><img title=" " alt=" " src="~/images/1.png" /></a>
+                                                <p>@items.ElementAt(i).name</p>
+                                                <h4> @items.ElementAt(i).pricePerUnit VND</h4>
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details">
+                                                @using (Html.BeginForm("Buy","Cart",FormMethod.Post))
+                                                {
+                                                    <fieldset>
+                                                        <input type="hidden" name="id" value="@items.ElementAt(i).id" />
+                                                        <input type="hidden" name="product" value="item" />
+                                                        <input type="hidden" name="Controller" value="Home" />
+                                                        <input type="hidden" name="Action" value="Index" />
+                                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                    </fieldset>
+
+                                                }
+                                               
+
+
+                                            </div>
+                                        </div>
+                                    </figure>
+>>>>>>> parent of 2a7c02a... WEB update
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w3l_fresh_vegetables_grid1_bottom">
-                        <img src="~/images/10.jpg" alt=" " class="img-responsive" />
-                        <div class="w3l_fresh_vegetables_grid1_bottom_pos">
-                            <h5>Special Offers</h5>
+                }
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //top-brands -->
+    <!-- fresh-vegetables -->
+    <div class="fresh-vegetables">
+        <div class="container">
+            <h3>Top Products</h3>
+            <div class="w3l_fresh_vegetables_grids">
+                <div class="col-md-3 w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
+                    <div class="w3l_fresh_vegetables_grid2">
+                        <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="products.html">All Brands</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href= @Html.ActionLink("Catalog","Home");>Vegetables</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href= @Html.ActionLink("Catalog","Home");>Fruits</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="drinks.html">Juices</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="pet.html">Pet Food</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="bread.html">Bread & Bakery</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="household.html">Cleaning</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="products.html">Spices</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="products.html">Dry Fruits</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="products.html">Dairy Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 w3l_fresh_vegetables_grid_right">
+                    <div class="col-md-4 w3l_fresh_vegetables_grid">
+                        <div class="w3l_fresh_vegetables_grid1">
+                            <img src="~/images/8.jpg" alt=" " class="img-responsive" />
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 w3l_fresh_vegetables_grid">
-                    <div class="w3l_fresh_vegetables_grid1">
-                        <img src="~/images/9.jpg" alt=" " class="img-responsive" />
+                    <div class="col-md-4 w3l_fresh_vegetables_grid">
+                        <div class="w3l_fresh_vegetables_grid1">
+                            <div class="w3l_fresh_vegetables_grid1_rel">
+                                <img src="~/images/7.jpg" alt=" " class="img-responsive" />
+                                <div class="w3l_fresh_vegetables_grid1_rel_pos">
+                                    <div class="more m1">
+                                        <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3l_fresh_vegetables_grid1_bottom">
+                            <img src="~/images/10.jpg" alt=" " class="img-responsive" />
+                            <div class="w3l_fresh_vegetables_grid1_bottom_pos">
+                                <h5>Special Offers</h5>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w3l_fresh_vegetables_grid1_bottom">
-                        <img src="~/images/11.jpg" alt=" " class="img-responsive" />
+                    <div class="col-md-4 w3l_fresh_vegetables_grid">
+                        <div class="w3l_fresh_vegetables_grid1">
+                            <img src="~/images/9.jpg" alt=" " class="img-responsive" />
+                        </div>
+                        <div class="w3l_fresh_vegetables_grid1_bottom">
+                            <img src="~/images/11.jpg" alt=" " class="img-responsive" />
+                        </div>
                     </div>
+                    <div class="clearfix"> </div>
+
                 </div>
                 <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //fresh-vegetables -->
+    <!-- newsletter -->
+    <div class="newsletter">
+        <div class="container">
+            <div class="w3agile_newsletter_left">
+                <h3>sign up for our newsletter</h3>
+            </div>
+            <div class="w3agile_newsletter_right">
+                <form action="#" method="post">
+                    <input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <input type="submit" value="subscribe now">
+                </form>
             </div>
             <div class="clearfix"> </div>
         </div>
     </div>
-</div>
-<!-- //fresh-vegetables -->
-<!-- newsletter -->
-<div class="newsletter">
-    <div class="container">
-        <div class="w3agile_newsletter_left">
-            <h3>sign up for our newsletter</h3>
-        </div>
-        <div class="w3agile_newsletter_right">
-            <form action="#" method="post">
-                <input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                <input type="submit" value="subscribe now">
-            </form>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<!-- //newsletter -->
+    <!-- //newsletter -->
