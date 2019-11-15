@@ -70,6 +70,7 @@
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.genderTextEdit = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForid = new DevExpress.XtraLayout.LayoutControlItem();
@@ -89,7 +90,6 @@
             this.ItemFororder_user = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.order_userPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.genderTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).BeginInit();
@@ -112,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userBarManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).BeginInit();
@@ -131,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororder_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -416,7 +416,7 @@
             // usernameTextEdit
             // 
             this.usernameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "username", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.usernameTextEdit.Location = new System.Drawing.Point(85, 275);
+            this.usernameTextEdit.Location = new System.Drawing.Point(85, 280);
             this.usernameTextEdit.MenuManager = this.mainRibbonControl;
             this.usernameTextEdit.Name = "usernameTextEdit";
             this.usernameTextEdit.Size = new System.Drawing.Size(927, 20);
@@ -430,10 +430,10 @@
             this.order_userXtraUserControl.Controls.Add(this.barDockControlRight);
             this.order_userXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.order_userXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.order_userXtraUserControl.Location = new System.Drawing.Point(24, 333);
+            this.order_userXtraUserControl.Location = new System.Drawing.Point(24, 338);
             this.order_userXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.order_userXtraUserControl.Name = "order_userXtraUserControl";
-            this.order_userXtraUserControl.Size = new System.Drawing.Size(976, 295);
+            this.order_userXtraUserControl.Size = new System.Drawing.Size(976, 290);
             this.order_userXtraUserControl.TabIndex = 16;
             // 
             // order_userGridControl
@@ -444,7 +444,7 @@
             this.order_userGridControl.MainView = this.order_userGridView;
             this.order_userGridControl.MenuManager = this.mainRibbonControl;
             this.order_userGridControl.Name = "order_userGridControl";
-            this.order_userGridControl.Size = new System.Drawing.Size(976, 271);
+            this.order_userGridControl.Size = new System.Drawing.Size(976, 266);
             this.order_userGridControl.TabIndex = 0;
             this.order_userGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.order_userGridView});
@@ -507,7 +507,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.order_userBarManager;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 271);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 266);
             // 
             // order_userBarManager
             // 
@@ -587,7 +587,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 295);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 290);
             this.barDockControlBottom.Manager = this.order_userBarManager;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
@@ -599,7 +599,20 @@
             this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
             this.barDockControlRight.Manager = this.order_userBarManager;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 271);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 266);
+            // 
+            // genderTextEdit
+            // 
+            this.genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.genderTextEdit.Location = new System.Drawing.Point(85, 251);
+            this.genderTextEdit.MenuManager = this.mainRibbonControl;
+            this.genderTextEdit.Name = "genderTextEdit";
+            this.genderTextEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Male", "Male"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Female", "Female")});
+            this.genderTextEdit.Size = new System.Drawing.Size(927, 25);
+            this.genderTextEdit.StyleController = this.dataLayoutControl1;
+            this.genderTextEdit.TabIndex = 14;
             // 
             // layoutControlGroup1
             // 
@@ -729,14 +742,14 @@
             this.ItemForgender.Control = this.genderTextEdit;
             this.ItemForgender.Location = new System.Drawing.Point(0, 239);
             this.ItemForgender.Name = "ItemForgender";
-            this.ItemForgender.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForgender.Size = new System.Drawing.Size(1004, 29);
             this.ItemForgender.Text = "Gender";
             this.ItemForgender.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForusername
             // 
             this.ItemForusername.Control = this.usernameTextEdit;
-            this.ItemForusername.Location = new System.Drawing.Point(0, 263);
+            this.ItemForusername.Location = new System.Drawing.Point(0, 268);
             this.ItemForusername.Name = "ItemForusername";
             this.ItemForusername.Size = new System.Drawing.Size(1004, 24);
             this.ItemForusername.Text = "Username";
@@ -744,10 +757,10 @@
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 287);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 292);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 345);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 340);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -758,7 +771,7 @@
             this.ItemFororder_user});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupFororder_user";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 299);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 294);
             this.layoutControlGroup3.Text = "Order User";
             // 
             // ItemFororder_user
@@ -766,7 +779,7 @@
             this.ItemFororder_user.Control = this.order_userXtraUserControl;
             this.ItemFororder_user.Location = new System.Drawing.Point(0, 0);
             this.ItemFororder_user.Name = "ItemFororder_user";
-            this.ItemFororder_user.Size = new System.Drawing.Size(980, 299);
+            this.ItemFororder_user.Size = new System.Drawing.Size(980, 294);
             this.ItemFororder_user.StartNewLine = true;
             this.ItemFororder_user.Text = "order_user";
             this.ItemFororder_user.TextSize = new System.Drawing.Size(0, 0);
@@ -797,19 +810,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiorder_userRefresh)});
             this.order_userPopUpMenu.Manager = this.order_userBarManager;
             this.order_userPopUpMenu.Name = "order_userPopUpMenu";
-            // 
-            // genderTextEdit
-            // 
-            this.genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.genderTextEdit.Location = new System.Drawing.Point(85, 251);
-            this.genderTextEdit.MenuManager = this.mainRibbonControl;
-            this.genderTextEdit.Name = "genderTextEdit";
-            this.genderTextEdit.Properties.AutoHeight = false;
-            this.genderTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.genderTextEdit.Size = new System.Drawing.Size(927, 20);
-            this.genderTextEdit.StyleController = this.dataLayoutControl1;
-            this.genderTextEdit.TabIndex = 14;
             // 
             // userView
             // 
@@ -843,6 +843,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userBarManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).EndInit();
@@ -862,7 +863,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororder_user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_userPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -936,6 +936,6 @@
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem ItemFororder_user;
-        private DevExpress.XtraEditors.ComboBoxEdit genderTextEdit;
+        private DevExpress.XtraEditors.RadioGroup genderTextEdit;
     }
 }
