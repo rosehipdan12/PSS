@@ -24,10 +24,27 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.idTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.supplierViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.nameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.descriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.statusCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.itemsXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.itemsGridControl = new DevExpress.XtraGrid.GridControl();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colcategory_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,67 +59,50 @@
             this.colcategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsupplier = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorder_product = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
-            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.idTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForid = new DevExpress.XtraLayout.LayoutControlItem();
-            this.nameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForname = new DevExpress.XtraLayout.LayoutControlItem();
-            this.descriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemFordescription = new DevExpress.XtraLayout.LayoutControlItem();
-            this.statusCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.ItemForstatus = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForitems = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.itemsBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.itemsBar = new DevExpress.XtraBars.Bar();
             this.bbiitemsNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiitemsEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiitemsDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiitemsRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.itemsBar = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForid = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForname = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemFordescription = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForstatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForitems = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.itemsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusCheckEdit.Properties)).BeginInit();
             this.itemsXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBarManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForname)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForstatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsPopUpMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,204 +116,38 @@
             this.dataLayoutControl1.Controls.Add(this.itemsXtraUserControl);
             this.dataLayoutControl1.DataSource = this.supplierViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // idTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
-            this.layoutControlGroup1.TextVisible = false;
+            this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.supplierViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.idTextEdit.Location = new System.Drawing.Point(67, 10);
+            this.idTextEdit.MenuManager = this.mainRibbonControl;
+            this.idTextEdit.Name = "idTextEdit";
+            this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.idTextEdit.Properties.Mask.EditMask = "N0";
+            this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(946, 20);
+            this.idTextEdit.StyleController = this.dataLayoutControl1;
+            this.idTextEdit.TabIndex = 4;
             // 
             // supplierViewBindingSource
             // 
             this.supplierViewBindingSource.DataSource = typeof(PSS_WINFORM_CONTROL.supplier);
-            // 
-            // itemsXtraUserControl
-            // 
-            this.itemsXtraUserControl.Controls.Add(this.itemsGridControl);
-            this.itemsXtraUserControl.Controls.Add(this.barDockControlLeft);
-            this.itemsXtraUserControl.Controls.Add(this.barDockControlRight);
-            this.itemsXtraUserControl.Controls.Add(this.barDockControlBottom);
-            this.itemsXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.itemsXtraUserControl.Location = new System.Drawing.Point(27, 157);
-            this.itemsXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemsXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
-            this.itemsXtraUserControl.Name = "itemsXtraUserControl";
-            this.itemsXtraUserControl.Size = new System.Drawing.Size(1140, 614);
-            this.itemsXtraUserControl.TabIndex = 8;
-            // 
-            // itemsGridControl
-            // 
-            this.itemsGridControl.DataSource = this.itemsBindingSource;
-            this.itemsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemsGridControl.Location = new System.Drawing.Point(0, 30);
-            this.itemsGridControl.MainView = this.itemsGridView;
-            this.itemsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemsGridControl.MenuManager = this.mainRibbonControl;
-            this.itemsGridControl.Name = "itemsGridControl";
-            this.itemsGridControl.Size = new System.Drawing.Size(1140, 584);
-            this.itemsGridControl.TabIndex = 0;
-            this.itemsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.itemsGridView});
-            // 
-            // itemsGridView
-            // 
-            this.itemsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colcategory_id,
-            this.colid,
-            this.colname,
-            this.colstatus,
-            this.colpricePerUnit,
-            this.coltags,
-            this.colimage,
-            this.coldetail,
-            this.colquantity,
-            this.colsupplier_id,
-            this.colcategory,
-            this.colsupplier,
-            this.colorder_product});
-            this.itemsGridView.DetailHeight = 431;
-            this.itemsGridView.GridControl = this.itemsGridControl;
-            this.itemsGridView.Name = "itemsGridView";
-            this.itemsGridView.OptionsBehavior.Editable = false;
-            this.itemsGridView.OptionsBehavior.ReadOnly = true;
-            // 
-            // colcategory_id
-            // 
-            this.colcategory_id.Caption = "Category ID";
-            this.colcategory_id.FieldName = "category_id";
-            this.colcategory_id.MinWidth = 23;
-            this.colcategory_id.Name = "colcategory_id";
-            this.colcategory_id.Visible = true;
-            this.colcategory_id.VisibleIndex = 0;
-            this.colcategory_id.Width = 87;
-            // 
-            // colid
-            // 
-            this.colid.Caption = "ID";
-            this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
-            this.colid.Name = "colid";
-            this.colid.Visible = true;
-            this.colid.VisibleIndex = 1;
-            this.colid.Width = 87;
-            // 
-            // colname
-            // 
-            this.colname.Caption = "Name";
-            this.colname.FieldName = "name";
-            this.colname.MinWidth = 23;
-            this.colname.Name = "colname";
-            this.colname.Visible = true;
-            this.colname.VisibleIndex = 2;
-            this.colname.Width = 87;
-            // 
-            // colstatus
-            // 
-            this.colstatus.Caption = "Status";
-            this.colstatus.FieldName = "status";
-            this.colstatus.MinWidth = 23;
-            this.colstatus.Name = "colstatus";
-            this.colstatus.Visible = true;
-            this.colstatus.VisibleIndex = 3;
-            this.colstatus.Width = 87;
-            // 
-            // colpricePerUnit
-            // 
-            this.colpricePerUnit.Caption = "Price Per Unit";
-            this.colpricePerUnit.FieldName = "pricePerUnit";
-            this.colpricePerUnit.MinWidth = 23;
-            this.colpricePerUnit.Name = "colpricePerUnit";
-            this.colpricePerUnit.Visible = true;
-            this.colpricePerUnit.VisibleIndex = 4;
-            this.colpricePerUnit.Width = 87;
-            // 
-            // coltags
-            // 
-            this.coltags.Caption = "Tags";
-            this.coltags.FieldName = "tags";
-            this.coltags.MinWidth = 23;
-            this.coltags.Name = "coltags";
-            this.coltags.Visible = true;
-            this.coltags.VisibleIndex = 5;
-            this.coltags.Width = 87;
-            // 
-            // colimage
-            // 
-            this.colimage.Caption = "Image";
-            this.colimage.FieldName = "image";
-            this.colimage.MinWidth = 23;
-            this.colimage.Name = "colimage";
-            this.colimage.Visible = true;
-            this.colimage.VisibleIndex = 6;
-            this.colimage.Width = 87;
-            // 
-            // coldetail
-            // 
-            this.coldetail.Caption = "Detail";
-            this.coldetail.FieldName = "detail";
-            this.coldetail.MinWidth = 23;
-            this.coldetail.Name = "coldetail";
-            this.coldetail.Visible = true;
-            this.coldetail.VisibleIndex = 7;
-            this.coldetail.Width = 87;
-            // 
-            // colquantity
-            // 
-            this.colquantity.Caption = "Quantity";
-            this.colquantity.FieldName = "quantity";
-            this.colquantity.MinWidth = 23;
-            this.colquantity.Name = "colquantity";
-            this.colquantity.Visible = true;
-            this.colquantity.VisibleIndex = 8;
-            this.colquantity.Width = 87;
-            // 
-            // colsupplier_id
-            // 
-            this.colsupplier_id.Caption = "Supplier ID";
-            this.colsupplier_id.FieldName = "supplier_id";
-            this.colsupplier_id.MinWidth = 23;
-            this.colsupplier_id.Name = "colsupplier_id";
-            this.colsupplier_id.Visible = true;
-            this.colsupplier_id.VisibleIndex = 9;
-            this.colsupplier_id.Width = 87;
-            // 
-            // colcategory
-            // 
-            this.colcategory.FieldName = "category";
-            this.colcategory.MinWidth = 23;
-            this.colcategory.Name = "colcategory";
-            this.colcategory.Width = 87;
-            // 
-            // colsupplier
-            // 
-            this.colsupplier.FieldName = "supplier";
-            this.colsupplier.MinWidth = 23;
-            this.colsupplier.Name = "colsupplier";
-            this.colsupplier.Width = 87;
-            // 
-            // colorder_product
-            // 
-            this.colorder_product.FieldName = "order_product";
-            this.colorder_product.MinWidth = 23;
-            this.colorder_product.Name = "colorder_product";
-            this.colorder_product.Width = 87;
             // 
             // mainRibbonControl
             // 
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
             this.mainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.mainRibbonControl.ExpandCollapseItem,
+            this.mainRibbonControl.SearchEditItem,
             this.bbiCustomize,
             this.bbiSave,
             this.bbiSaveAndClose,
@@ -322,17 +156,15 @@
             this.bbiDelete,
             this.bbiClose,
             this.bbiSaveLayout,
-            this.bbiResetLayout,
-            this.mainRibbonControl.SearchEditItem});
+            this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -341,28 +173,6 @@
             this.bbiCustomize.Id = 1;
             this.bbiCustomize.ImageOptions.ImageUri.Uri = "Customization";
             this.bbiCustomize.Name = "bbiCustomize";
-            // 
-            // mainRibbonPage
-            // 
-            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.mainRibbonPageGroup,
-            this.ribbonPageGroupLayout});
-            this.mainRibbonPage.MergeOrder = 0;
-            this.mainRibbonPage.Name = "mainRibbonPage";
-            this.mainRibbonPage.Text = "Home";
-            // 
-            // mainRibbonPageGroup
-            // 
-            this.mainRibbonPageGroup.AllowTextClipping = false;
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
-            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
-            this.mainRibbonPageGroup.ShowCaptionButton = false;
-            this.mainRibbonPageGroup.Text = "supplier Tasks";
             // 
             // bbiSave
             // 
@@ -406,15 +216,6 @@
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
             // 
-            // ribbonPageGroupLayout
-            // 
-            this.ribbonPageGroupLayout.AllowTextClipping = false;
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
-            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
-            this.ribbonPageGroupLayout.Text = "Layout";
-            // 
             // bbiSaveLayout
             // 
             this.bbiSaveLayout.Caption = "Save Layout";
@@ -429,157 +230,223 @@
             this.bbiResetLayout.ImageOptions.ImageUri.Uri = "Reset";
             this.bbiResetLayout.Name = "bbiResetLayout";
             // 
-            // itemsBindingSource
+            // mainRibbonPage
             // 
-            this.itemsBindingSource.DataSource = typeof(PSS_WINFORM_CONTROL.item);
+            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.mainRibbonPageGroup,
+            this.ribbonPageGroupLayout});
+            this.mainRibbonPage.MergeOrder = 0;
+            this.mainRibbonPage.Name = "mainRibbonPage";
+            this.mainRibbonPage.Text = "Home";
             // 
-            // layoutControlGroup2
+            // mainRibbonPageGroup
             // 
-            this.layoutControlGroup2.AllowDrawBackground = false;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForid,
-            this.ItemForname,
-            this.ItemFordescription,
-            this.ItemForstatus,
-            this.tabbedControlGroup1});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1171, 776);
+            this.mainRibbonPageGroup.AllowTextClipping = false;
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
+            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
+            this.mainRibbonPageGroup.ShowCaptionButton = false;
+            this.mainRibbonPageGroup.Text = "supplier Tasks";
             // 
-            // idTextEdit
+            // ribbonPageGroupLayout
             // 
-            this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.supplierViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(80, 14);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.idTextEdit.MenuManager = this.mainRibbonControl;
-            this.idTextEdit.Name = "idTextEdit";
-            this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.idTextEdit.Properties.Mask.EditMask = "N0";
-            this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1101, 22);
-            this.idTextEdit.StyleController = this.dataLayoutControl1;
-            this.idTextEdit.TabIndex = 4;
-            // 
-            // ItemForid
-            // 
-            this.ItemForid.Control = this.idTextEdit;
-            this.ItemForid.Location = new System.Drawing.Point(0, 0);
-            this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1171, 26);
-            this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(63, 16);
+            this.ribbonPageGroupLayout.AllowTextClipping = false;
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
+            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
+            this.ribbonPageGroupLayout.Text = "Layout";
             // 
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.supplierViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(80, 40);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(67, 34);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(946, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
-            // 
-            // ItemForname
-            // 
-            this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 26);
-            this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1171, 26);
-            this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(63, 16);
             // 
             // descriptionTextEdit
             // 
             this.descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.supplierViewBindingSource, "description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextEdit.Location = new System.Drawing.Point(80, 66);
-            this.descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.descriptionTextEdit.Location = new System.Drawing.Point(67, 58);
             this.descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.descriptionTextEdit.Name = "descriptionTextEdit";
-            this.descriptionTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.descriptionTextEdit.Size = new System.Drawing.Size(946, 20);
             this.descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.descriptionTextEdit.TabIndex = 6;
-            // 
-            // ItemFordescription
-            // 
-            this.ItemFordescription.Control = this.descriptionTextEdit;
-            this.ItemFordescription.Location = new System.Drawing.Point(0, 52);
-            this.ItemFordescription.Name = "ItemFordescription";
-            this.ItemFordescription.Size = new System.Drawing.Size(1171, 26);
-            this.ItemFordescription.Text = "Description";
-            this.ItemFordescription.TextSize = new System.Drawing.Size(63, 16);
             // 
             // statusCheckEdit
             // 
             this.statusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.supplierViewBindingSource, "status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.statusCheckEdit.Location = new System.Drawing.Point(14, 92);
-            this.statusCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.statusCheckEdit.Location = new System.Drawing.Point(11, 82);
             this.statusCheckEdit.MenuManager = this.mainRibbonControl;
             this.statusCheckEdit.Name = "statusCheckEdit";
             this.statusCheckEdit.Properties.Caption = "Status";
             this.statusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.statusCheckEdit.Size = new System.Drawing.Size(1167, 20);
+            this.statusCheckEdit.Size = new System.Drawing.Size(1002, 19);
             this.statusCheckEdit.StyleController = this.dataLayoutControl1;
             this.statusCheckEdit.TabIndex = 7;
             // 
-            // ItemForstatus
+            // itemsXtraUserControl
             // 
-            this.ItemForstatus.Control = this.statusCheckEdit;
-            this.ItemForstatus.Location = new System.Drawing.Point(0, 78);
-            this.ItemForstatus.Name = "ItemForstatus";
-            this.ItemForstatus.Size = new System.Drawing.Size(1171, 24);
-            this.ItemForstatus.Text = "status";
-            this.ItemForstatus.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForstatus.TextVisible = false;
+            this.itemsXtraUserControl.Controls.Add(this.itemsGridControl);
+            this.itemsXtraUserControl.Controls.Add(this.barDockControlLeft);
+            this.itemsXtraUserControl.Controls.Add(this.barDockControlRight);
+            this.itemsXtraUserControl.Controls.Add(this.barDockControlBottom);
+            this.itemsXtraUserControl.Controls.Add(this.barDockControlTop);
+            this.itemsXtraUserControl.Location = new System.Drawing.Point(22, 137);
+            this.itemsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
+            this.itemsXtraUserControl.Name = "itemsXtraUserControl";
+            this.itemsXtraUserControl.Size = new System.Drawing.Size(980, 495);
+            this.itemsXtraUserControl.TabIndex = 8;
             // 
-            // ItemForitems
+            // itemsGridControl
             // 
-            this.ItemForitems.Control = this.itemsXtraUserControl;
-            this.ItemForitems.Location = new System.Drawing.Point(0, 0);
-            this.ItemForitems.Name = "ItemForitems";
-            this.ItemForitems.Size = new System.Drawing.Size(1144, 618);
-            this.ItemForitems.StartNewLine = true;
-            this.ItemForitems.Text = "items";
-            this.ItemForitems.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForitems.TextVisible = false;
+            this.itemsGridControl.DataSource = this.itemsBindingSource;
+            this.itemsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemsGridControl.Location = new System.Drawing.Point(0, 24);
+            this.itemsGridControl.MainView = this.itemsGridView;
+            this.itemsGridControl.MenuManager = this.mainRibbonControl;
+            this.itemsGridControl.Name = "itemsGridControl";
+            this.itemsGridControl.Size = new System.Drawing.Size(980, 471);
+            this.itemsGridControl.TabIndex = 0;
+            this.itemsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.itemsGridView});
             // 
-            // tabbedControlGroup1
+            // itemsBindingSource
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 102);
-            this.tabbedControlGroup1.Name = "autoGroupForTabs";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1171, 674);
-            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup3});
-            this.tabbedControlGroup1.Text = "Tabs";
+            this.itemsBindingSource.DataSource = typeof(PSS_WINFORM_CONTROL.item);
             // 
-            // layoutControlGroup3
+            // itemsGridView
             // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForitems});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "autoGroupForitems";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1144, 618);
-            this.layoutControlGroup3.Text = "items";
+            this.itemsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colcategory_id,
+            this.colid,
+            this.colname,
+            this.colstatus,
+            this.colpricePerUnit,
+            this.coltags,
+            this.colimage,
+            this.coldetail,
+            this.colquantity,
+            this.colsupplier_id,
+            this.colcategory,
+            this.colsupplier,
+            this.colorder_product});
+            this.itemsGridView.GridControl = this.itemsGridControl;
+            this.itemsGridView.Name = "itemsGridView";
+            this.itemsGridView.OptionsBehavior.Editable = false;
+            this.itemsGridView.OptionsBehavior.ReadOnly = true;
             // 
-            // mvvmContext
+            // colcategory_id
             // 
-            this.mvvmContext.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Save", this.bbiSave),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveAndClose", this.bbiSaveAndClose),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveAndNew", this.bbiSaveAndNew),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Reset", this.bbiReset),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Delete", this.bbiDelete),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Close", this.bbiClose),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveLayout", this.bbiSaveLayout),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "ResetLayout", this.bbiResetLayout)});
-            this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
-            DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
-            this.mvvmContext.ViewModelType = typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel);
+            this.colcategory_id.Caption = "Category ID";
+            this.colcategory_id.FieldName = "category_id";
+            this.colcategory_id.Name = "colcategory_id";
+            this.colcategory_id.Visible = true;
+            this.colcategory_id.VisibleIndex = 0;
+            // 
+            // colid
+            // 
+            this.colid.Caption = "ID";
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.Visible = true;
+            this.colid.VisibleIndex = 1;
+            // 
+            // colname
+            // 
+            this.colname.Caption = "Name";
+            this.colname.FieldName = "name";
+            this.colname.Name = "colname";
+            this.colname.Visible = true;
+            this.colname.VisibleIndex = 2;
+            // 
+            // colstatus
+            // 
+            this.colstatus.Caption = "Status";
+            this.colstatus.FieldName = "status";
+            this.colstatus.Name = "colstatus";
+            this.colstatus.Visible = true;
+            this.colstatus.VisibleIndex = 3;
+            // 
+            // colpricePerUnit
+            // 
+            this.colpricePerUnit.Caption = "Price Per Unit";
+            this.colpricePerUnit.FieldName = "pricePerUnit";
+            this.colpricePerUnit.Name = "colpricePerUnit";
+            this.colpricePerUnit.Visible = true;
+            this.colpricePerUnit.VisibleIndex = 4;
+            // 
+            // coltags
+            // 
+            this.coltags.Caption = "Tags";
+            this.coltags.FieldName = "tags";
+            this.coltags.Name = "coltags";
+            this.coltags.Visible = true;
+            this.coltags.VisibleIndex = 5;
+            // 
+            // colimage
+            // 
+            this.colimage.Caption = "Image";
+            this.colimage.FieldName = "image";
+            this.colimage.Name = "colimage";
+            this.colimage.Visible = true;
+            this.colimage.VisibleIndex = 6;
+            // 
+            // coldetail
+            // 
+            this.coldetail.Caption = "Detail";
+            this.coldetail.FieldName = "detail";
+            this.coldetail.Name = "coldetail";
+            this.coldetail.Visible = true;
+            this.coldetail.VisibleIndex = 7;
+            // 
+            // colquantity
+            // 
+            this.colquantity.Caption = "Quantity";
+            this.colquantity.FieldName = "quantity";
+            this.colquantity.Name = "colquantity";
+            this.colquantity.Visible = true;
+            this.colquantity.VisibleIndex = 8;
+            // 
+            // colsupplier_id
+            // 
+            this.colsupplier_id.Caption = "Supplier ID";
+            this.colsupplier_id.FieldName = "supplier_id";
+            this.colsupplier_id.Name = "colsupplier_id";
+            this.colsupplier_id.Visible = true;
+            this.colsupplier_id.VisibleIndex = 9;
+            // 
+            // colcategory
+            // 
+            this.colcategory.FieldName = "category";
+            this.colcategory.Name = "colcategory";
+            // 
+            // colsupplier
+            // 
+            this.colsupplier.FieldName = "supplier";
+            this.colsupplier.Name = "colsupplier";
+            // 
+            // colorder_product
+            // 
+            this.colorder_product.FieldName = "order_product";
+            this.colorder_product.Name = "colorder_product";
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Manager = this.itemsBarManager;
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 471);
             // 
             // itemsBarManager
             // 
@@ -598,6 +465,21 @@
             this.bbiitemsRefresh});
             this.itemsBarManager.MainMenu = this.itemsBar;
             this.itemsBarManager.MaxItemId = 4;
+            // 
+            // itemsBar
+            // 
+            this.itemsBar.BarName = "items";
+            this.itemsBar.DockCol = 0;
+            this.itemsBar.DockRow = 0;
+            this.itemsBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.itemsBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsDelete),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsRefresh)});
+            this.itemsBar.OptionsBar.AllowQuickCustomization = false;
+            this.itemsBar.OptionsBar.DrawDragBorder = false;
+            this.itemsBar.Text = "items";
             // 
             // bbiitemsNew
             // 
@@ -631,52 +513,139 @@
             this.bbiitemsRefresh.Name = "bbiitemsRefresh";
             this.bbiitemsRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // itemsBar
-            // 
-            this.itemsBar.BarName = "items";
-            this.itemsBar.DockCol = 0;
-            this.itemsBar.DockRow = 0;
-            this.itemsBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.itemsBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsDelete),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiitemsRefresh)});
-            this.itemsBar.OptionsBar.AllowQuickCustomization = false;
-            this.itemsBar.OptionsBar.DrawDragBorder = false;
-            this.itemsBar.Text = "items";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.itemsBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1140, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 614);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 495);
             this.barDockControlBottom.Manager = this.itemsBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1140, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
-            this.barDockControlLeft.Manager = this.itemsBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 584);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1140, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.itemsBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 584);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 471);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.AllowDrawBackground = false;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForid,
+            this.ItemForname,
+            this.ItemFordescription,
+            this.ItemForstatus,
+            this.tabbedControlGroup1});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
+            // 
+            // ItemForid
+            // 
+            this.ItemForid.Control = this.idTextEdit;
+            this.ItemForid.Location = new System.Drawing.Point(0, 0);
+            this.ItemForid.Name = "ItemForid";
+            this.ItemForid.Size = new System.Drawing.Size(1006, 24);
+            this.ItemForid.Text = "ID";
+            this.ItemForid.TextSize = new System.Drawing.Size(53, 13);
+            // 
+            // ItemForname
+            // 
+            this.ItemForname.Control = this.nameTextEdit;
+            this.ItemForname.Location = new System.Drawing.Point(0, 24);
+            this.ItemForname.Name = "ItemForname";
+            this.ItemForname.Size = new System.Drawing.Size(1006, 24);
+            this.ItemForname.Text = "Name";
+            this.ItemForname.TextSize = new System.Drawing.Size(53, 13);
+            // 
+            // ItemFordescription
+            // 
+            this.ItemFordescription.Control = this.descriptionTextEdit;
+            this.ItemFordescription.Location = new System.Drawing.Point(0, 48);
+            this.ItemFordescription.Name = "ItemFordescription";
+            this.ItemFordescription.Size = new System.Drawing.Size(1006, 24);
+            this.ItemFordescription.Text = "Description";
+            this.ItemFordescription.TextSize = new System.Drawing.Size(53, 13);
+            // 
+            // ItemForstatus
+            // 
+            this.ItemForstatus.Control = this.statusCheckEdit;
+            this.ItemForstatus.Location = new System.Drawing.Point(0, 72);
+            this.ItemForstatus.Name = "ItemForstatus";
+            this.ItemForstatus.Size = new System.Drawing.Size(1006, 23);
+            this.ItemForstatus.Text = "status";
+            this.ItemForstatus.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForstatus.TextVisible = false;
+            // 
+            // tabbedControlGroup1
+            // 
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 95);
+            this.tabbedControlGroup1.Name = "autoGroupForTabs";
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 541);
+            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup3});
+            this.tabbedControlGroup1.Text = "Tabs";
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForitems});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "autoGroupForitems";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 499);
+            this.layoutControlGroup3.Text = "items";
+            // 
+            // ItemForitems
+            // 
+            this.ItemForitems.Control = this.itemsXtraUserControl;
+            this.ItemForitems.Location = new System.Drawing.Point(0, 0);
+            this.ItemForitems.Name = "ItemForitems";
+            this.ItemForitems.Size = new System.Drawing.Size(984, 499);
+            this.ItemForitems.StartNewLine = true;
+            this.ItemForitems.Text = "items";
+            this.ItemForitems.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForitems.TextVisible = false;
+            // 
+            // mvvmContext
+            // 
+            this.mvvmContext.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Save", this.bbiSave),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveAndClose", this.bbiSaveAndClose),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveAndNew", this.bbiSaveAndNew),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Reset", this.bbiReset),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Delete", this.bbiDelete),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "Close", this.bbiClose),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "SaveLayout", this.bbiSaveLayout),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel), "ResetLayout", this.bbiResetLayout)});
+            this.mvvmContext.ContainerControl = this;
+            this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
+            this.mvvmContext.ViewModelType = typeof(PSS_WINFORM_CONTROL.ViewModels.supplierViewModel);
             // 
             // itemsPopUpMenu
             // 
@@ -690,38 +659,37 @@
             // 
             // supplierView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "supplierView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusCheckEdit.Properties)).EndInit();
             this.itemsXtraUserControl.ResumeLayout(false);
             this.itemsXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBarManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForname)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForstatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsPopUpMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,9 @@
 namespace Webtest2
 {
+    using System;
     using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
 
     public partial class Model1 : DbContext
     {
@@ -12,14 +15,13 @@ namespace Webtest2
         public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<item> items { get; set; }
         public virtual DbSet<order> orders { get; set; }
+        public virtual DbSet<order_user> order_user { get; set; }
         public virtual DbSet<pet> pets { get; set; }
         public virtual DbSet<role> roles { get; set; }
         public virtual DbSet<species> species { get; set; }
         public virtual DbSet<supplier> suppliers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<user> users { get; set; }
         public virtual DbSet<order_product> order_product { get; set; }
-        public virtual DbSet<order_user> order_user { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

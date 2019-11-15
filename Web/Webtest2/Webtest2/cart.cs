@@ -1,4 +1,9 @@
-﻿namespace Webtest2
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Webtest2
 {
     public class cart
     {
@@ -7,7 +12,7 @@
         public int quantity;
         public double? price()
         {
-            if (this.item != null)
+            if (item != null)
             {
                 return item.pricePerUnit * quantity;
             }
@@ -18,8 +23,7 @@
         }
         public bool itemorpet()
         {
-            return item != null;
+            return item == null;
         }
     }
-
 }

@@ -111,18 +111,16 @@
             this.dataLayoutControl1.Controls.Add(this.petsXtraUserControl);
             this.dataLayoutControl1.DataSource = this.speciesViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(78, 12);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTextEdit.Location = new System.Drawing.Point(67, 10);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
             this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -130,7 +128,8 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(946, 20);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 4;
             // 
@@ -154,14 +153,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -261,22 +259,20 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(78, 38);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(67, 34);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(946, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
             // 
             // descriptionTextEdit
             // 
             this.descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesViewBindingSource, "description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextEdit.Location = new System.Drawing.Point(78, 64);
-            this.descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.descriptionTextEdit.Location = new System.Drawing.Point(67, 58);
             this.descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.descriptionTextEdit.Name = "descriptionTextEdit";
-            this.descriptionTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.descriptionTextEdit.Size = new System.Drawing.Size(946, 20);
             this.descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.descriptionTextEdit.TabIndex = 6;
             // 
@@ -287,24 +283,21 @@
             this.petsXtraUserControl.Controls.Add(this.barDockControlRight);
             this.petsXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.petsXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.petsXtraUserControl.Location = new System.Drawing.Point(24, 129);
-            this.petsXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.petsXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.petsXtraUserControl.Location = new System.Drawing.Point(22, 114);
+            this.petsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.petsXtraUserControl.Name = "petsXtraUserControl";
-            this.petsXtraUserControl.Size = new System.Drawing.Size(1146, 646);
+            this.petsXtraUserControl.Size = new System.Drawing.Size(980, 518);
             this.petsXtraUserControl.TabIndex = 7;
             // 
             // petsGridControl
             // 
             this.petsGridControl.DataSource = this.petsBindingSource;
             this.petsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.petsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.petsGridControl.Location = new System.Drawing.Point(0, 30);
+            this.petsGridControl.Location = new System.Drawing.Point(0, 24);
             this.petsGridControl.MainView = this.petsGridView;
-            this.petsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.petsGridControl.MenuManager = this.mainRibbonControl;
             this.petsGridControl.Name = "petsGridControl";
-            this.petsGridControl.Size = new System.Drawing.Size(1146, 616);
+            this.petsGridControl.Size = new System.Drawing.Size(980, 494);
             this.petsGridControl.TabIndex = 0;
             this.petsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.petsGridView});
@@ -329,7 +322,6 @@
             this.colimage,
             this.colorder_product,
             this.colspecies});
-            this.petsGridView.DetailHeight = 431;
             this.petsGridView.GridControl = this.petsGridControl;
             this.petsGridView.Name = "petsGridView";
             this.petsGridView.OptionsBehavior.Editable = false;
@@ -339,133 +331,108 @@
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 87;
             // 
             // colname
             // 
             this.colname.Caption = "Name";
             this.colname.FieldName = "name";
-            this.colname.MinWidth = 23;
             this.colname.Name = "colname";
             this.colname.Visible = true;
             this.colname.VisibleIndex = 1;
-            this.colname.Width = 87;
             // 
             // coldescription
             // 
             this.coldescription.Caption = "Description";
             this.coldescription.FieldName = "description";
-            this.coldescription.MinWidth = 23;
             this.coldescription.Name = "coldescription";
             this.coldescription.Visible = true;
             this.coldescription.VisibleIndex = 2;
-            this.coldescription.Width = 87;
             // 
             // colgender
             // 
             this.colgender.Caption = "Gender";
             this.colgender.FieldName = "gender";
-            this.colgender.MinWidth = 23;
             this.colgender.Name = "colgender";
             this.colgender.Visible = true;
             this.colgender.VisibleIndex = 3;
-            this.colgender.Width = 87;
             // 
             // colbirth
             // 
             this.colbirth.Caption = "Birth";
             this.colbirth.FieldName = "birth";
-            this.colbirth.MinWidth = 23;
             this.colbirth.Name = "colbirth";
             this.colbirth.Visible = true;
             this.colbirth.VisibleIndex = 4;
-            this.colbirth.Width = 87;
             // 
             // colprice
             // 
             this.colprice.Caption = "Price";
             this.colprice.FieldName = "price";
-            this.colprice.MinWidth = 23;
             this.colprice.Name = "colprice";
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 5;
-            this.colprice.Width = 87;
             // 
             // colcolor
             // 
             this.colcolor.Caption = "Color";
             this.colcolor.FieldName = "color";
-            this.colcolor.MinWidth = 23;
             this.colcolor.Name = "colcolor";
             this.colcolor.Visible = true;
             this.colcolor.VisibleIndex = 6;
-            this.colcolor.Width = 87;
             // 
             // colvaccine
             // 
             this.colvaccine.Caption = "Vaccine";
             this.colvaccine.FieldName = "vaccine";
-            this.colvaccine.MinWidth = 23;
             this.colvaccine.Name = "colvaccine";
             this.colvaccine.Visible = true;
             this.colvaccine.VisibleIndex = 7;
-            this.colvaccine.Width = 87;
             // 
             // colstatus
             // 
             this.colstatus.Caption = "Status";
             this.colstatus.FieldName = "status";
-            this.colstatus.MinWidth = 23;
             this.colstatus.Name = "colstatus";
             this.colstatus.Visible = true;
             this.colstatus.VisibleIndex = 8;
-            this.colstatus.Width = 87;
             // 
             // colspecies_id
             // 
             this.colspecies_id.Caption = "Species ID";
             this.colspecies_id.FieldName = "species_id";
-            this.colspecies_id.MinWidth = 23;
             this.colspecies_id.Name = "colspecies_id";
             this.colspecies_id.Visible = true;
             this.colspecies_id.VisibleIndex = 9;
-            this.colspecies_id.Width = 87;
             // 
             // colimage
             // 
             this.colimage.Caption = "Image";
             this.colimage.FieldName = "image";
-            this.colimage.MinWidth = 23;
             this.colimage.Name = "colimage";
             this.colimage.Visible = true;
             this.colimage.VisibleIndex = 10;
-            this.colimage.Width = 87;
             // 
             // colorder_product
             // 
             this.colorder_product.FieldName = "order_product";
-            this.colorder_product.MinWidth = 23;
             this.colorder_product.Name = "colorder_product";
-            this.colorder_product.Width = 87;
             // 
             // colspecies
             // 
             this.colspecies.FieldName = "species";
-            this.colspecies.MinWidth = 23;
             this.colspecies.Name = "colspecies";
-            this.colspecies.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.petsBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 616);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 494);
             // 
             // petsBarManager
             // 
@@ -538,23 +505,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.petsBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 646);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 518);
             this.barDockControlBottom.Manager = this.petsBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.petsBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 616);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 494);
             // 
             // layoutControlGroup1
             // 
@@ -563,7 +533,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -577,41 +547,41 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
             // 
             // ItemForid
             // 
             this.ItemForid.Control = this.idTextEdit;
             this.ItemForid.Location = new System.Drawing.Point(0, 0);
             this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForid.Size = new System.Drawing.Size(1006, 24);
             this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForid.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForname
             // 
             this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 26);
+            this.ItemForname.Location = new System.Drawing.Point(0, 24);
             this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForname.Size = new System.Drawing.Size(1006, 24);
             this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForname.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemFordescription
             // 
             this.ItemFordescription.Control = this.descriptionTextEdit;
-            this.ItemFordescription.Location = new System.Drawing.Point(0, 52);
+            this.ItemFordescription.Location = new System.Drawing.Point(0, 48);
             this.ItemFordescription.Name = "ItemFordescription";
-            this.ItemFordescription.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFordescription.Size = new System.Drawing.Size(1006, 24);
             this.ItemFordescription.Text = "Description";
-            this.ItemFordescription.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemFordescription.TextSize = new System.Drawing.Size(53, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 78);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 72);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 702);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 564);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -622,7 +592,7 @@
             this.ItemForpets});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForpets";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 650);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 522);
             this.layoutControlGroup3.Text = "Pets";
             // 
             // ItemForpets
@@ -630,7 +600,7 @@
             this.ItemForpets.Control = this.petsXtraUserControl;
             this.ItemForpets.Location = new System.Drawing.Point(0, 0);
             this.ItemForpets.Name = "ItemForpets";
-            this.ItemForpets.Size = new System.Drawing.Size(1150, 650);
+            this.ItemForpets.Size = new System.Drawing.Size(984, 522);
             this.ItemForpets.StartNewLine = true;
             this.ItemForpets.Text = "pets";
             this.ItemForpets.TextSize = new System.Drawing.Size(0, 0);
@@ -664,14 +634,13 @@
             // 
             // speciesView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "speciesView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();

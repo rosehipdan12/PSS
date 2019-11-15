@@ -1,0 +1,113 @@
+﻿@{
+    IEnumerable<item> itemLoad = ViewData["ItemLoad"] as IEnumerable<item>;
+    var item = (item)ViewData["Items"];
+    int count = 0;
+    ViewBag.Title = item.name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+        var imgsrc="";
+    var base64="";
+}
+        <div class="w3l_banner_nav_right">
+            <div class="w3l_banner_nav_right_banner3">
+                <h3>Best Deals For New Products<span class="blink_me"></span></h3>
+            </div>
+            <div class="agileinfo_single">
+                <h5>@item.name</h5>
+                <div class="col-md-4 agileinfo_single_left">
+                    @if (item.image != null)
+                    {
+                         base64 = Convert.ToBase64String(item.image);
+                         imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                        <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
+                    }
+                </div>
+                <div class="col-md-8 agileinfo_single_right">
+                    <div class="w3agile_description">
+                        <h4>Description :</h4>
+                        <p>
+                            @item.detail
+                        </p>
+                    </div>
+                    <div class="snipcart-item block">
+                        <div class="snipcart-thumb agileinfo_single_right_snipcart">
+                            <h4>@item.pricePerUnit VND</h4>
+                        </div>
+                        <div class="snipcart-details agileinfo_single_right_details">
+                            @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
+                            {
+                                <fieldset>
+                                    <input type="hidden" name="id" value="@item.id" />
+                                    <input type="hidden" name="product" value="item" />
+                                    <input type="hidden" name="Controller" value="Home" />
+                                    <input type="hidden" name="Action" value="" />
+                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                </fieldset>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!-- //banner -->
+    <!-- brands -->
+    <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_popular">
+        <div class="container">
+            <h3>Popular Brands</h3>
+            <div class="w3ls_w3l_banner_nav_right_grid1">
+                <h6>food</h6>
+                @for (int i = 0; i < 4;i+=0)
+                {
+                    if (itemLoad.ElementAt(i).category_id == 14 || itemLoad.ElementAt(i).category_id == 15)
+                    {
+                        count++;
+                        if (count > 4)
+                        {
+                            count = 0;
+                            break;
+                        }
+                <div class="col-md-3">
+                        <div class="col-md-3 w3ls_w3l_banner_left">
+                            <div class="hover14 column">
+                                <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                                    <div class="agile_top_brand_left_grid_pos">
+                                        <img src="@imgsrc" alt=" " class="img-responsive" />
+                                    </div>
+                                    <div class="agile_top_brand_left_grid1">
+                                        <figure>
+                                            <div class="snipcart-item block">
+                                                <div class="snipcart-thumb">
+                                                    <a href="@Url.Action("Single", "Home", new {id = itemLoad.ElementAt(i).id})"><img src="@imgsrc" alt=" " class="img-responsive" /></a>
+                                                    <p>@itemLoad.ElementAt(i).name</p>
+                                                    <h4>@itemLoad.ElementAt(i).pricePerUnit VND</h4>
+                                                </div>
+                                                <div class="snipcart-details">
+                                                    @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
+                                                    {
+                                                        <fieldset>
+                                                            <input type="hidden" name="id" value="@itemLoad.ElementAt(i).id" />
+                                                            <input type="hidden" name="product" value="item" />
+                                                            <input type="hidden" name="Controller" value="Home" />
+                                                            <input type="hidden" name="Action" value="Index" />
+                                                            <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                        </fieldset>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    }
+                }
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //brands -->

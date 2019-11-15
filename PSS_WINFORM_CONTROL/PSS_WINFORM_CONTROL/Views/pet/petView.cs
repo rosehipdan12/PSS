@@ -49,5 +49,7 @@ namespace PSS_WINFORM_CONTROL.Views.petView{
 			 
 			bbiCustomize.ItemClick += (s, e) => { dataLayoutControl1.ShowCustomizationForm(); };
        }
+
+        
     }
 }

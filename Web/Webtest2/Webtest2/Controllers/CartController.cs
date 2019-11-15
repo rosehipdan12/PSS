@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace Webtest2.Controllers
 {
@@ -9,7 +13,7 @@ namespace Webtest2.Controllers
         Model1 ps = new Model1();
 
         // GET: Cart
-        public ActionResult Index(string controller, string action)
+        public ActionResult Checkout()
         {
             return View();
         }
@@ -21,59 +25,52 @@ namespace Webtest2.Controllers
         [HttpPost]
         public ActionResult Buy(string id, string product, string controller, string action)
         {
-
-            int item_id = int.Parse(id);
+            int item_id = Int32.Parse(id);
             //Create cart
             if (Session["cart"] == null)
             {
-                List<cart> carts = new List<cart>();
-                System.Diagnostics.Debug.WriteLine(carts.Count());
-                System.Diagnostics.Debug.WriteLine(Session["cart"]);
-
+                List<cart> cart = new List<cart>();
                 //add product to card 
                 if (product.Equals("item"))
                 {
-                    carts.Add(new cart { item = ps.items.First(c => c.id == item_id), pet = null, quantity = 1 });
+                    cart.Add(new cart { item = ps.items.First(c => c.id == item_id), quantity = 1 });
                 }
                 else
                 {
-                    carts.Add(new cart { item = null, pet = ps.pets.First(c => c.id == item_id), quantity = 1 });
+                    cart.Add(new cart { pet = ps.pets.First(c => c.id == item_id), quantity = 1 });
 
                 }
-                System.Diagnostics.Debug.WriteLine(carts.Count());
-
-                Session["cart"] = carts;
+                Session["cart"] = cart;
             }
             else
             {
                 // if have card, increase quantity
-                List<cart> carts = (List<cart>)Session["cart"];
-
+                List<cart> cart = (List<cart>)Session["cart"];
                 int index = isExist(item_id);
                 if (index != -1)
                 {
-                    carts[index].quantity++;
+                    cart[index].quantity++;
                 }
                 else
                 {
                     if (product.Equals("item"))
                     {
-                        carts.Add(new cart { item = ps.items.First(c => c.id == item_id), quantity = 1 });
+                        cart.Add(new cart { item = ps.items.First(c => c.id == item_id), quantity = 1 });
                     }
                     else
                     {
-                        carts.Add(new cart { pet = ps.pets.First(c => c.id == item_id), quantity = 1 });
+                        cart.Add(new cart { pet = ps.pets.First(c => c.id == item_id), quantity = 1 });
 
                     }
                 }
-                Session["cart"] = carts;
+                Session["cart"] = cart;
             }
-            return RedirectToAction(action, controller);
+            return Redirect(Request.UrlReferrer.PathAndQuery);
         }
         //Remove product im cart
         public ActionResult Remove(string id)
         {
-            int item_id = int.Parse(id);
+            int item_id = Int32.Parse(id);
             item ie = ps.items.First(c => c.id == item_id);
             List<cart> cart = (List<cart>)Session["cart"];
             int index = isExist(item_id);
@@ -104,5 +101,50 @@ namespace Webtest2.Controllers
             }
             return -1;
         }
+        [HttpPost]
+
+        public JsonResult MinusQuantity(string id)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
+            int item_id = Int32.Parse(id);
+            List<cart> cart = (List<cart>)Session["cart"];
+            int index = isExist(item_id);
+            if (index != -1)
+            {
+                if (cart[index].quantity > 1)
+                {
+                    cart[index].quantity--;
+                    return Json(cart[index].quantity, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json("Failed", JsonRequestBehavior.AllowGet);
+                }
+
+            }
+            return Json("Failed", JsonRequestBehavior.AllowGet);
+
+        }
+        [HttpPost]
+
+        public JsonResult PlusQuantity(string id)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
+            int item_id = Int32.Parse(id);
+            List<cart> cart = (List<cart>)Session["cart"];
+            int index = isExist(item_id);
+            if (index != -1)
+            {
+                
+                    cart[index].quantity++;
+                    return Json(cart[index].quantity, JsonRequestBehavior.AllowGet);
+                
+                
+
+            }
+            return Json("Failed", JsonRequestBehavior.AllowGet);
+
+        }
+
     }
 }

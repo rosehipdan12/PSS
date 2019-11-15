@@ -105,10 +105,10 @@
             this.ItemForlevel = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForparent_id = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForcategory1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForitems = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForcategory1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.category1PopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.itemsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -143,10 +143,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForlevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForparent_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForcategory1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForcategory1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.category1PopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsPopUpMenu)).BeginInit();
@@ -165,18 +165,16 @@
             this.dataLayoutControl1.Controls.Add(this.itemsXtraUserControl);
             this.dataLayoutControl1.DataSource = this.categoryViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(82, 12);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTextEdit.Location = new System.Drawing.Point(73, 10);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
             this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -184,7 +182,8 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(940, 20);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 4;
             // 
@@ -208,14 +207,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -315,41 +313,37 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(82, 38);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(73, 34);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(940, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
             // 
             // descriptionTextEdit
             // 
             this.descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextEdit.Location = new System.Drawing.Point(82, 64);
-            this.descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.descriptionTextEdit.Location = new System.Drawing.Point(73, 58);
             this.descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.descriptionTextEdit.Name = "descriptionTextEdit";
-            this.descriptionTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.descriptionTextEdit.Size = new System.Drawing.Size(940, 20);
             this.descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.descriptionTextEdit.TabIndex = 6;
             // 
             // slugTextEdit
             // 
             this.slugTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "slug", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.slugTextEdit.Location = new System.Drawing.Point(82, 90);
-            this.slugTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.slugTextEdit.Location = new System.Drawing.Point(73, 82);
             this.slugTextEdit.MenuManager = this.mainRibbonControl;
             this.slugTextEdit.Name = "slugTextEdit";
-            this.slugTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.slugTextEdit.Size = new System.Drawing.Size(940, 20);
             this.slugTextEdit.StyleController = this.dataLayoutControl1;
             this.slugTextEdit.TabIndex = 7;
             // 
             // levelTextEdit
             // 
             this.levelTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "level", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.levelTextEdit.Location = new System.Drawing.Point(82, 116);
-            this.levelTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.levelTextEdit.Location = new System.Drawing.Point(73, 106);
             this.levelTextEdit.MenuManager = this.mainRibbonControl;
             this.levelTextEdit.Name = "levelTextEdit";
             this.levelTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -358,15 +352,14 @@
             this.levelTextEdit.Properties.Mask.EditMask = "N0";
             this.levelTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.levelTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.levelTextEdit.Size = new System.Drawing.Size(1101, 22);
+            this.levelTextEdit.Size = new System.Drawing.Size(940, 20);
             this.levelTextEdit.StyleController = this.dataLayoutControl1;
             this.levelTextEdit.TabIndex = 8;
             // 
             // category2LookUpEdit
             // 
             this.category2LookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryViewBindingSource, "parent_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.category2LookUpEdit.Location = new System.Drawing.Point(82, 142);
-            this.category2LookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.category2LookUpEdit.Location = new System.Drawing.Point(73, 130);
             this.category2LookUpEdit.MenuManager = this.mainRibbonControl;
             this.category2LookUpEdit.Name = "category2LookUpEdit";
             this.category2LookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -375,7 +368,7 @@
             this.category2LookUpEdit.Properties.DisplayMember = "name";
             this.category2LookUpEdit.Properties.PopupView = this.category2LookUpEditView;
             this.category2LookUpEdit.Properties.ValueMember = "id";
-            this.category2LookUpEdit.Size = new System.Drawing.Size(1101, 22);
+            this.category2LookUpEdit.Size = new System.Drawing.Size(940, 20);
             this.category2LookUpEdit.StyleController = this.dataLayoutControl1;
             this.category2LookUpEdit.TabIndex = 9;
             // 
@@ -397,24 +390,21 @@
             this.category1XtraUserControl.Controls.Add(this.barDockControlRight);
             this.category1XtraUserControl.Controls.Add(this.barDockControlBottom);
             this.category1XtraUserControl.Controls.Add(this.barDockControlTop);
-            this.category1XtraUserControl.Location = new System.Drawing.Point(24, 207);
-            this.category1XtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.category1XtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.category1XtraUserControl.Location = new System.Drawing.Point(22, 186);
+            this.category1XtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.category1XtraUserControl.Name = "category1XtraUserControl";
-            this.category1XtraUserControl.Size = new System.Drawing.Size(1146, 568);
+            this.category1XtraUserControl.Size = new System.Drawing.Size(980, 446);
             this.category1XtraUserControl.TabIndex = 10;
             // 
             // category1GridControl
             // 
             this.category1GridControl.DataSource = this.category1BindingSource;
             this.category1GridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.category1GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.category1GridControl.Location = new System.Drawing.Point(0, 30);
+            this.category1GridControl.Location = new System.Drawing.Point(0, 24);
             this.category1GridControl.MainView = this.category1GridView;
-            this.category1GridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.category1GridControl.MenuManager = this.mainRibbonControl;
             this.category1GridControl.Name = "category1GridControl";
-            this.category1GridControl.Size = new System.Drawing.Size(1146, 538);
+            this.category1GridControl.Size = new System.Drawing.Size(980, 422);
             this.category1GridControl.TabIndex = 0;
             this.category1GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.category1GridView});
@@ -435,7 +425,6 @@
             this.colcategory1,
             this.colcategory2,
             this.colitems});
-            this.category1GridView.DetailHeight = 431;
             this.category1GridView.GridControl = this.category1GridControl;
             this.category1GridView.Name = "category1GridView";
             this.category1GridView.OptionsBehavior.Editable = false;
@@ -445,90 +434,73 @@
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 87;
             // 
             // colname
             // 
             this.colname.Caption = "Name";
             this.colname.FieldName = "name";
-            this.colname.MinWidth = 23;
             this.colname.Name = "colname";
             this.colname.Visible = true;
             this.colname.VisibleIndex = 1;
-            this.colname.Width = 87;
             // 
             // coldescription
             // 
             this.coldescription.Caption = "Description";
             this.coldescription.FieldName = "description";
-            this.coldescription.MinWidth = 23;
             this.coldescription.Name = "coldescription";
             this.coldescription.Visible = true;
             this.coldescription.VisibleIndex = 2;
-            this.coldescription.Width = 87;
             // 
             // colslug
             // 
             this.colslug.Caption = "Slug";
             this.colslug.FieldName = "slug";
-            this.colslug.MinWidth = 23;
             this.colslug.Name = "colslug";
             this.colslug.Visible = true;
             this.colslug.VisibleIndex = 3;
-            this.colslug.Width = 87;
             // 
             // collevel
             // 
             this.collevel.Caption = "Level";
             this.collevel.FieldName = "level";
-            this.collevel.MinWidth = 23;
             this.collevel.Name = "collevel";
             this.collevel.Visible = true;
             this.collevel.VisibleIndex = 4;
-            this.collevel.Width = 87;
             // 
             // colparent_id
             // 
             this.colparent_id.Caption = "Parent ID";
             this.colparent_id.FieldName = "parent_id";
-            this.colparent_id.MinWidth = 23;
             this.colparent_id.Name = "colparent_id";
             this.colparent_id.Visible = true;
             this.colparent_id.VisibleIndex = 5;
-            this.colparent_id.Width = 87;
             // 
             // colcategory1
             // 
             this.colcategory1.FieldName = "category1";
-            this.colcategory1.MinWidth = 23;
             this.colcategory1.Name = "colcategory1";
-            this.colcategory1.Width = 87;
             // 
             // colcategory2
             // 
             this.colcategory2.FieldName = "category2";
-            this.colcategory2.MinWidth = 23;
             this.colcategory2.Name = "colcategory2";
-            this.colcategory2.Width = 87;
             // 
             // colitems
             // 
             this.colitems.FieldName = "items";
-            this.colitems.MinWidth = 23;
             this.colitems.Name = "colitems";
-            this.colitems.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.category1BarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 538);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 422);
             // 
             // category1BarManager
             // 
@@ -601,23 +573,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.category1BarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 446);
             this.barDockControlBottom.Manager = this.category1BarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.category1BarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 538);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 422);
             // 
             // itemsXtraUserControl
             // 
@@ -626,24 +601,21 @@
             this.itemsXtraUserControl.Controls.Add(this.barDockControl4);
             this.itemsXtraUserControl.Controls.Add(this.barDockControl2);
             this.itemsXtraUserControl.Controls.Add(this.barDockControl1);
-            this.itemsXtraUserControl.Location = new System.Drawing.Point(24, 207);
-            this.itemsXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemsXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.itemsXtraUserControl.Location = new System.Drawing.Point(22, 186);
+            this.itemsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.itemsXtraUserControl.Name = "itemsXtraUserControl";
-            this.itemsXtraUserControl.Size = new System.Drawing.Size(1146, 568);
+            this.itemsXtraUserControl.Size = new System.Drawing.Size(980, 446);
             this.itemsXtraUserControl.TabIndex = 11;
             // 
             // itemsGridControl
             // 
             this.itemsGridControl.DataSource = this.itemsBindingSource;
             this.itemsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemsGridControl.Location = new System.Drawing.Point(0, 30);
+            this.itemsGridControl.Location = new System.Drawing.Point(0, 24);
             this.itemsGridControl.MainView = this.itemsGridView;
-            this.itemsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.itemsGridControl.MenuManager = this.mainRibbonControl;
             this.itemsGridControl.Name = "itemsGridControl";
-            this.itemsGridControl.Size = new System.Drawing.Size(1146, 538);
+            this.itemsGridControl.Size = new System.Drawing.Size(980, 422);
             this.itemsGridControl.TabIndex = 0;
             this.itemsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.itemsGridView});
@@ -668,6 +640,7 @@
             this.colcategory,
             this.colsupplier,
             this.colorder_product});
+            this.itemsGridView.DetailHeight = 284;
             this.itemsGridView.GridControl = this.itemsGridControl;
             this.itemsGridView.Name = "itemsGridView";
             this.itemsGridView.OptionsBehavior.Editable = false;
@@ -677,104 +650,131 @@
             // 
             this.colcategory_id.Caption = "Category ID";
             this.colcategory_id.FieldName = "category_id";
+            this.colcategory_id.MinWidth = 17;
             this.colcategory_id.Name = "colcategory_id";
             this.colcategory_id.Visible = true;
             this.colcategory_id.VisibleIndex = 0;
+            this.colcategory_id.Width = 64;
             // 
             // colid1
             // 
             this.colid1.Caption = "ID";
             this.colid1.FieldName = "id";
+            this.colid1.MinWidth = 17;
             this.colid1.Name = "colid1";
             this.colid1.Visible = true;
             this.colid1.VisibleIndex = 1;
+            this.colid1.Width = 64;
             // 
             // colname1
             // 
             this.colname1.Caption = "Name";
             this.colname1.FieldName = "name";
+            this.colname1.MinWidth = 17;
             this.colname1.Name = "colname1";
             this.colname1.Visible = true;
             this.colname1.VisibleIndex = 2;
+            this.colname1.Width = 64;
             // 
             // colstatus
             // 
             this.colstatus.Caption = "Status";
             this.colstatus.FieldName = "status";
+            this.colstatus.MinWidth = 17;
             this.colstatus.Name = "colstatus";
             this.colstatus.Visible = true;
             this.colstatus.VisibleIndex = 3;
+            this.colstatus.Width = 64;
             // 
             // colpricePerUnit
             // 
             this.colpricePerUnit.Caption = "Price per Unit";
             this.colpricePerUnit.FieldName = "pricePerUnit";
+            this.colpricePerUnit.MinWidth = 17;
             this.colpricePerUnit.Name = "colpricePerUnit";
             this.colpricePerUnit.Visible = true;
             this.colpricePerUnit.VisibleIndex = 4;
+            this.colpricePerUnit.Width = 64;
             // 
             // coltags
             // 
             this.coltags.Caption = "Tags";
             this.coltags.FieldName = "tags";
+            this.coltags.MinWidth = 17;
             this.coltags.Name = "coltags";
             this.coltags.Visible = true;
             this.coltags.VisibleIndex = 5;
+            this.coltags.Width = 64;
             // 
             // colimage
             // 
             this.colimage.Caption = "Image";
             this.colimage.FieldName = "image";
+            this.colimage.MinWidth = 17;
             this.colimage.Name = "colimage";
             this.colimage.Visible = true;
             this.colimage.VisibleIndex = 6;
+            this.colimage.Width = 64;
             // 
             // coldetail
             // 
             this.coldetail.Caption = "Detail";
             this.coldetail.FieldName = "detail";
+            this.coldetail.MinWidth = 17;
             this.coldetail.Name = "coldetail";
             this.coldetail.Visible = true;
             this.coldetail.VisibleIndex = 7;
+            this.coldetail.Width = 64;
             // 
             // colquantity
             // 
             this.colquantity.Caption = "Quantity";
             this.colquantity.FieldName = "quantity";
+            this.colquantity.MinWidth = 17;
             this.colquantity.Name = "colquantity";
             this.colquantity.Visible = true;
             this.colquantity.VisibleIndex = 8;
+            this.colquantity.Width = 64;
             // 
             // colsupplier_id
             // 
             this.colsupplier_id.Caption = "Supplier ID";
             this.colsupplier_id.FieldName = "supplier_id";
+            this.colsupplier_id.MinWidth = 17;
             this.colsupplier_id.Name = "colsupplier_id";
             this.colsupplier_id.Visible = true;
             this.colsupplier_id.VisibleIndex = 9;
+            this.colsupplier_id.Width = 64;
             // 
             // colcategory
             // 
             this.colcategory.FieldName = "category";
+            this.colcategory.MinWidth = 17;
             this.colcategory.Name = "colcategory";
+            this.colcategory.Width = 64;
             // 
             // colsupplier
             // 
             this.colsupplier.FieldName = "supplier";
+            this.colsupplier.MinWidth = 17;
             this.colsupplier.Name = "colsupplier";
+            this.colsupplier.Width = 64;
             // 
             // colorder_product
             // 
             this.colorder_product.FieldName = "order_product";
+            this.colorder_product.MinWidth = 17;
             this.colorder_product.Name = "colorder_product";
+            this.colorder_product.Width = 64;
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 30);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 24);
             this.barDockControl3.Manager = this.itemsBarManager;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 538);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 422);
             // 
             // itemsBarManager
             // 
@@ -847,23 +847,26 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.itemsBarManager;
-            this.barDockControl1.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl1.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 568);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 446);
             this.barDockControl2.Manager = this.itemsBarManager;
-            this.barDockControl2.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl2.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControl4.Location = new System.Drawing.Point(980, 24);
             this.barDockControl4.Manager = this.itemsBarManager;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 538);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 422);
             // 
             // layoutControlGroup1
             // 
@@ -872,7 +875,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -889,92 +892,72 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
             // 
             // ItemForid
             // 
             this.ItemForid.Control = this.idTextEdit;
             this.ItemForid.Location = new System.Drawing.Point(0, 0);
             this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForid.Size = new System.Drawing.Size(1006, 24);
             this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemForid.TextSize = new System.Drawing.Size(59, 13);
             // 
             // ItemForname
             // 
             this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 26);
+            this.ItemForname.Location = new System.Drawing.Point(0, 24);
             this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForname.Size = new System.Drawing.Size(1006, 24);
             this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemForname.TextSize = new System.Drawing.Size(59, 13);
             // 
             // ItemFordescription
             // 
             this.ItemFordescription.Control = this.descriptionTextEdit;
-            this.ItemFordescription.Location = new System.Drawing.Point(0, 52);
+            this.ItemFordescription.Location = new System.Drawing.Point(0, 48);
             this.ItemFordescription.Name = "ItemFordescription";
-            this.ItemFordescription.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFordescription.Size = new System.Drawing.Size(1006, 24);
             this.ItemFordescription.Text = "Description";
-            this.ItemFordescription.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemFordescription.TextSize = new System.Drawing.Size(59, 13);
             // 
             // ItemForslug
             // 
             this.ItemForslug.Control = this.slugTextEdit;
-            this.ItemForslug.Location = new System.Drawing.Point(0, 78);
+            this.ItemForslug.Location = new System.Drawing.Point(0, 72);
             this.ItemForslug.Name = "ItemForslug";
-            this.ItemForslug.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForslug.Size = new System.Drawing.Size(1006, 24);
             this.ItemForslug.Text = "Slug";
-            this.ItemForslug.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemForslug.TextSize = new System.Drawing.Size(59, 13);
             // 
             // ItemForlevel
             // 
             this.ItemForlevel.Control = this.levelTextEdit;
-            this.ItemForlevel.Location = new System.Drawing.Point(0, 104);
+            this.ItemForlevel.Location = new System.Drawing.Point(0, 96);
             this.ItemForlevel.Name = "ItemForlevel";
-            this.ItemForlevel.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForlevel.Size = new System.Drawing.Size(1006, 24);
             this.ItemForlevel.Text = "Level";
-            this.ItemForlevel.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemForlevel.TextSize = new System.Drawing.Size(59, 13);
             // 
             // ItemForparent_id
             // 
             this.ItemForparent_id.Control = this.category2LookUpEdit;
-            this.ItemForparent_id.Location = new System.Drawing.Point(0, 130);
+            this.ItemForparent_id.Location = new System.Drawing.Point(0, 120);
             this.ItemForparent_id.Name = "ItemForparent_id";
-            this.ItemForparent_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForparent_id.Size = new System.Drawing.Size(1006, 24);
             this.ItemForparent_id.Text = "Category ID";
-            this.ItemForparent_id.TextSize = new System.Drawing.Size(67, 16);
+            this.ItemForparent_id.TextSize = new System.Drawing.Size(59, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 156);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 144);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 624);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 492);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3,
             this.layoutControlGroup4});
             this.tabbedControlGroup1.Text = "Tabs";
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForcategory1});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "autoGroupForcategory1";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 572);
-            this.layoutControlGroup3.Text = "Category";
-            // 
-            // ItemForcategory1
-            // 
-            this.ItemForcategory1.Control = this.category1XtraUserControl;
-            this.ItemForcategory1.Location = new System.Drawing.Point(0, 0);
-            this.ItemForcategory1.Name = "ItemForcategory1";
-            this.ItemForcategory1.Size = new System.Drawing.Size(1150, 572);
-            this.ItemForcategory1.StartNewLine = true;
-            this.ItemForcategory1.Text = "category1";
-            this.ItemForcategory1.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForcategory1.TextVisible = false;
             // 
             // layoutControlGroup4
             // 
@@ -982,7 +965,7 @@
             this.ItemForitems});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "autoGroupForitems";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1150, 572);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(984, 450);
             this.layoutControlGroup4.Text = "Items";
             // 
             // ItemForitems
@@ -990,11 +973,31 @@
             this.ItemForitems.Control = this.itemsXtraUserControl;
             this.ItemForitems.Location = new System.Drawing.Point(0, 0);
             this.ItemForitems.Name = "ItemForitems";
-            this.ItemForitems.Size = new System.Drawing.Size(1150, 572);
+            this.ItemForitems.Size = new System.Drawing.Size(984, 450);
             this.ItemForitems.StartNewLine = true;
             this.ItemForitems.Text = "items";
             this.ItemForitems.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForitems.TextVisible = false;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForcategory1});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "autoGroupForcategory1";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 450);
+            this.layoutControlGroup3.Text = "Category";
+            // 
+            // ItemForcategory1
+            // 
+            this.ItemForcategory1.Control = this.category1XtraUserControl;
+            this.ItemForcategory1.Location = new System.Drawing.Point(0, 0);
+            this.ItemForcategory1.Name = "ItemForcategory1";
+            this.ItemForcategory1.Size = new System.Drawing.Size(984, 450);
+            this.ItemForcategory1.StartNewLine = true;
+            this.ItemForcategory1.Text = "category1";
+            this.ItemForcategory1.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForcategory1.TextVisible = false;
             // 
             // mvvmContext
             // 
@@ -1034,14 +1037,13 @@
             // 
             // categoryView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "categoryView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();
@@ -1075,10 +1077,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForlevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForparent_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForcategory1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForitems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForcategory1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.category1PopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsPopUpMenu)).EndInit();

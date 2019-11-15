@@ -41,7 +41,6 @@
             this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.nameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.descriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.genderTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.birthDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.priceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.colorTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -74,6 +73,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.imageComboBoxEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.genderTextEdit = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForid = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,6 +94,7 @@
             this.order_productPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).BeginInit();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceTextEdit.Properties)).BeginInit();
@@ -117,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_productGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_productBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).BeginInit();
@@ -136,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_productPopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -144,7 +146,6 @@
             this.dataLayoutControl1.Controls.Add(this.idTextEdit);
             this.dataLayoutControl1.Controls.Add(this.nameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.descriptionTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.genderTextEdit);
             this.dataLayoutControl1.Controls.Add(this.birthDateEdit);
             this.dataLayoutControl1.Controls.Add(this.priceTextEdit);
             this.dataLayoutControl1.Controls.Add(this.colorTextEdit);
@@ -153,20 +154,19 @@
             this.dataLayoutControl1.Controls.Add(this.speciesLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.order_productXtraUserControl);
             this.dataLayoutControl1.Controls.Add(this.imageComboBoxEdit1);
+            this.dataLayoutControl1.Controls.Add(this.genderTextEdit);
             this.dataLayoutControl1.DataSource = this.petViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(78, 12);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTextEdit.Location = new System.Drawing.Point(68, 12);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
             this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -174,7 +174,8 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(944, 20);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 4;
             // 
@@ -198,14 +199,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -305,42 +305,28 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(78, 38);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(68, 36);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(944, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
             // 
             // descriptionTextEdit
             // 
             this.descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextEdit.Location = new System.Drawing.Point(78, 64);
-            this.descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.descriptionTextEdit.Location = new System.Drawing.Point(68, 60);
             this.descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.descriptionTextEdit.Name = "descriptionTextEdit";
-            this.descriptionTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.descriptionTextEdit.Size = new System.Drawing.Size(944, 20);
             this.descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.descriptionTextEdit.TabIndex = 6;
-            // 
-            // genderTextEdit
-            // 
-            this.genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.genderTextEdit.Location = new System.Drawing.Point(78, 90);
-            this.genderTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.genderTextEdit.MenuManager = this.mainRibbonControl;
-            this.genderTextEdit.Name = "genderTextEdit";
-            this.genderTextEdit.Size = new System.Drawing.Size(1105, 22);
-            this.genderTextEdit.StyleController = this.dataLayoutControl1;
-            this.genderTextEdit.TabIndex = 7;
             // 
             // birthDateEdit
             // 
             this.birthDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "birth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.birthDateEdit.EditValue = null;
-            this.birthDateEdit.Location = new System.Drawing.Point(78, 116);
-            this.birthDateEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.birthDateEdit.Location = new System.Drawing.Point(68, 113);
             this.birthDateEdit.MenuManager = this.mainRibbonControl;
             this.birthDateEdit.Name = "birthDateEdit";
             this.birthDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -348,15 +334,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.birthDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthDateEdit.Size = new System.Drawing.Size(1105, 22);
+            this.birthDateEdit.Size = new System.Drawing.Size(944, 20);
             this.birthDateEdit.StyleController = this.dataLayoutControl1;
             this.birthDateEdit.TabIndex = 8;
             // 
             // priceTextEdit
             // 
             this.priceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "price", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.priceTextEdit.Location = new System.Drawing.Point(78, 142);
-            this.priceTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.priceTextEdit.Location = new System.Drawing.Point(68, 137);
             this.priceTextEdit.MenuManager = this.mainRibbonControl;
             this.priceTextEdit.Name = "priceTextEdit";
             this.priceTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -365,52 +350,48 @@
             this.priceTextEdit.Properties.Mask.EditMask = "F";
             this.priceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.priceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.priceTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.priceTextEdit.Size = new System.Drawing.Size(944, 20);
             this.priceTextEdit.StyleController = this.dataLayoutControl1;
             this.priceTextEdit.TabIndex = 9;
             // 
             // colorTextEdit
             // 
             this.colorTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "color", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.colorTextEdit.Location = new System.Drawing.Point(78, 168);
-            this.colorTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.colorTextEdit.Location = new System.Drawing.Point(68, 161);
             this.colorTextEdit.MenuManager = this.mainRibbonControl;
             this.colorTextEdit.Name = "colorTextEdit";
-            this.colorTextEdit.Size = new System.Drawing.Size(1105, 22);
+            this.colorTextEdit.Size = new System.Drawing.Size(944, 20);
             this.colorTextEdit.StyleController = this.dataLayoutControl1;
             this.colorTextEdit.TabIndex = 10;
             // 
             // vaccineCheckEdit
             // 
             this.vaccineCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "vaccine", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.vaccineCheckEdit.Location = new System.Drawing.Point(12, 218);
-            this.vaccineCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vaccineCheckEdit.Location = new System.Drawing.Point(12, 313);
             this.vaccineCheckEdit.MenuManager = this.mainRibbonControl;
             this.vaccineCheckEdit.Name = "vaccineCheckEdit";
             this.vaccineCheckEdit.Properties.Caption = "Vaccine";
             this.vaccineCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.vaccineCheckEdit.Size = new System.Drawing.Size(1171, 20);
+            this.vaccineCheckEdit.Size = new System.Drawing.Size(1000, 19);
             this.vaccineCheckEdit.StyleController = this.dataLayoutControl1;
             this.vaccineCheckEdit.TabIndex = 11;
             // 
             // statusCheckEdit
             // 
             this.statusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.statusCheckEdit.Location = new System.Drawing.Point(12, 242);
-            this.statusCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.statusCheckEdit.Location = new System.Drawing.Point(12, 336);
             this.statusCheckEdit.MenuManager = this.mainRibbonControl;
             this.statusCheckEdit.Name = "statusCheckEdit";
             this.statusCheckEdit.Properties.Caption = "Status";
             this.statusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.statusCheckEdit.Size = new System.Drawing.Size(1171, 20);
+            this.statusCheckEdit.Size = new System.Drawing.Size(1000, 19);
             this.statusCheckEdit.StyleController = this.dataLayoutControl1;
             this.statusCheckEdit.TabIndex = 12;
             // 
             // speciesLookUpEdit
             // 
             this.speciesLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "species_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.speciesLookUpEdit.Location = new System.Drawing.Point(78, 266);
-            this.speciesLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.speciesLookUpEdit.Location = new System.Drawing.Point(68, 359);
             this.speciesLookUpEdit.MenuManager = this.mainRibbonControl;
             this.speciesLookUpEdit.Name = "speciesLookUpEdit";
             this.speciesLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -419,7 +400,7 @@
             this.speciesLookUpEdit.Properties.DisplayMember = "name";
             this.speciesLookUpEdit.Properties.PopupView = this.speciesLookUpEditView;
             this.speciesLookUpEdit.Properties.ValueMember = "id";
-            this.speciesLookUpEdit.Size = new System.Drawing.Size(1105, 22);
+            this.speciesLookUpEdit.Size = new System.Drawing.Size(944, 20);
             this.speciesLookUpEdit.StyleController = this.dataLayoutControl1;
             this.speciesLookUpEdit.TabIndex = 13;
             // 
@@ -441,24 +422,21 @@
             this.order_productXtraUserControl.Controls.Add(this.barDockControlRight);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.order_productXtraUserControl.Location = new System.Drawing.Point(24, 331);
-            this.order_productXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.order_productXtraUserControl.Location = new System.Drawing.Point(24, 417);
+            this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.order_productXtraUserControl.Name = "order_productXtraUserControl";
-            this.order_productXtraUserControl.Size = new System.Drawing.Size(1146, 444);
+            this.order_productXtraUserControl.Size = new System.Drawing.Size(976, 211);
             this.order_productXtraUserControl.TabIndex = 15;
             // 
             // order_productGridControl
             // 
             this.order_productGridControl.DataSource = this.order_productBindingSource;
             this.order_productGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.order_productGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.order_productGridControl.Location = new System.Drawing.Point(0, 30);
+            this.order_productGridControl.Location = new System.Drawing.Point(0, 24);
             this.order_productGridControl.MainView = this.order_productGridView;
-            this.order_productGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.order_productGridControl.MenuManager = this.mainRibbonControl;
             this.order_productGridControl.Name = "order_productGridControl";
-            this.order_productGridControl.Size = new System.Drawing.Size(1146, 414);
+            this.order_productGridControl.Size = new System.Drawing.Size(976, 187);
             this.order_productGridControl.TabIndex = 0;
             this.order_productGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.order_productGridView});
@@ -479,7 +457,6 @@
             this.colitem,
             this.colorder,
             this.colpet});
-            this.order_productGridView.DetailHeight = 431;
             this.order_productGridView.GridControl = this.order_productGridControl;
             this.order_productGridView.Name = "order_productGridView";
             this.order_productGridView.OptionsBehavior.Editable = false;
@@ -489,90 +466,73 @@
             // 
             this.colorder_id.Caption = "Order ID";
             this.colorder_id.FieldName = "order_id";
-            this.colorder_id.MinWidth = 23;
             this.colorder_id.Name = "colorder_id";
             this.colorder_id.Visible = true;
             this.colorder_id.VisibleIndex = 0;
-            this.colorder_id.Width = 87;
             // 
             // colpet_id
             // 
             this.colpet_id.Caption = "Pet ID";
             this.colpet_id.FieldName = "pet_id";
-            this.colpet_id.MinWidth = 23;
             this.colpet_id.Name = "colpet_id";
             this.colpet_id.Visible = true;
             this.colpet_id.VisibleIndex = 1;
-            this.colpet_id.Width = 87;
             // 
             // colitem_id
             // 
             this.colitem_id.Caption = "Item ID";
             this.colitem_id.FieldName = "item_id";
-            this.colitem_id.MinWidth = 23;
             this.colitem_id.Name = "colitem_id";
             this.colitem_id.Visible = true;
             this.colitem_id.VisibleIndex = 2;
-            this.colitem_id.Width = 87;
             // 
             // colquantity
             // 
             this.colquantity.Caption = "Quantity";
             this.colquantity.FieldName = "quantity";
-            this.colquantity.MinWidth = 23;
             this.colquantity.Name = "colquantity";
             this.colquantity.Visible = true;
             this.colquantity.VisibleIndex = 3;
-            this.colquantity.Width = 87;
             // 
             // colprice
             // 
             this.colprice.Caption = "Price";
             this.colprice.FieldName = "price";
-            this.colprice.MinWidth = 23;
             this.colprice.Name = "colprice";
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 4;
-            this.colprice.Width = 87;
             // 
             // colid
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 5;
-            this.colid.Width = 87;
             // 
             // colitem
             // 
             this.colitem.FieldName = "item";
-            this.colitem.MinWidth = 23;
             this.colitem.Name = "colitem";
-            this.colitem.Width = 87;
             // 
             // colorder
             // 
             this.colorder.FieldName = "order";
-            this.colorder.MinWidth = 23;
             this.colorder.Name = "colorder";
-            this.colorder.Width = 87;
             // 
             // colpet
             // 
             this.colpet.FieldName = "pet";
-            this.colpet.MinWidth = 23;
             this.colpet.Name = "colpet";
-            this.colpet.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.order_productBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 414);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 187);
             // 
             // order_productBarManager
             // 
@@ -645,36 +605,59 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.order_productBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(976, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 444);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 211);
             this.barDockControlBottom.Manager = this.order_productBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
             this.barDockControlRight.Manager = this.order_productBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 187);
             // 
             // imageComboBoxEdit1
             // 
+            this.imageComboBoxEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.imageComboBoxEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "image", true));
-            this.imageComboBoxEdit1.Location = new System.Drawing.Point(78, 194);
+            this.imageComboBoxEdit1.Location = new System.Drawing.Point(68, 185);
+            this.imageComboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imageComboBoxEdit1.MenuManager = this.mainRibbonControl;
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
             this.imageComboBoxEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.imageComboBoxEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1105, 20);
+            this.imageComboBoxEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.imageComboBoxEdit1.Size = new System.Drawing.Size(944, 124);
             this.imageComboBoxEdit1.StyleController = this.dataLayoutControl1;
             this.imageComboBoxEdit1.TabIndex = 16;
             this.imageComboBoxEdit1.TabStop = true;
+            // 
+            // genderTextEdit
+            // 
+            this.genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.genderTextEdit.EditValue = "Male";
+            this.genderTextEdit.Location = new System.Drawing.Point(68, 84);
+            this.genderTextEdit.MenuManager = this.mainRibbonControl;
+            this.genderTextEdit.Name = "genderTextEdit";
+            this.genderTextEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Male", "Male", true, "Male"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Female", "Female", true, "Female")});
+            this.genderTextEdit.Properties.Tag = "Male";
+            this.genderTextEdit.Size = new System.Drawing.Size(944, 25);
+            this.genderTextEdit.StyleController = this.dataLayoutControl1;
+            this.genderTextEdit.TabIndex = 7;
             // 
             // layoutControlGroup1
             // 
@@ -683,7 +666,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -705,68 +688,68 @@
             this.layoutControlItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1004, 632);
             // 
             // ItemForid
             // 
             this.ItemForid.Control = this.idTextEdit;
             this.ItemForid.Location = new System.Drawing.Point(0, 0);
             this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForid.Size = new System.Drawing.Size(1004, 24);
             this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForid.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForname
             // 
             this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 26);
+            this.ItemForname.Location = new System.Drawing.Point(0, 24);
             this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForname.Size = new System.Drawing.Size(1004, 24);
             this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForname.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemFordescription
             // 
             this.ItemFordescription.Control = this.descriptionTextEdit;
-            this.ItemFordescription.Location = new System.Drawing.Point(0, 52);
+            this.ItemFordescription.Location = new System.Drawing.Point(0, 48);
             this.ItemFordescription.Name = "ItemFordescription";
-            this.ItemFordescription.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFordescription.Size = new System.Drawing.Size(1004, 24);
             this.ItemFordescription.Text = "Description";
-            this.ItemFordescription.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemFordescription.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForgender
             // 
             this.ItemForgender.Control = this.genderTextEdit;
-            this.ItemForgender.Location = new System.Drawing.Point(0, 78);
+            this.ItemForgender.Location = new System.Drawing.Point(0, 72);
             this.ItemForgender.Name = "ItemForgender";
-            this.ItemForgender.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForgender.Size = new System.Drawing.Size(1004, 29);
             this.ItemForgender.Text = "Gender";
-            this.ItemForgender.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForgender.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForbirth
             // 
             this.ItemForbirth.Control = this.birthDateEdit;
-            this.ItemForbirth.Location = new System.Drawing.Point(0, 104);
+            this.ItemForbirth.Location = new System.Drawing.Point(0, 101);
             this.ItemForbirth.Name = "ItemForbirth";
-            this.ItemForbirth.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForbirth.Size = new System.Drawing.Size(1004, 24);
             this.ItemForbirth.Text = "Birth";
-            this.ItemForbirth.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForbirth.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForprice
             // 
             this.ItemForprice.Control = this.priceTextEdit;
-            this.ItemForprice.Location = new System.Drawing.Point(0, 130);
+            this.ItemForprice.Location = new System.Drawing.Point(0, 125);
             this.ItemForprice.Name = "ItemForprice";
-            this.ItemForprice.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForprice.Size = new System.Drawing.Size(1004, 24);
             this.ItemForprice.Text = "Price";
-            this.ItemForprice.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForprice.TextSize = new System.Drawing.Size(53, 13);
             // 
             // ItemForvaccine
             // 
             this.ItemForvaccine.Control = this.vaccineCheckEdit;
-            this.ItemForvaccine.Location = new System.Drawing.Point(0, 206);
+            this.ItemForvaccine.Location = new System.Drawing.Point(0, 301);
             this.ItemForvaccine.Name = "ItemForvaccine";
-            this.ItemForvaccine.Size = new System.Drawing.Size(1175, 24);
+            this.ItemForvaccine.Size = new System.Drawing.Size(1004, 23);
             this.ItemForvaccine.Text = "vaccine";
             this.ItemForvaccine.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForvaccine.TextVisible = false;
@@ -774,9 +757,9 @@
             // ItemForstatus
             // 
             this.ItemForstatus.Control = this.statusCheckEdit;
-            this.ItemForstatus.Location = new System.Drawing.Point(0, 230);
+            this.ItemForstatus.Location = new System.Drawing.Point(0, 324);
             this.ItemForstatus.Name = "ItemForstatus";
-            this.ItemForstatus.Size = new System.Drawing.Size(1175, 24);
+            this.ItemForstatus.Size = new System.Drawing.Size(1004, 23);
             this.ItemForstatus.Text = "status";
             this.ItemForstatus.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForstatus.TextVisible = false;
@@ -784,18 +767,18 @@
             // ItemForspecies_id
             // 
             this.ItemForspecies_id.Control = this.speciesLookUpEdit;
-            this.ItemForspecies_id.Location = new System.Drawing.Point(0, 254);
+            this.ItemForspecies_id.Location = new System.Drawing.Point(0, 347);
             this.ItemForspecies_id.Name = "ItemForspecies_id";
-            this.ItemForspecies_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForspecies_id.Size = new System.Drawing.Size(1004, 24);
             this.ItemForspecies_id.Text = "Species ID";
-            this.ItemForspecies_id.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForspecies_id.TextSize = new System.Drawing.Size(53, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 280);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 371);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 500);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 261);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -806,7 +789,7 @@
             this.ItemFororder_product});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupFororder_product";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 448);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 215);
             this.layoutControlGroup3.Text = "Order Product";
             // 
             // ItemFororder_product
@@ -814,7 +797,7 @@
             this.ItemFororder_product.Control = this.order_productXtraUserControl;
             this.ItemFororder_product.Location = new System.Drawing.Point(0, 0);
             this.ItemFororder_product.Name = "ItemFororder_product";
-            this.ItemFororder_product.Size = new System.Drawing.Size(1150, 448);
+            this.ItemFororder_product.Size = new System.Drawing.Size(980, 215);
             this.ItemFororder_product.StartNewLine = true;
             this.ItemFororder_product.Text = "order_product";
             this.ItemFororder_product.TextSize = new System.Drawing.Size(0, 0);
@@ -823,20 +806,22 @@
             // ItemForcolor
             // 
             this.ItemForcolor.Control = this.colorTextEdit;
-            this.ItemForcolor.Location = new System.Drawing.Point(0, 156);
+            this.ItemForcolor.Location = new System.Drawing.Point(0, 149);
             this.ItemForcolor.Name = "ItemForcolor";
-            this.ItemForcolor.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForcolor.Size = new System.Drawing.Size(1004, 24);
             this.ItemForcolor.Text = "Color";
-            this.ItemForcolor.TextSize = new System.Drawing.Size(63, 16);
+            this.ItemForcolor.TextSize = new System.Drawing.Size(53, 13);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.imageComboBoxEdit1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 182);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 173);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(80, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1175, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1004, 128);
+            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.Text = "Image";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(53, 13);
             // 
             // mvvmContext
             // 
@@ -870,16 +855,23 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // object_4652eaac_83ab_4b6b_9fa4_369399dddf03
+            // 
+            this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Male", "Male", true, "Male"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Female", "Female", true, "Female")});
+            this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03.Name = "object_4652eaac_83ab_4b6b_9fa4_369399dddf03";
+            this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03.Tag = "Male";
+            // 
             // petView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "petView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();
@@ -887,7 +879,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.descriptionTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceTextEdit.Properties)).EndInit();
@@ -904,6 +895,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_productGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_productBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForid)).EndInit();
@@ -923,6 +915,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_productPopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.object_4652eaac_83ab_4b6b_9fa4_369399dddf03)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -962,7 +955,6 @@
         private DevExpress.XtraBars.BarButtonItem bbiResetLayout;
         private DevExpress.XtraEditors.TextEdit nameTextEdit;
         private DevExpress.XtraEditors.TextEdit descriptionTextEdit;
-        private DevExpress.XtraEditors.TextEdit genderTextEdit;
         private DevExpress.XtraEditors.DateEdit birthDateEdit;
         private DevExpress.XtraEditors.TextEdit priceTextEdit;
         private DevExpress.XtraEditors.TextEdit colorTextEdit;
@@ -1001,5 +993,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.ImageList imageList1;
+        private DevExpress.XtraEditors.RadioGroup genderTextEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup object_4652eaac_83ab_4b6b_9fa4_369399dddf03;
     }
 }

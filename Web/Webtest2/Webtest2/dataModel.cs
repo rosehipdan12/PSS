@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace Webtest2
 {
     public class dataModel
     {
-        public ICollection<category> cate;
+       public ICollection<category> cate;
         public ICollection<item> items;
         public ICollection<pet> pets;
         public ICollection<supplier> sups;
@@ -12,9 +15,9 @@ namespace Webtest2
         public ICollection<order> orders;
         public ICollection<user> users;
 
-        public dataModel()
+      public dataModel()
         {
-
+            
         }
 
         public ICollection<category> Cate { get => cate; set => cate = value; }

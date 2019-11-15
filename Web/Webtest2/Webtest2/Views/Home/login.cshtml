@@ -1,0 +1,148 @@
+﻿@{
+
+    IEnumerable<category> category = ViewData["Category"] as IEnumerable<category>;
+    IEnumerable<item> items = ViewData["Items"] as IEnumerable<item>;
+    ViewBag.Title = "Home";
+    int count = 1;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Collections;
+
+<div class="w3l_banner_nav_right">
+    <!-- login -->
+    <div class="w3_login">
+        <h3>Sign In & Sign Up</h3>
+        <div class="w3_login_module">
+            <div class="module form-module">
+                <div class="toggle">
+                    <i class="fa fa-times fa-pencil"></i>
+                    <div class="tooltip">Click Me</div>
+                </div>
+                <div class="form">
+                    <h2>Login to your account</h2>
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @id = "register" }))
+                    {
+                        <input type="text" id="userinput" name="Username" placeholder="Username" required=" ">
+                        <input type="password" id="passLog" name="Password" placeholder="Password" required=" ">
+                        if (ViewData["ErrorMessage"] != null)
+                        {
+                            <span class="alert alert-danger" role="alert">@ViewData["ErrorMessage"].ToString()</span>
+                        }
+                        <input type="submit" value="Login">
+                    }
+                </div>
+                <div class="form">
+                    <h2>Create an account</h2>
+                    @using (Html.BeginForm("CreateAccount", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <input type="text" maxlength="12" min="8" id="usernameReg" name="Username" placeholder="Username" required="tr">
+                        if (ViewData["RegMess"] != null)
+                        {
+                            <span>@ViewData["RegMess"].ToString()</span>
+                        }
+                        <input type="password" id="passReg" name="Password" placeholder="Password" required=" ">
+                        <input type="email" id="emailReg" name="Email" placeholder="Email Address" required=" ">
+                        <input type="text" name="Phone" id="phoneReg" placeholder="Phone Number" required=" ">
+                        <input type="submit" value="Register">
+                    }
+                </div>
+                <div class="cta"><a href="#">Forgot your password?</a></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script>
+            jQuery.validator.setDefaults({
+                debug: true,
+                success: "valid"
+            });
+            $(document).ready(function (c) {
+                $('#userinput').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
+                    }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#passLog').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#usernameReg').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#passReg').keyup(function () {
+                    var pass = $(this).val();
+                    if ((pass.length < 8) || (pass.length > 12)) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+              $(document).ready(function (c) {
+                $('#phoneReg').keyup(function () {
+                    var phone = $(this).val();
+                    if ((phone.length < 8) || (phone.length > 12)) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+
+            $("#emailReg").validate({
+                rules: {
+                    field: {
+                        required: true,
+                        email: true
+                    }
+                }
+            });
+
+
+            $('.toggle').click(function () {
+                // Switches the Icon
+                $(this).children('i').toggleClass('fa-pencil');
+                // Switches the forms
+                $('.form').animate({
+                    height: "toggle",
+                    'padding-top': 'toggle',
+                    'padding-bottom': 'toggle',
+                    opacity: "toggle"
+                }, "slow");
+            });
+        </script>
+    </div>
+    <!-- //login -->
+</div>
+<div class="clearfix"></div>
+

@@ -20,7 +20,7 @@ namespace PSS_WINFORM_CONTROL
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }
