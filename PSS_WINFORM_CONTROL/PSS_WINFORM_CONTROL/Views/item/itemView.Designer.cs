@@ -150,18 +150,16 @@
             this.dataLayoutControl1.Controls.Add(this.order_productXtraUserControl);
             this.dataLayoutControl1.DataSource = this.itemViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // categoryLookUpEdit
             // 
             this.categoryLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "category_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.categoryLookUpEdit.Location = new System.Drawing.Point(99, 12);
-            this.categoryLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.categoryLookUpEdit.Location = new System.Drawing.Point(82, 10);
             this.categoryLookUpEdit.MenuManager = this.mainRibbonControl;
             this.categoryLookUpEdit.Name = "categoryLookUpEdit";
             this.categoryLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -170,7 +168,7 @@
             this.categoryLookUpEdit.Properties.DisplayMember = "name";
             this.categoryLookUpEdit.Properties.PopupView = this.categoryLookUpEditView;
             this.categoryLookUpEdit.Properties.ValueMember = "id";
-            this.categoryLookUpEdit.Size = new System.Drawing.Size(1084, 22);
+            this.categoryLookUpEdit.Size = new System.Drawing.Size(931, 20);
             this.categoryLookUpEdit.StyleController = this.dataLayoutControl1;
             this.categoryLookUpEdit.TabIndex = 4;
             // 
@@ -194,14 +192,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -312,8 +309,7 @@
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(99, 38);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTextEdit.Location = new System.Drawing.Point(82, 34);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
             this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -321,39 +317,37 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(931, 20);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 5;
             // 
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(99, 64);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(82, 58);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(931, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 6;
             // 
             // statusCheckEdit
             // 
             this.statusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.statusCheckEdit.Location = new System.Drawing.Point(12, 90);
-            this.statusCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.statusCheckEdit.Location = new System.Drawing.Point(11, 82);
             this.statusCheckEdit.MenuManager = this.mainRibbonControl;
             this.statusCheckEdit.Name = "statusCheckEdit";
             this.statusCheckEdit.Properties.Caption = "status";
             this.statusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.statusCheckEdit.Size = new System.Drawing.Size(1171, 20);
+            this.statusCheckEdit.Size = new System.Drawing.Size(1002, 19);
             this.statusCheckEdit.StyleController = this.dataLayoutControl1;
             this.statusCheckEdit.TabIndex = 7;
             // 
             // pricePerUnitTextEdit
             // 
             this.pricePerUnitTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "pricePerUnit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pricePerUnitTextEdit.Location = new System.Drawing.Point(99, 114);
-            this.pricePerUnitTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pricePerUnitTextEdit.Location = new System.Drawing.Point(82, 105);
             this.pricePerUnitTextEdit.MenuManager = this.mainRibbonControl;
             this.pricePerUnitTextEdit.Name = "pricePerUnitTextEdit";
             this.pricePerUnitTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -362,50 +356,46 @@
             this.pricePerUnitTextEdit.Properties.Mask.EditMask = "F";
             this.pricePerUnitTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.pricePerUnitTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.pricePerUnitTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.pricePerUnitTextEdit.Size = new System.Drawing.Size(931, 20);
             this.pricePerUnitTextEdit.StyleController = this.dataLayoutControl1;
             this.pricePerUnitTextEdit.TabIndex = 8;
             // 
             // tagsTextEdit
             // 
             this.tagsTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "tags", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tagsTextEdit.Location = new System.Drawing.Point(99, 140);
-            this.tagsTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tagsTextEdit.Location = new System.Drawing.Point(82, 129);
             this.tagsTextEdit.MenuManager = this.mainRibbonControl;
             this.tagsTextEdit.Name = "tagsTextEdit";
-            this.tagsTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.tagsTextEdit.Size = new System.Drawing.Size(931, 20);
             this.tagsTextEdit.StyleController = this.dataLayoutControl1;
             this.tagsTextEdit.TabIndex = 9;
             // 
             // imagePictureEdit
             // 
             this.imagePictureEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "image", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imagePictureEdit.Location = new System.Drawing.Point(99, 166);
-            this.imagePictureEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.imagePictureEdit.Location = new System.Drawing.Point(82, 153);
             this.imagePictureEdit.MenuManager = this.mainRibbonControl;
             this.imagePictureEdit.Name = "imagePictureEdit";
             this.imagePictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.imagePictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.imagePictureEdit.Size = new System.Drawing.Size(1084, 121);
+            this.imagePictureEdit.Size = new System.Drawing.Size(931, 94);
             this.imagePictureEdit.StyleController = this.dataLayoutControl1;
             this.imagePictureEdit.TabIndex = 10;
             // 
             // detailTextEdit
             // 
             this.detailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "detail", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.detailTextEdit.Location = new System.Drawing.Point(99, 291);
-            this.detailTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.detailTextEdit.Location = new System.Drawing.Point(82, 251);
             this.detailTextEdit.MenuManager = this.mainRibbonControl;
             this.detailTextEdit.Name = "detailTextEdit";
-            this.detailTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.detailTextEdit.Size = new System.Drawing.Size(931, 20);
             this.detailTextEdit.StyleController = this.dataLayoutControl1;
             this.detailTextEdit.TabIndex = 11;
             // 
             // quantityTextEdit
             // 
             this.quantityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "quantity", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.quantityTextEdit.Location = new System.Drawing.Point(99, 317);
-            this.quantityTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.quantityTextEdit.Location = new System.Drawing.Point(82, 275);
             this.quantityTextEdit.MenuManager = this.mainRibbonControl;
             this.quantityTextEdit.Name = "quantityTextEdit";
             this.quantityTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -414,15 +404,14 @@
             this.quantityTextEdit.Properties.Mask.EditMask = "N0";
             this.quantityTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.quantityTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.quantityTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.quantityTextEdit.Size = new System.Drawing.Size(931, 20);
             this.quantityTextEdit.StyleController = this.dataLayoutControl1;
             this.quantityTextEdit.TabIndex = 12;
             // 
             // supplierLookUpEdit
             // 
             this.supplierLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.itemViewBindingSource, "supplier_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.supplierLookUpEdit.Location = new System.Drawing.Point(99, 343);
-            this.supplierLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.supplierLookUpEdit.Location = new System.Drawing.Point(82, 299);
             this.supplierLookUpEdit.MenuManager = this.mainRibbonControl;
             this.supplierLookUpEdit.Name = "supplierLookUpEdit";
             this.supplierLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -431,7 +420,7 @@
             this.supplierLookUpEdit.Properties.DisplayMember = "name";
             this.supplierLookUpEdit.Properties.PopupView = this.supplierLookUpEditView;
             this.supplierLookUpEdit.Properties.ValueMember = "id";
-            this.supplierLookUpEdit.Size = new System.Drawing.Size(1084, 22);
+            this.supplierLookUpEdit.Size = new System.Drawing.Size(931, 20);
             this.supplierLookUpEdit.StyleController = this.dataLayoutControl1;
             this.supplierLookUpEdit.TabIndex = 13;
             // 
@@ -453,24 +442,21 @@
             this.order_productXtraUserControl.Controls.Add(this.barDockControlRight);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.order_productXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.order_productXtraUserControl.Location = new System.Drawing.Point(24, 408);
-            this.order_productXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.order_productXtraUserControl.Location = new System.Drawing.Point(22, 355);
+            this.order_productXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.order_productXtraUserControl.Name = "order_productXtraUserControl";
-            this.order_productXtraUserControl.Size = new System.Drawing.Size(1146, 367);
+            this.order_productXtraUserControl.Size = new System.Drawing.Size(980, 277);
             this.order_productXtraUserControl.TabIndex = 14;
             // 
             // order_productGridControl
             // 
             this.order_productGridControl.DataSource = this.order_productBindingSource;
             this.order_productGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.order_productGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.order_productGridControl.Location = new System.Drawing.Point(0, 30);
+            this.order_productGridControl.Location = new System.Drawing.Point(0, 24);
             this.order_productGridControl.MainView = this.order_productGridView;
-            this.order_productGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.order_productGridControl.MenuManager = this.mainRibbonControl;
             this.order_productGridControl.Name = "order_productGridControl";
-            this.order_productGridControl.Size = new System.Drawing.Size(1146, 337);
+            this.order_productGridControl.Size = new System.Drawing.Size(980, 253);
             this.order_productGridControl.TabIndex = 0;
             this.order_productGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.order_productGridView});
@@ -491,7 +477,6 @@
             this.colitem,
             this.colorder,
             this.colpet});
-            this.order_productGridView.DetailHeight = 431;
             this.order_productGridView.GridControl = this.order_productGridControl;
             this.order_productGridView.Name = "order_productGridView";
             this.order_productGridView.OptionsBehavior.Editable = false;
@@ -501,90 +486,73 @@
             // 
             this.colorder_id.Caption = "Order ID";
             this.colorder_id.FieldName = "order_id";
-            this.colorder_id.MinWidth = 23;
             this.colorder_id.Name = "colorder_id";
             this.colorder_id.Visible = true;
             this.colorder_id.VisibleIndex = 0;
-            this.colorder_id.Width = 87;
             // 
             // colpet_id
             // 
             this.colpet_id.Caption = "Pet ID";
             this.colpet_id.FieldName = "pet_id";
-            this.colpet_id.MinWidth = 23;
             this.colpet_id.Name = "colpet_id";
             this.colpet_id.Visible = true;
             this.colpet_id.VisibleIndex = 1;
-            this.colpet_id.Width = 87;
             // 
             // colitem_id
             // 
             this.colitem_id.Caption = "Item ID";
             this.colitem_id.FieldName = "item_id";
-            this.colitem_id.MinWidth = 23;
             this.colitem_id.Name = "colitem_id";
             this.colitem_id.Visible = true;
             this.colitem_id.VisibleIndex = 2;
-            this.colitem_id.Width = 87;
             // 
             // colquantity
             // 
             this.colquantity.Caption = "Quantity";
             this.colquantity.FieldName = "quantity";
-            this.colquantity.MinWidth = 23;
             this.colquantity.Name = "colquantity";
             this.colquantity.Visible = true;
             this.colquantity.VisibleIndex = 3;
-            this.colquantity.Width = 87;
             // 
             // colprice
             // 
             this.colprice.Caption = "Price";
             this.colprice.FieldName = "price";
-            this.colprice.MinWidth = 23;
             this.colprice.Name = "colprice";
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 4;
-            this.colprice.Width = 87;
             // 
             // colid
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 5;
-            this.colid.Width = 87;
             // 
             // colitem
             // 
             this.colitem.FieldName = "item";
-            this.colitem.MinWidth = 23;
             this.colitem.Name = "colitem";
-            this.colitem.Width = 87;
             // 
             // colorder
             // 
             this.colorder.FieldName = "order";
-            this.colorder.MinWidth = 23;
             this.colorder.Name = "colorder";
-            this.colorder.Width = 87;
             // 
             // colpet
             // 
             this.colpet.FieldName = "pet";
-            this.colpet.MinWidth = 23;
             this.colpet.Name = "colpet";
-            this.colpet.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.order_productBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 337);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 253);
             // 
             // order_productBarManager
             // 
@@ -657,23 +625,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.order_productBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 367);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 277);
             this.barDockControlBottom.Manager = this.order_productBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.order_productBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 337);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 253);
             // 
             // layoutControlGroup1
             // 
@@ -682,7 +653,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -703,41 +674,41 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
             // 
             // ItemForcategory_id
             // 
             this.ItemForcategory_id.Control = this.categoryLookUpEdit;
             this.ItemForcategory_id.Location = new System.Drawing.Point(0, 0);
             this.ItemForcategory_id.Name = "ItemForcategory_id";
-            this.ItemForcategory_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForcategory_id.Size = new System.Drawing.Size(1006, 24);
             this.ItemForcategory_id.Text = "Category ID";
-            this.ItemForcategory_id.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForcategory_id.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForid
             // 
             this.ItemForid.Control = this.idTextEdit;
-            this.ItemForid.Location = new System.Drawing.Point(0, 26);
+            this.ItemForid.Location = new System.Drawing.Point(0, 24);
             this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForid.Size = new System.Drawing.Size(1006, 24);
             this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForid.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForname
             // 
             this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 52);
+            this.ItemForname.Location = new System.Drawing.Point(0, 48);
             this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForname.Size = new System.Drawing.Size(1006, 24);
             this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForname.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForstatus
             // 
             this.ItemForstatus.Control = this.statusCheckEdit;
-            this.ItemForstatus.Location = new System.Drawing.Point(0, 78);
+            this.ItemForstatus.Location = new System.Drawing.Point(0, 72);
             this.ItemForstatus.Name = "ItemForstatus";
-            this.ItemForstatus.Size = new System.Drawing.Size(1175, 24);
+            this.ItemForstatus.Size = new System.Drawing.Size(1006, 23);
             this.ItemForstatus.Text = "status";
             this.ItemForstatus.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForstatus.TextVisible = false;
@@ -745,64 +716,64 @@
             // ItemForpricePerUnit
             // 
             this.ItemForpricePerUnit.Control = this.pricePerUnitTextEdit;
-            this.ItemForpricePerUnit.Location = new System.Drawing.Point(0, 102);
+            this.ItemForpricePerUnit.Location = new System.Drawing.Point(0, 95);
             this.ItemForpricePerUnit.Name = "ItemForpricePerUnit";
-            this.ItemForpricePerUnit.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForpricePerUnit.Size = new System.Drawing.Size(1006, 24);
             this.ItemForpricePerUnit.Text = "Price Per Unit";
-            this.ItemForpricePerUnit.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForpricePerUnit.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemFortags
             // 
             this.ItemFortags.Control = this.tagsTextEdit;
-            this.ItemFortags.Location = new System.Drawing.Point(0, 128);
+            this.ItemFortags.Location = new System.Drawing.Point(0, 119);
             this.ItemFortags.Name = "ItemFortags";
-            this.ItemFortags.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFortags.Size = new System.Drawing.Size(1006, 24);
             this.ItemFortags.Text = "Tags";
-            this.ItemFortags.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemFortags.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForimage
             // 
             this.ItemForimage.Control = this.imagePictureEdit;
-            this.ItemForimage.Location = new System.Drawing.Point(0, 154);
+            this.ItemForimage.Location = new System.Drawing.Point(0, 143);
             this.ItemForimage.Name = "ItemForimage";
-            this.ItemForimage.Size = new System.Drawing.Size(1175, 125);
+            this.ItemForimage.Size = new System.Drawing.Size(1006, 98);
             this.ItemForimage.StartNewLine = true;
             this.ItemForimage.Text = "Image";
-            this.ItemForimage.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForimage.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemFordetail
             // 
             this.ItemFordetail.Control = this.detailTextEdit;
-            this.ItemFordetail.Location = new System.Drawing.Point(0, 279);
+            this.ItemFordetail.Location = new System.Drawing.Point(0, 241);
             this.ItemFordetail.Name = "ItemFordetail";
-            this.ItemFordetail.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFordetail.Size = new System.Drawing.Size(1006, 24);
             this.ItemFordetail.Text = "Detail";
-            this.ItemFordetail.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemFordetail.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForquantity
             // 
             this.ItemForquantity.Control = this.quantityTextEdit;
-            this.ItemForquantity.Location = new System.Drawing.Point(0, 305);
+            this.ItemForquantity.Location = new System.Drawing.Point(0, 265);
             this.ItemForquantity.Name = "ItemForquantity";
-            this.ItemForquantity.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForquantity.Size = new System.Drawing.Size(1006, 24);
             this.ItemForquantity.Text = "Quantity";
-            this.ItemForquantity.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForquantity.TextSize = new System.Drawing.Size(68, 13);
             // 
             // ItemForsupplier_id
             // 
             this.ItemForsupplier_id.Control = this.supplierLookUpEdit;
-            this.ItemForsupplier_id.Location = new System.Drawing.Point(0, 331);
+            this.ItemForsupplier_id.Location = new System.Drawing.Point(0, 289);
             this.ItemForsupplier_id.Name = "ItemForsupplier_id";
-            this.ItemForsupplier_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForsupplier_id.Size = new System.Drawing.Size(1006, 24);
             this.ItemForsupplier_id.Text = "Supplier Name";
-            this.ItemForsupplier_id.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForsupplier_id.TextSize = new System.Drawing.Size(68, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 357);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 313);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 423);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 323);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -813,7 +784,7 @@
             this.ItemFororder_product});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupFororder_product";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 371);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 281);
             this.layoutControlGroup3.Text = "Order Product";
             // 
             // ItemFororder_product
@@ -821,7 +792,7 @@
             this.ItemFororder_product.Control = this.order_productXtraUserControl;
             this.ItemFororder_product.Location = new System.Drawing.Point(0, 0);
             this.ItemFororder_product.Name = "ItemFororder_product";
-            this.ItemFororder_product.Size = new System.Drawing.Size(1150, 371);
+            this.ItemFororder_product.Size = new System.Drawing.Size(984, 281);
             this.ItemFororder_product.StartNewLine = true;
             this.ItemFororder_product.Text = "order_product";
             this.ItemFororder_product.TextSize = new System.Drawing.Size(0, 0);
@@ -855,14 +826,13 @@
             // 
             // itemView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "itemView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.categoryLookUpEdit.Properties)).EndInit();

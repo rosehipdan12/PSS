@@ -15,5 +15,10 @@ namespace PSS_WINFORM_CONTROL
         {
             InitializeComponent();
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -107,18 +107,16 @@
             this.dataLayoutControl1.Controls.Add(this.usersXtraUserControl);
             this.dataLayoutControl1.DataSource = this.roleViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // idTextEdit
             // 
             this.idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.roleViewBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.idTextEdit.Location = new System.Drawing.Point(48, 12);
-            this.idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTextEdit.Location = new System.Drawing.Point(41, 10);
             this.idTextEdit.MenuManager = this.mainRibbonControl;
             this.idTextEdit.Name = "idTextEdit";
             this.idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -126,7 +124,8 @@
             this.idTextEdit.Properties.Mask.EditMask = "N0";
             this.idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.idTextEdit.Size = new System.Drawing.Size(1135, 22);
+            this.idTextEdit.Properties.ReadOnly = true;
+            this.idTextEdit.Size = new System.Drawing.Size(972, 20);
             this.idTextEdit.StyleController = this.dataLayoutControl1;
             this.idTextEdit.TabIndex = 4;
             // 
@@ -150,14 +149,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -257,11 +255,10 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.roleViewBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextEdit.Location = new System.Drawing.Point(48, 38);
-            this.nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTextEdit.Location = new System.Drawing.Point(41, 34);
             this.nameTextEdit.MenuManager = this.mainRibbonControl;
             this.nameTextEdit.Name = "nameTextEdit";
-            this.nameTextEdit.Size = new System.Drawing.Size(1135, 22);
+            this.nameTextEdit.Size = new System.Drawing.Size(972, 20);
             this.nameTextEdit.StyleController = this.dataLayoutControl1;
             this.nameTextEdit.TabIndex = 5;
             // 
@@ -272,24 +269,21 @@
             this.usersXtraUserControl.Controls.Add(this.barDockControlRight);
             this.usersXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.usersXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.usersXtraUserControl.Location = new System.Drawing.Point(24, 103);
-            this.usersXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.usersXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.usersXtraUserControl.Location = new System.Drawing.Point(22, 90);
+            this.usersXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.usersXtraUserControl.Name = "usersXtraUserControl";
-            this.usersXtraUserControl.Size = new System.Drawing.Size(1146, 672);
+            this.usersXtraUserControl.Size = new System.Drawing.Size(980, 542);
             this.usersXtraUserControl.TabIndex = 6;
             // 
             // usersGridControl
             // 
             this.usersGridControl.DataSource = this.usersBindingSource;
             this.usersGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.usersGridControl.Location = new System.Drawing.Point(0, 30);
+            this.usersGridControl.Location = new System.Drawing.Point(0, 24);
             this.usersGridControl.MainView = this.usersGridView;
-            this.usersGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usersGridControl.MenuManager = this.mainRibbonControl;
             this.usersGridControl.Name = "usersGridControl";
-            this.usersGridControl.Size = new System.Drawing.Size(1146, 642);
+            this.usersGridControl.Size = new System.Drawing.Size(980, 518);
             this.usersGridControl.TabIndex = 0;
             this.usersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.usersGridView});
@@ -315,7 +309,6 @@
             this.colusername,
             this.colrole,
             this.colorder_user});
-            this.usersGridView.DetailHeight = 431;
             this.usersGridView.GridControl = this.usersGridControl;
             this.usersGridView.Name = "usersGridView";
             this.usersGridView.OptionsBehavior.Editable = false;
@@ -325,143 +318,116 @@
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 87;
             // 
             // colfirst_name
             // 
             this.colfirst_name.Caption = "First Name";
             this.colfirst_name.FieldName = "first_name";
-            this.colfirst_name.MinWidth = 23;
             this.colfirst_name.Name = "colfirst_name";
             this.colfirst_name.Visible = true;
             this.colfirst_name.VisibleIndex = 1;
-            this.colfirst_name.Width = 87;
             // 
             // collast_name
             // 
             this.collast_name.Caption = "Last Name";
             this.collast_name.FieldName = "last_name";
-            this.collast_name.MinWidth = 23;
             this.collast_name.Name = "collast_name";
             this.collast_name.Visible = true;
             this.collast_name.VisibleIndex = 2;
-            this.collast_name.Width = 87;
             // 
             // colphone_number
             // 
             this.colphone_number.Caption = "Phone number";
             this.colphone_number.FieldName = "phone_number";
-            this.colphone_number.MinWidth = 23;
             this.colphone_number.Name = "colphone_number";
             this.colphone_number.Visible = true;
             this.colphone_number.VisibleIndex = 3;
-            this.colphone_number.Width = 87;
             // 
             // colemail
             // 
             this.colemail.Caption = "Email";
             this.colemail.FieldName = "email";
-            this.colemail.MinWidth = 23;
             this.colemail.Name = "colemail";
             this.colemail.Visible = true;
             this.colemail.VisibleIndex = 4;
-            this.colemail.Width = 87;
             // 
             // coladdress
             // 
             this.coladdress.Caption = "Address";
             this.coladdress.FieldName = "address";
-            this.coladdress.MinWidth = 23;
             this.coladdress.Name = "coladdress";
             this.coladdress.Visible = true;
             this.coladdress.VisibleIndex = 5;
-            this.coladdress.Width = 87;
             // 
             // colcity
             // 
             this.colcity.Caption = "City";
             this.colcity.FieldName = "city";
-            this.colcity.MinWidth = 23;
             this.colcity.Name = "colcity";
             this.colcity.Visible = true;
             this.colcity.VisibleIndex = 6;
-            this.colcity.Width = 87;
             // 
             // colpassword
             // 
             this.colpassword.Caption = "Password";
             this.colpassword.FieldName = "password";
-            this.colpassword.MinWidth = 23;
             this.colpassword.Name = "colpassword";
             this.colpassword.Visible = true;
             this.colpassword.VisibleIndex = 7;
-            this.colpassword.Width = 87;
             // 
             // colstatus
             // 
             this.colstatus.Caption = "Status";
             this.colstatus.FieldName = "status";
-            this.colstatus.MinWidth = 23;
             this.colstatus.Name = "colstatus";
             this.colstatus.Visible = true;
             this.colstatus.VisibleIndex = 8;
-            this.colstatus.Width = 87;
             // 
             // colrole_id
             // 
             this.colrole_id.Caption = "Role ID";
             this.colrole_id.FieldName = "role_id";
-            this.colrole_id.MinWidth = 23;
             this.colrole_id.Name = "colrole_id";
             this.colrole_id.Visible = true;
             this.colrole_id.VisibleIndex = 9;
-            this.colrole_id.Width = 87;
             // 
             // colgender
             // 
             this.colgender.Caption = "Gender";
             this.colgender.FieldName = "gender";
-            this.colgender.MinWidth = 23;
             this.colgender.Name = "colgender";
             this.colgender.Visible = true;
             this.colgender.VisibleIndex = 10;
-            this.colgender.Width = 87;
             // 
             // colusername
             // 
             this.colusername.Caption = "Username";
             this.colusername.FieldName = "username";
-            this.colusername.MinWidth = 23;
             this.colusername.Name = "colusername";
             this.colusername.Visible = true;
             this.colusername.VisibleIndex = 11;
-            this.colusername.Width = 87;
             // 
             // colrole
             // 
             this.colrole.FieldName = "role";
-            this.colrole.MinWidth = 23;
             this.colrole.Name = "colrole";
-            this.colrole.Width = 87;
             // 
             // colorder_user
             // 
             this.colorder_user.FieldName = "order_user";
-            this.colorder_user.MinWidth = 23;
             this.colorder_user.Name = "colorder_user";
-            this.colorder_user.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.usersBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 642);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 518);
             // 
             // usersBarManager
             // 
@@ -534,23 +500,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.usersBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 672);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 542);
             this.barDockControlBottom.Manager = this.usersBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.usersBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 642);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 518);
             // 
             // layoutControlGroup1
             // 
@@ -559,7 +528,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -572,32 +541,32 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
             // 
             // ItemForid
             // 
             this.ItemForid.Control = this.idTextEdit;
             this.ItemForid.Location = new System.Drawing.Point(0, 0);
             this.ItemForid.Name = "ItemForid";
-            this.ItemForid.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForid.Size = new System.Drawing.Size(1006, 24);
             this.ItemForid.Text = "ID";
-            this.ItemForid.TextSize = new System.Drawing.Size(33, 16);
+            this.ItemForid.TextSize = new System.Drawing.Size(27, 13);
             // 
             // ItemForname
             // 
             this.ItemForname.Control = this.nameTextEdit;
-            this.ItemForname.Location = new System.Drawing.Point(0, 26);
+            this.ItemForname.Location = new System.Drawing.Point(0, 24);
             this.ItemForname.Name = "ItemForname";
-            this.ItemForname.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForname.Size = new System.Drawing.Size(1006, 24);
             this.ItemForname.Text = "Name";
-            this.ItemForname.TextSize = new System.Drawing.Size(33, 16);
+            this.ItemForname.TextSize = new System.Drawing.Size(27, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 52);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 48);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 728);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 588);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -608,7 +577,7 @@
             this.ItemForusers});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForusers";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 676);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 546);
             this.layoutControlGroup3.Text = "Users";
             // 
             // ItemForusers
@@ -616,7 +585,7 @@
             this.ItemForusers.Control = this.usersXtraUserControl;
             this.ItemForusers.Location = new System.Drawing.Point(0, 0);
             this.ItemForusers.Name = "ItemForusers";
-            this.ItemForusers.Size = new System.Drawing.Size(1150, 676);
+            this.ItemForusers.Size = new System.Drawing.Size(984, 546);
             this.ItemForusers.StartNewLine = true;
             this.ItemForusers.Text = "users";
             this.ItemForusers.TextSize = new System.Drawing.Size(0, 0);
@@ -650,14 +619,13 @@
             // 
             // roleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "roleView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.idTextEdit.Properties)).EndInit();

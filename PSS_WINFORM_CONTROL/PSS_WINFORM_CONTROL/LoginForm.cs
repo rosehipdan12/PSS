@@ -25,35 +25,36 @@ namespace PSS_WINFORM_CONTROL
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Model1 ms = new Model1();
-            user us = ms.users.Where(c => c.username.Equals(txtName.Text)).FirstOrDefault();
+            user us = ms.users.Where(c => c.username.Equals(txtName.Text) && c.role_id==3).FirstOrDefault();
             if(us == null)
             {
-                const string message = "Are you sure that you would like to close the form?";
-                const string caption = "Form Closing";
-                var result = MessageBox.Show(message, caption,
-                                             MessageBoxButtons.YesNo,
-                                             MessageBoxIcon.Question);
-
-                // If the no button was pressed ...
-                if (result == DialogResult.No)
-                {
-                    // cancel the closure of the form.
-                    this.Close();
-                }
+                MessageBox.Show("Please input again", "Username or password wrong!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if(us.password.Equals(txtPass.Text))
             {
                 Form1 mainForm = new Form1();
                 mainForm.Show();
-                
+                //Hide login form
                 this.Hide();
             }
             else
             {
-
+                MessageBox.Show("Please input again", "Username or password wrong!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
 
+        }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+            if(e.KeyCode == Keys.Escape)
+            {
+                btnCancel.PerformClick();
+            }
         }
     }
 }
