@@ -12,7 +12,7 @@ namespace Webtest2
         public int quantity;
         public double? price()
         {
-            if (item!=null)
+            if (item != null)
             {
                 return item.pricePerUnit * quantity;
             }

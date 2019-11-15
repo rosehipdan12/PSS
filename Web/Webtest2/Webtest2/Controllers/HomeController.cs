@@ -9,6 +9,7 @@ namespace Webtest2.Controllers
     public class HomeController : Controller
     {
         Model1 ps = new Model1();
+        Function fs = new Function();
         public ActionResult Index()
         {
             ViewData["Items"] = (from e in ps.items select e).ToList();
@@ -75,6 +76,7 @@ namespace Webtest2.Controllers
                 ViewData["ErrorMessage"] = "Password must from 8 to 12 character. Try again";
                 return View();
             }
+            Password = fs.CreateMD5(Password);
             var s = ps.users.Where(c => c.username.Equals(Username) && c.password.Equals(Password)).FirstOrDefault();
             if (s == null)
             {
@@ -87,6 +89,9 @@ namespace Webtest2.Controllers
             }
             return View();
         }
+
+       
+
         [HttpPost]
         public ActionResult CreateAccount(string username, string password, string email, string phone)
         {
@@ -99,7 +104,7 @@ namespace Webtest2.Controllers
             {
                 user us = new user();
                 us.username = username;
-                us.password = password;
+                us.password = fs.CreateMD5(password);
                 us.phone_number = phone;
                 us.email = email;
                 us.role_id = 3;
@@ -139,12 +144,105 @@ namespace Webtest2.Controllers
 
             return Redirect(Request.UrlReferrer.PathAndQuery);
         }
-
+        
 
         public ActionResult Payment()
         {
+            if (Session["cart"] == null)
+            {
+                return new EmptyResult();
+            }
             return View();
         }
-       
+        public ActionResult Placeorder()
+        {
+            order order = new order();
+            order_user os = new order_user();
+
+            int id = Int32.Parse(Session["user"].ToString());
+            user us = ps.users.Where(c => c.id == id).FirstOrDefault();
+
+            order.status = false;
+            order.date_order = DateTime.Now;
+
+            ps.orders.Add(order);
+            ps.SaveChanges();
+
+
+            order = ps.orders.Where(c => c.id == ps.orders.Max(item => item.id)).FirstOrDefault();
+          
+            os.user_id = us.id;
+            os.order_id = order.id;
+
+            ps.order_user.Add(os);
+
+            double? priceTotal = 0;
+            foreach (var item in (List<cart>)Session["cart"])
+            {
+                
+                order_product od = new order_product();
+                if (!item.itemorpet())
+                {
+                    od.item_id = item.item.id;
+                    od.order_id = order.id;
+                    od.quantity = item.quantity;
+                    od.price = item.price();
+                    priceTotal += item.price();
+                    ps.order_product.Add(od);
+                }
+                else
+                {
+                    od.pet_id = item.pet.id;
+                    od.order_id = order.id;
+                    od.quantity = item.quantity;
+                    od.price = item.price();
+                    priceTotal += item.price();
+                    ps.order_product.Add(od);
+                }
+            }
+            order.price = priceTotal;
+            ps.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
+        public ActionResult orderhistory()
+        {
+            if (Session["user"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+            int id = Int32.Parse(Session["user"].ToString());
+            IEnumerable<order_user> orderHis = ps.order_user.Where(e => e.user_id == id).ToList();
+            System.Diagnostics.Debug.WriteLine(orderHis.Count());
+            List<order_product> orderProductHis = new List<order_product>();
+
+            foreach (var item in orderHis)
+            {
+                System.Diagnostics.Debug.WriteLine(item.order_id);
+                System.Diagnostics.Debug.WriteLine(item.user_id);
+                order_product order_product = ps.order_product.Where(c => c.order_id == item.order_id).FirstOrDefault();
+                //System.Diagnostics.Debug.WriteLine(order_product.order_id);
+                //System.Diagnostics.Debug.WriteLine(order_product.price);
+                orderProductHis.Add(order_product);
+            }
+            ViewData["Order_product"] = orderProductHis;
+            return View();
+        }
+        
+        public ActionResult searchresult(string keyword)
+        {
+            ViewData["itemSearch"] = ps.items.Where(c => c.tags.Contains(keyword)).ToList();
+            ViewData["petSearch"] = ps.pets.Where(c => c.name.Contains(keyword)||c.species.name.Contains(keyword)).ToList();
+            ViewData["keyword"] = keyword;
+            return View();
+        }
+
+        public ActionResult petcatalog(string type)
+        {
+            ViewData["petSearch"] = ps.pets.Where(c => c.species.description.Contains(type)).ToList();
+            return View();
+        }
+
     }
 }

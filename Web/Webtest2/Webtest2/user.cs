@@ -22,7 +22,7 @@ namespace Webtest2
 
         [StringLength(50)]
         public string last_name { get; set; }
-        
+
         [StringLength(50)]
         public string phone_number { get; set; }
 
@@ -48,9 +48,9 @@ namespace Webtest2
         [StringLength(50)]
         public string username { get; set; }
 
-        public virtual role role { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_user> order_user { get; set; }
+
+        public virtual role role { get; set; }
     }
 }

@@ -4,6 +4,8 @@
     int count = 0;
     ViewBag.Title = item.name;
     Layout = "~/Views/Shared/_Layout.cshtml";
+        var imgsrc="";
+    var base64="";
 }
         <div class="w3l_banner_nav_right">
             <div class="w3l_banner_nav_right_banner3">
@@ -14,8 +16,8 @@
                 <div class="col-md-4 agileinfo_single_left">
                     @if (item.image != null)
                     {
-                        var base64 = Convert.ToBase64String(item.image);
-                        var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                         base64 = Convert.ToBase64String(item.image);
+                         imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                         <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
                     }
                 </div>
@@ -73,13 +75,13 @@
                             <div class="hover14 column">
                                 <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                                     <div class="agile_top_brand_left_grid_pos">
-                                        <img src="~/~/images/offer.png" alt=" " class="img-responsive" />
+                                        <img src="@imgsrc" alt=" " class="img-responsive" />
                                     </div>
                                     <div class="agile_top_brand_left_grid1">
                                         <figure>
                                             <div class="snipcart-item block">
                                                 <div class="snipcart-thumb">
-                                                    <a href="@Url.Action("Single", "Home", new {id = itemLoad.ElementAt(i).id})"><img src="~/~/images/5.png" alt=" " class="img-responsive" /></a>
+                                                    <a href="@Url.Action("Single", "Home", new {id = itemLoad.ElementAt(i).id})"><img src="@imgsrc" alt=" " class="img-responsive" /></a>
                                                     <p>@itemLoad.ElementAt(i).name</p>
                                                     <h4>@itemLoad.ElementAt(i).pricePerUnit VND</h4>
                                                 </div>

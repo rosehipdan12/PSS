@@ -22,11 +22,11 @@
                     <h2>Login to your account</h2>
                     @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @id = "register" }))
                     {
-                        <input type="text" id="userLog" onfocosout="userLog()" name="Username" placeholder="Username" required=" ">
-                        <input type="password" id="passLog" onfocusout="passLog()" name="Password" placeholder="Password" required=" ">
+                        <input type="text" id="userinput" name="Username" placeholder="Username" required=" ">
+                        <input type="password" id="passLog" name="Password" placeholder="Password" required=" ">
                         if (ViewData["ErrorMessage"] != null)
                         {
-                           <span>@ViewData["ErrorMessage"].ToString()</span>
+                            <span class="alert alert-danger" role="alert">@ViewData["ErrorMessage"].ToString()</span>
                         }
                         <input type="submit" value="Login">
                     }
@@ -37,57 +37,97 @@
                     {
                         @Html.AntiForgeryToken()
 
-                        <input type="text" onfocusout="userReg()" maxlength="12" min="8" id="usernameReg" name="Username" placeholder="Username" required="tr">
+                        <input type="text" maxlength="12" min="8" id="usernameReg" name="Username" placeholder="Username" required="tr">
                         if (ViewData["RegMess"] != null)
                         {
                             <span>@ViewData["RegMess"].ToString()</span>
                         }
-                        <input type="password" id="passReg" onfocusout="passReg()" name="Password" placeholder="Password" required=" ">
+                        <input type="password" id="passReg" name="Password" placeholder="Password" required=" ">
                         <input type="email" id="emailReg" name="Email" placeholder="Email Address" required=" ">
-                        <input type="text" onfocusout="phoneReg()" name="Phone" id="phoneReg" placeholder="Phone Number" required=" ">
+                        <input type="text" name="Phone" id="phoneReg" placeholder="Phone Number" required=" ">
                         <input type="submit" value="Register">
                     }
                 </div>
                 <div class="cta"><a href="#">Forgot your password?</a></div>
             </div>
         </div>
-        <script type="text/javascript">
-
-        </script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
         <script>
-            var username = document.getElementById("usernameReg");
-            var password = document.getElementById("passReg");
-            var email = document.getElementById("emailReg");
-            var phone = document.getElementById("phoneReg");
-
-
-
-            function userReg() {
-
-                var lowerCaseLetters = /[a-z]/g;
-
-                if (username.value.length > 12 || username.value.length < 8) {
-                    swal("Username Invalid!", ",Must from 8 to 12", "error");
-                    return false;
-                }
-
-                if (!username.value.match(lowerCaseLetters)) {
-                    swal("Username Invalid!", ",Must contain letter", "error");
-                    return false;
-                }
-                return true;
-            };
-            function register() {
-                var data = $("#register").serialize();
-                $.ajax({
-                    type="post"
-                    data: data,
-                    URL: "/Home/CreateAccount"
-                    success: function (result) {
-                        swal("Register Successfull", result, "success");
+            jQuery.validator.setDefaults({
+                debug: true,
+                success: "valid"
+            });
+            $(document).ready(function (c) {
+                $('#userinput').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
                     }
-                })
-            }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#passLog').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#usernameReg').keyup(function () {
+                    var username = $(this).val();
+                    if (username.length > 12 || username.length < 8) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else if (username.length < 12 && username.length > 8) {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+            $(document).ready(function (c) {
+                $('#passReg').keyup(function () {
+                    var pass = $(this).val();
+                    if ((pass.length < 8) || (pass.length > 12)) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+              $(document).ready(function (c) {
+                $('#phoneReg').keyup(function () {
+                    var phone = $(this).val();
+                    if ((phone.length < 8) || (phone.length > 12)) {
+                        $(this).css("border", "red solid 1px");
+                        return false;
+                    }
+                    else {
+                        $(this).css("border", "green solid 1px");
+                    }
+                });
+            });
+
+            $("#emailReg").validate({
+                rules: {
+                    field: {
+                        required: true,
+                        email: true
+                    }
+                }
+            });
+
 
             $('.toggle').click(function () {
                 // Switches the Icon

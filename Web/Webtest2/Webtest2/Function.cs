@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
 
 namespace Webtest2
 {
     public class Function
     {
-        public static string CreateMD5(string input)
+        public  string CreateMD5(string input)
         {
             // Use input string to calculate MD5 hash
             using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
@@ -28,10 +27,10 @@ namespace Webtest2
         public double? totalPrice(List<cart> cars)
         {
             double? total = 0;
-            foreach(var item in cars)
+            foreach (var item in cars)
             {
 
-                total+=item.price();
+                total += item.price();
             }
             return total;
         }

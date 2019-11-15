@@ -25,8 +25,9 @@
                                         <a href="">  <i class="fa fa-user"></i><span> My Profile</span></a>
                                     </li>
                                     <li class="">
-                                        <a href="">  <i class="fa fa-shopping-cart"></i><span> History order</span></a>
+                                        <a href="@Url.Action("orderhistory", "Home")"><i class="fa fa-shopping-cart"></i><span> History order</span></a>
                                     </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -41,12 +42,7 @@
                                 <div class="form-group">
 
                                     <label class="control-label" for="full_name">First Name </label>
-                                    @Html.HiddenFor(model => model.id)
-                                    @Html.HiddenFor(model => model.role)
-                                    @Html.HiddenFor(model => model.id)
-                                    @Html.HiddenFor(model => model.id)
-                                    @Html.HiddenFor(model => model.id)
-                                    
+                               
                                     <div class="input-wrap">
                                         @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control", @Value  = @user.first_name } })
                                         @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })

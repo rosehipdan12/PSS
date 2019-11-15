@@ -92,17 +92,17 @@
                                     </td>
                                 }
 
-                                <td class="invert">
-                                    <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus" id="minus" >&nbsp;</div>
-                                            <input type="hidden" id="dataID" value="@item.pet.id" />
-                                            <div class="entry value"><span data-id="@item.pet.id">@item.quantity</span></div>
-                                            <div class="entry value-plus active" id="plus">&nbsp;</div>
-                                        </div>
+                            <td class="invert">
+                                <div class="quantity">
+                                    <div class="quantity-select">
+                                        <div class="entry value-minus">&nbsp;</div>
+                                        <input type="hidden" id="dataID" data-id="@item.pet.id" class="idContent" value="@item.pet.id" />
+                                        <div class="entry value" data-id="@item.pet.id"><span>@item.quantity</span></div>
+                                        <div class="entry value-plus active">&nbsp;</div>
                                     </div>
-                                </td>
-                                <td class="invert">item.pet.name</td>
+                                </div>
+                            </td>
+                                <td class="invert">@item.pet.name</td>
 
                                 <td class="invert">
                                     @String.Format(info, "{0:c}", item.pet.price)
@@ -232,7 +232,6 @@
     $('.value-minus').on('click', function () {
         var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
         var idModel = divUpd.data('id');
-        alert(idModel);       
         $.ajax({
             url: "/Cart/MinusQuantity",
             data: '{"id":"' + idModel +'"}',

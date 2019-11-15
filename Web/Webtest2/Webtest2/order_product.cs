@@ -18,7 +18,7 @@ namespace Webtest2
 
         public int id { get; set; }
 
-        public int? price { get; set; }
+        public double? price { get; set; }
 
         public virtual item item { get; set; }
 

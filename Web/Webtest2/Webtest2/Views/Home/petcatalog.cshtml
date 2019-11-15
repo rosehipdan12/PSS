@@ -1,7 +1,7 @@
 ﻿@{
 
     category category_load = ViewData["Catalogy_name"] as category;
-    IEnumerable<item> items = ViewData["ItemLoad"] as IEnumerable<item>;
+    IEnumerable<pet> items = ViewData["petSearch"] as IEnumerable<pet>;
     ViewBag.Title = "Catalog";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var base64 = "";
@@ -14,7 +14,7 @@
 
 <div class="top-brands">
     <div class="container">
-        <h3>Best Food</h3>
+        <h3>Pussy & Cat</h3>
         <div class="agile_top_brands_grids">
             @foreach (var item in items)
             {
@@ -30,14 +30,14 @@
                                                 base64 = Convert.ToBase64String(item.image);
                                                 imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                                                
-                                                <a href="@Url.Action("Singleitem", "Home", new { id = item.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
+                                                <a href="@Url.Action("Singlepet", "Home", new { id = item.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
 
 
 
                                             }
                                             <p>@item.name</p>
                                             <h4>
-                                                @String.Format(info, "{0:c}", item.pricePerUnit)
+                                                @String.Format(info, "{0:c}", item.price)
                                             </h4>
                                         </div>
                                         <div class="snipcart-details top_brand_home_details">
@@ -45,7 +45,7 @@
                                             {
                                                 <fieldset>
                                                     <input type="hidden" name="id" value="@item.id" />
-                                                    <input type="hidden" name="product" value="item" />
+                                                    <input type="hidden" name="product" value="pet" />
                                                     <input type="hidden" name="Controller" value="Home" />
                                                     <input type="hidden" name="Action" value="Index" />
                                                     <input type="submit" name="submit" value="Add to cart" class="button" />
