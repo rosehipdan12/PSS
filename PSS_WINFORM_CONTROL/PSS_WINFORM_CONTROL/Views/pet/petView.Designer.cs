@@ -669,6 +669,7 @@
             this.imageComboBoxEdit1.Location = new System.Drawing.Point(78, 194);
             this.imageComboBoxEdit1.MenuManager = this.mainRibbonControl;
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
+            this.imageComboBoxEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.imageComboBoxEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.imageComboBoxEdit1.Size = new System.Drawing.Size(1105, 20);
             this.imageComboBoxEdit1.StyleController = this.dataLayoutControl1;
