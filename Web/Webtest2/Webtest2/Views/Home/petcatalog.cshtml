@@ -28,8 +28,7 @@
                                             @if (item.image != null)
                                             {
                                                 base64 = Convert.ToBase64String(item.image);
-                                                imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
-                                               
+                                                imgsrc = string.Format("data:image/jpg;base64,{0}", base64);                                               
                                                 <a href="@Url.Action("Singlepet", "Home", new { id = item.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
 
 

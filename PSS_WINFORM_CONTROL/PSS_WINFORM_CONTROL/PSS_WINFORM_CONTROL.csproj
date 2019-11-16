@@ -330,6 +330,9 @@
     <EmbeddedResource Include="Views\item\itemView.resx">
       <DependentUpon>itemView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Model1View.resx">
+      <DependentUpon>Model1View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\order\orderCollectionView.resx">
       <DependentUpon>orderCollectionView.cs</DependentUpon>
     </EmbeddedResource>

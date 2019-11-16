@@ -1,96 +1,91 @@
 ﻿@{
-    IEnumerable<pet> petLoad = ViewData["PetLoad"] as IEnumerable<pet>;
+    IEnumerable<pet> petLoad = ViewData["PetsLoad"] as IEnumerable<pet>;
     var pet = (pet)ViewData["Pets"];
     int count = 0;
     ViewBag.Title = pet.name;
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var imgsrc="";
-    var base64="";
-        var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+    var imgsrc = "";
+    var base64 = "";
+    var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
 
 }
 
-        <div class="w3l_banner_nav_right">
-            <div class="w3l_banner_nav_right_banner3">
-                <h3>Best Deals For New Products<span class="blink_me"></span></h3>
-            </div>
-            <div class="agileinfo_single">
-                <h5>@pet.name</h5>
-                <div class="col-md-4 agileinfo_single_left">
-                    @if (pet.image != null)
-                    {
-                         base64 = Convert.ToBase64String(pet.image);
-                         imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
-                     <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
-                    }
-                </div>
-                <div class="col-md-8 agileinfo_single_right">
+<div class="w3l_banner_nav_right">
+    <div class="agileinfo_single">
+        <h5>@pet.name</h5>
+        <div class="col-md-4 agileinfo_single_left">
+            @if (pet.image != null)
+            {
+                base64 = Convert.ToBase64String(pet.image);
+                imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
+            }
+        </div>
+        <div class="col-md-8 agileinfo_single_right">
 
-                    <div class="w3agile_description">
-                        <h4>Description :</h4>
-                        <p>
-                            @pet.description
-                        </p>
-                    </div>
-                    <div class="snipcart-item block">
-                        <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                            <h4>
-                                @String.Format(info, "{0:c}", @pet.price )
-                           
-                            </h4>
-                        </div>
-                        <div class="snipcart-details agileinfo_single_right_details">
-                            <form action="#" method="post">
-                                @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
-                                {
-                                    <fieldset>
-                                        <input type="hidden" name="id" value="@pet.id" />
-                                        <input type="hidden" name="product" value="item" />
-                                        <input type="hidden" name="Controller" value="Home" />
-                                        <input type="hidden" name="Action" value="Index" />
-                                        <input type="submit" name="submit" value="Add to cart" class="button" />
-                                    </fieldset>
-                                }
-                            </form>
-                        </div>
-                    </div>
+            <div class="w3agile_description">
+                <h4>Description :</h4>
+                <p>
+                    @pet.description
+                </p>
+            </div>
+            <div class="snipcart-item block">
+                <div class="snipcart-thumb agileinfo_single_right_snipcart">
+                    <h4>
+                        @String.Format(info, "{0:c}", @pet.price)
+                    </h4>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="snipcart-details agileinfo_single_right_details">
+                    <form action="#" method="post">
+                        @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
+                        {
+                            <fieldset>
+                                <input type="hidden" name="id" value="@pet.id" />
+                                <input type="hidden" name="product" value="item" />
+                                <input type="hidden" name="Controller" value="Home" />
+                                <input type="hidden" name="Action" value="Index" />
+                                <input type="submit" name="submit" value="Add to cart" class="button" />
+                            </fieldset>
+                        }
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="clearfix"></div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<div class="clearfix"></div>
     </div>
 
 </div>
 <div class="clearfix"></div>
 <!-- //banner -->
-
-    <!-- brands -->
-    <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_popular">
-        <div class="container">
-            <h3>Popular Brands</h3>
-            <div class="w3ls_w3l_banner_nav_right_grid1">
-                <h6>Popular</h6>
-                @for (int i = 0; i < 4;i+=0)
+<!-- brands -->
+<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_popular">
+    <div class="container">
+        <h3>Popular Brands</h3>
+        <div class="w3ls_w3l_banner_nav_right_grid1">
+            <h6>Popular</h6>
+            @for (int i = 0; i < 4; i += 0)
+            {
+                if (petLoad.ElementAt(i).species_id == 1 || petLoad.ElementAt(i).species_id == 2)
                 {
-                    if (petLoad.ElementAt(i).species_id == 1 || petLoad.ElementAt(i).species_id == 2)
+                    count++;
+                    if (count > 4)
                     {
-                        count++;
-                        if (count > 4)
-                        {
-                            count = 0;
-                            break;
-                        }
+                        count = 0;
+                        break;
+                    }
 
-                <div class="col-md-3">
+                    <div class="col-md-3">
                         <div class="col-md-3 w3ls_w3l_banner_left">
                             <div class="hover14 column">
                                 <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                                     <div class="agile_top_brand_left_grid_pos">
                                         @if (pet.image != null)
                                         {
-                                             base64 = Convert.ToBase64String(pet.image);
-                                             imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                            base64 = Convert.ToBase64String(pet.image);
+                                            imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                                             <td class="invert-image">
                                                 <a href="@Url.Action("Singlepet", "Home", new { id = pet.id })"><img title=" " alt=" " src="@imgsrc" class="img-responsive" /></a>
                                             </td>
@@ -104,7 +99,7 @@
                                                     <p>@petLoad.ElementAt(i).name</p>
                                                     <h4>
                                                         @String.Format(info, "{0:c}", @petLoad.ElementAt(i).price)
-                                                         VND
+
                                                     </h4>
                                                 </div>
                                                 <div class="snipcart-details">
@@ -125,61 +120,63 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    }
+                    </div>
                 }
-                <div class="clearfix"> </div>
-            </div>
-            <div class="w3ls_w3l_banner_nav_right_grid1">
-                <h6>@pet.species.name</h6>
-                @for (int i = 0; i < petLoad.Count();i++)
+                    i++;
+            }
+            <div class="clearfix"> </div>
+        </div>
+        <div class="w3ls_w3l_banner_nav_right_grid1">
+            <h6>@pet.species.name</h6>
+            @for (int i = 0; i < petLoad.Count(); i++)
+            {
+                if (petLoad.ElementAt(i).species_id == pet.species_id)
                 {
-                    if (petLoad.ElementAt(i).species_id ==pet.species_id)
+
+                    count++;
+                    if (count > 4)
                     {
+                        break;
+                    }
 
-                            count++;
-                            if (count > 4)
-                            {
-                                break;
-                            }
+                    <div class="col-md-3 w3ls_w3l_banner_left">
+                        <div class="hover14 column">
+                            <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                                <div class="agile_top_brand_left_grid_pos">
+                                    <img src="@imgsrc" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="agile_top_brand_left_grid1">
+                                    <figure>
+                                        <div class="snipcart-item block">
+                                            <div class="snipcart-thumb">
+                                                <a href="@Url.Action("Singlepet", "Home", new {id = petLoad.ElementAt(i).id})"><img src="@imgsrc" alt=" " class="img-responsive" /></a>
+                                                <p>@petLoad.ElementAt(i).name</p>
+                                                @String.Format(info, "{0:c}", @petLoad.ElementAt(i).price)
 
-                <div class="col-md-3 w3ls_w3l_banner_left">
-                    <div class="hover14 column">
-                        <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-                            <div class="agile_top_brand_left_grid_pos">
-                                <img src="~/Image/offer.png" alt=" " class="img-responsive" />
-                            </div>
-                            <div class="agile_top_brand_left_grid1">
-                                <figure>
-                                    <div class="snipcart-item block">
-                                        <div class="snipcart-thumb">
-                                            <a href="@Url.Action("Single", "Home", new {id = petLoad.ElementAt(i).id})"><img src="~/~/images/5.png" alt=" " class="img-responsive" /></a>
-                                            <p>@petLoad.ElementAt(i).name</p>
-                                            <h4>@petLoad.ElementAt(i).price VND</h4>
+                                            </div>
+                                            <div class="snipcart-details">
+                                                @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
+                                                {
+                                                    <fieldset>
+                                                        <input type="hidden" name="id" value="@petLoad.ElementAt(i).id" />
+                                                        <input type="hidden" name="product" value="pet" />
+                                                        <input type="hidden" name="Controller" value="Home" />
+                                                        <input type="hidden" name="Action" value="Index" />
+                                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                    </fieldset>
+                                                }
+                                            </div>
                                         </div>
-                                        <div class="snipcart-details">
-                                            @using (Html.BeginForm("Buy", "Cart", FormMethod.Post))
-                                            {
-                                                <fieldset>
-                                                    <input type="hidden" name="id" value="@petLoad.ElementAt(i).id" />
-                                                    <input type="hidden" name="product" value="pet" />
-                                                    <input type="hidden" name="Controller" value="Home" />
-                                                    <input type="hidden" name="Action" value="Index" />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            }
-                                        </div>
-                                    </div>
-                                </figure>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    i++;
                 }
-                }
-                <div class="clearfix"> </div>
-            </div>
+            }
+            <div class="clearfix"> </div>
         </div>
     </div>
-    <!-- //brands -->
-
+</div>
+<!-- //brands -->

@@ -26,7 +26,7 @@
                         <input type="password" id="passLog" name="Password" placeholder="Password" required=" ">
                         if (ViewData["ErrorMessage"] != null)
                         {
-                            <span class="alert alert-danger" role="alert">@ViewData["ErrorMessage"].ToString()</span>
+                            <span>@ViewData["ErrorMessage"].ToString()</span>
                         }
                         <input type="submit" value="Login">
                     }

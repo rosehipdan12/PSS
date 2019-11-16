@@ -77,7 +77,7 @@ namespace Webtest2.Controllers
                 return View();
             }
             Password = fs.CreateMD5(Password);
-            var s = ps.users.Where(c => c.username.Equals(Username) && c.password.Equals(Password)).FirstOrDefault();
+            var s = ps.users.Where(c => c.username.Equals(Username) && c.password.Equals(Password) && c.role_id == 1).FirstOrDefault();
             if (s == null)
             {
                 ViewData["ErrorMessage"] = "Username or password is wrong. Try again";
@@ -107,7 +107,7 @@ namespace Webtest2.Controllers
                 us.password = fs.CreateMD5(password);
                 us.phone_number = phone;
                 us.email = email;
-                us.role_id = 3;
+                us.role_id = 1;
                 us.status = false;
                 ps.users.Add(us);
                 ps.SaveChanges();
@@ -175,7 +175,8 @@ namespace Webtest2.Controllers
             os.order_id = order.id;
 
             ps.order_user.Add(os);
-
+            item ie = null;
+            pet p = null;
             double? priceTotal = 0;
             foreach (var item in (List<cart>)Session["cart"])
             {
@@ -184,8 +185,10 @@ namespace Webtest2.Controllers
                 if (!item.itemorpet())
                 {
                     od.item_id = item.item.id;
+                    ie = ps.items.Where(c => c.id == item.item.id).FirstOrDefault();
                     od.order_id = order.id;
                     od.quantity = item.quantity;
+                    ie.quantity -= item.quantity;
                     od.price = item.price();
                     priceTotal += item.price();
                     ps.order_product.Add(od);
@@ -195,6 +198,8 @@ namespace Webtest2.Controllers
                     od.pet_id = item.pet.id;
                     od.order_id = order.id;
                     od.quantity = item.quantity;
+                    p = ps.pets.Where(c => c.id == item.pet.id).FirstOrDefault();
+                    p.price -= item.quantity;
                     od.price = item.price();
                     priceTotal += item.price();
                     ps.order_product.Add(od);
@@ -202,7 +207,7 @@ namespace Webtest2.Controllers
             }
             order.price = priceTotal;
             ps.SaveChanges();
-
+            Session["cart"] = new List<cart>();
             return RedirectToAction("Index");
 
         }
@@ -221,10 +226,9 @@ namespace Webtest2.Controllers
             {
                 System.Diagnostics.Debug.WriteLine(item.order_id);
                 System.Diagnostics.Debug.WriteLine(item.user_id);
-                order_product order_product = ps.order_product.Where(c => c.order_id == item.order_id).FirstOrDefault();
+                orderProductHis.AddRange(ps.order_product.Where(c => c.order_id == item.order_id).ToList());
                 //System.Diagnostics.Debug.WriteLine(order_product.order_id);
                 //System.Diagnostics.Debug.WriteLine(order_product.price);
-                orderProductHis.Add(order_product);
             }
             ViewData["Order_product"] = orderProductHis;
             return View();
@@ -243,6 +247,9 @@ namespace Webtest2.Controllers
             ViewData["petSearch"] = ps.pets.Where(c => c.species.description.Contains(type)).ToList();
             return View();
         }
-
+        public ActionResult Logout() {
+            Session["user"] = null;
+            return RedirectToAction("Index");
+        }
     }
 }
