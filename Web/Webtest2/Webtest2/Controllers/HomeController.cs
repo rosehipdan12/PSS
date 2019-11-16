@@ -146,12 +146,18 @@ namespace Webtest2.Controllers
         }
         
 
-        public ActionResult Payment()
+        public ActionResult Payment(user user)
         {
+            int id = Int32.Parse(Session["user"].ToString());
+            user us = ps.users.Where(c => c.id == id).FirstOrDefault();
+
             if (Session["cart"] == null)
             {
                 return new EmptyResult();
             }
+            us.address = user.address;
+            us.city = user.city;
+            ps.SaveChanges();
             return View();
         }
         public ActionResult Placeorder()
@@ -245,6 +251,7 @@ namespace Webtest2.Controllers
         public ActionResult petcatalog(string type)
         {
             ViewData["petSearch"] = ps.pets.Where(c => c.species.description.Contains(type)).ToList();
+            ViewData["type"] = type;
             return View();
         }
         public ActionResult Logout() {

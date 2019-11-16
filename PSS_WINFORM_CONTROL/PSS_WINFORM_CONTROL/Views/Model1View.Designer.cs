@@ -24,7 +24,6 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.noDocumentsView1 = new DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(this.components);
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -59,7 +58,6 @@
             this.navigationBarItemsysdiagramCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noDocumentsView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -69,9 +67,7 @@
             // 
             // documentManager
             // 
-            this.documentManager.View = this.noDocumentsView1;
-            this.documentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
-            this.noDocumentsView1});
+            this.documentManager.View = null;
             // 
             // mvvmContext
             // 
@@ -83,7 +79,6 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
             this.skinRibbonGalleryBarItem,
             this.barSubItemNavigation,
             this.barButtonItemcategoryCollectionView,
@@ -96,7 +91,8 @@
             this.barButtonItempetCollectionView,
             this.barButtonItemspeciesCollectionView,
             this.barButtonItemsupplierCollectionView,
-            this.barButtonItemsysdiagramCollectionView});
+            this.barButtonItemsysdiagramCollectionView,
+            this.ribbonControl.SearchEditItem});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 27;
@@ -251,17 +247,16 @@
             this.officeNavigationBar.Size = new System.Drawing.Size(1195, 52);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
-            this.officeNavigationBar.Click += new System.EventHandler(this.officeNavigationBar_Click);
             // 
             // navigationBarItemcategoryCollectionView
             // 
             this.navigationBarItemcategoryCollectionView.Name = "navigationBarItemcategoryCollectionView";
-            this.navigationBarItemcategoryCollectionView.Text = "Category";
+            this.navigationBarItemcategoryCollectionView.Text = "Categories";
             // 
             // navigationBarItemitemCollectionView
             // 
             this.navigationBarItemitemCollectionView.Name = "navigationBarItemitemCollectionView";
-            this.navigationBarItemitemCollectionView.Text = "Item";
+            this.navigationBarItemitemCollectionView.Text = "Items";
             // 
             // navigationBarItemorder_productCollectionView
             // 
@@ -283,12 +278,12 @@
             // navigationBarItemuserCollectionView
             // 
             this.navigationBarItemuserCollectionView.Name = "navigationBarItemuserCollectionView";
-            this.navigationBarItemuserCollectionView.Text = "Users";
+            this.navigationBarItemuserCollectionView.Text = "User";
             // 
             // navigationBarItemroleCollectionView
             // 
             this.navigationBarItemroleCollectionView.Name = "navigationBarItemroleCollectionView";
-            this.navigationBarItemroleCollectionView.Text = "Role";
+            this.navigationBarItemroleCollectionView.Text = "Roles";
             // 
             // navigationBarItempetCollectionView
             // 
@@ -335,7 +330,6 @@
             this.Name = "Model1View";
             this.Size = new System.Drawing.Size(1195, 945);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noDocumentsView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -382,6 +376,5 @@
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemsupplierCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemsysdiagramCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemsysdiagramCollectionView;
-        private DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView noDocumentsView1;
-    }
+					}
 }

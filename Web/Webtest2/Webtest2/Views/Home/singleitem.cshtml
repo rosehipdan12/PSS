@@ -24,8 +24,12 @@
             <div class="w3agile_description">
                 <h4>Description :</h4>
                 <p>
-                    @item.detail
+                    Detail: @item.detail
                 </p>
+                <p>
+                    Supplier: @item.supplier.name
+                </p>
+
             </div>
             <div class="snipcart-item block">
                 <div class="snipcart-thumb agileinfo_single_right_snipcart">
@@ -73,7 +77,12 @@
                             <div class="hover14 column">
                                 <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                                     <div class="agile_top_brand_left_grid_pos">
-                                        <img src="@imgsrc" alt=" " class="img-responsive" />
+                                        @if (item.image != null)
+                                        {
+                                            base64 = Convert.ToBase64String(itemLoad.ElementAt(i).image);
+                                            imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                            <img title=" " alt=" " src="@imgsrc" class="img-responsive" />
+                                        }
                                     </div>
                                     <div class="agile_top_brand_left_grid1">
                                         <figure>

@@ -62,10 +62,5 @@ namespace PSS_WINFORM_CONTROL.Views.Model1View{
             fluentAPI.WithEvent<EventArgs>(this, "Load")
                 .EventToCommand(x => x.OnLoaded(null), x => x.DefaultModule);
         }
-
-        private void officeNavigationBar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
